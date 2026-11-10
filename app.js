@@ -118,7 +118,7 @@
     var list = filtered(), html = "", group = "";
     list.forEach(function (s) {
       if (group !== s.group) { group = s.group; html += '<div class="list-group-title">' + esc(s.groupLabel) + " / " + (group === "rigid" ? "RIGID" : "CLOTH") + "</div>"; }
-      html += '<button class="scene-item' + (s.id === state.scene ? " active" : "") + '" data-scene="' + s.id + '" aria-pressed="' + String(s.id === state.scene) + '" aria-label="打开' + esc(s.short) + '"><img src="' + s.clips.REF.poster + '" alt="" loading="lazy"><span><strong>' + esc(s.short) + '</strong><small><span>' + s.id + '</span><span class="scene-number">' + fmt(s.duration) + " s</span></small></span></button>";
+      html += '<button class="scene-item' + (s.id === state.scene ? " active" : "") + '" data-scene="' + s.id + '" aria-pressed="' + String(s.id === state.scene) + '" aria-label="打开' + esc(s.short) + '"><img src="' + s.clips.REF.poster + '" alt="" loading="lazy"><span><strong>' + esc(s.short) + (s.id === "FLAG" ? " · 归档" : "") + '</strong><small><span>' + s.id + '</span><span class="scene-number">' + fmt(s.duration) + " s</span></small></span></button>";
     });
     $("sceneList").innerHTML = html || '<p class="empty-search">没有匹配的场景。试试“布料”“碰撞”或场景编号。</p>';
     $("navCount").textContent = list.length + " / 8";
@@ -142,7 +142,7 @@
     document.title = s.short + " · " + axis + " | Real2SimBench";
     $("sceneTitle").textContent = s.name; $("sceneDescription").textContent = s.description;
     $("sceneGroup").textContent = s.groupLabel; $("sceneId").textContent = s.id;
-    $("sceneEdition").hidden = s.id !== "R04"; $("sceneEdition").textContent = "错层铰接 v002";
+    $("sceneEdition").hidden = !["R04", "FLAG"].includes(s.id); $("sceneEdition").textContent = s.id === "FLAG" ? "历史归档" : "错层铰接 v002";
     $("scenePosition").textContent = String(scenes.indexOf(s) + 1).padStart(2, "0") + " / 08";
     $("topicHint").textContent = s.topic; $("factTopic").textContent = s.topic;
     $("factEngine").textContent = s.engine; $("factWindow").textContent = "0–" + fmt(s.duration) + " s";
@@ -178,6 +178,7 @@
     $("sceneNote").textContent = s.note;
     $("slowStart").hidden = !(s.id === "R02" && axis === "A");
     renderNav(); updateURL(); paintPlay(); paintTime();
+    window.dispatchEvent(new CustomEvent("gallery:selection", { detail: { scene: s.id, axis: axis } }));
   }
   function attach(p, clip, badge, label) {
     if (p.abort) p.abort.abort();
@@ -202,7 +203,7 @@
     var right = axis === "T" ? s.clips.T_FUTURE : axis === "REF" ? s.clips.REF : s.clips[axis];
     var labels = { REF: "基准条件", A: "初态 / 驱动", E: s.id === "R01" ? "重力场变化" : "环境 / 约束", V: "新观察视角" };
     try {
-      await Promise.all([attach(slots[0], left, axis === "T" ? "T OBS" : "REF", axis === "T" ? "观测段" : "基准条件"), attach(slots[1], right, axis === "T" ? "T FUTURE" : axis, axis === "T" ? "未来段" : labels[axis])]);
+      await Promise.all([attach(slots[0], left, axis === "T" ? "T_OBS" : "REF", axis === "T" ? "观测段" : "基准条件"), attach(slots[1], right, axis === "T" ? "T_FUTURE" : axis, axis === "T" ? "未来段" : labels[axis])]);
       if (epoch !== state.epoch) return;
       state.loading = false; state.seeking = false;
       slots.forEach(function (p) { if (p.video.readyState >= 2) p.loading.hidden = true; });

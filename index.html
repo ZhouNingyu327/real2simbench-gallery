@@ -6,8 +6,8 @@
   <meta name="description" content="探索八个刚体与布料物理场景，交互查看时间、初态、环境和视角泛化。48段原始仿真视频，支持同步对照与物理时钟。">
   <title>Real2SimBench · 物理泛化场景展厅</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="catalog.js" defer></script><script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="evaluation.css">
+  <script src="catalog.js" defer></script><script src="app.js" defer></script><script src="evaluation.js" defer></script>
 </head>
 <body>
 <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -69,6 +69,7 @@
     <div class="timeline-caption"><span id="timelineHint">物理时钟 · 原始视频</span><div id="cutActions" hidden><button id="observeBtn">重播观测</button><button id="futureBtn">从切点看未来 →</button></div></div>
    </div>
   </section>
+  <section id="evaluationPanel" class="evaluation-panel" aria-label="GPT 评测与下载" aria-live="polite"></section>
   <div class="main-foot"><span id="sourceFooter"></span><button id="dataBtn" class="text-button"><svg><use href="#i-info"/></svg>数据与来源说明</button></div>
  </main>
  <aside class="inspector" aria-label="当前场景说明">

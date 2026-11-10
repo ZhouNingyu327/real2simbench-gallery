@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "updated_beijing": "2026-11-11T02:26:28+08:00",
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "publication_policy": "Accepted version plus every independent scene attempt source frozen before new artifacts or GT/source downloads become public.",
+  "scenes": {
+    "R01": {
+      "archived": false,
+      "release": "Rigid4_Eval_v2_20261110",
+      "tasks": {
+        "T": {
+          "phase": "ready_for_scoring",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "A": {
+          "phase": "offline_rebuild",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {}
+    },
+    "R02": {
+      "archived": false,
+      "release": "Rigid4_Eval_v2_20261110",
+      "tasks": {
+        "T": {
+          "phase": "ready_for_scoring",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "A": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {}
+    },
+    "R03": {
+      "archived": false,
+      "release": "Rigid4_Eval_v2_20261110",
+      "tasks": {
+        "T": {
+          "phase": "offline_rebuild",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "A": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {}
+    },
+    "R04": {
+      "archived": false,
+      "release": "Rigid4_Eval_v2_20261110",
+      "tasks": {
+        "T": {
+          "phase": "offline_rebuild",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "A": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {}
+    },
+    "S01": {
+      "archived": false,
+      "release": "Cloth4_Eval_v1_20261110",
+      "tasks": {
+        "T": {
+          "phase": "ready_for_scoring",
+          "publication_hold": true,
+          "metrics": [],
+          "delivery_note": "原提交缺少必需的 render.mp4；正式指标记为缺失。冻结源码重建属于独立诊断，不计入正式成绩。"
+        },
+        "A": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {}
+    },
+    "S02": {
+      "archived": false,
+      "release": "Cloth4_Eval_v1_20261110",
+      "tasks": {
+        "T": {
+          "phase": "offline_rebuild",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "A": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {}
+    },
+    "S05": {
+      "archived": false,
+      "release": "Cloth4_Eval_v1_20261110",
+      "tasks": {
+        "T": {
+          "phase": "agent_running",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "A": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {}
+    },
+    "FLAG": {
+      "archived": true,
+      "release": "Cloth4_Eval_v1_20261110",
+      "tasks": {
+        "T": {
+          "phase": "offline_rebuild",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "A": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {}
+    },
+    "TABLECLOTH": {
+      "archived": false,
+      "release": "完整验收待完成",
+      "tasks": {
+        "T": {
+          "phase": "blocked",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "A": {
+          "phase": "blocked",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "blocked",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "blocked",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {}
+    }
+  }
+}
