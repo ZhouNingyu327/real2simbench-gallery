@@ -645,7 +645,7 @@
       "description": "旗帜在恒定风场中产生褶皱和摆动。比较风速变化，以及从竖边两端固定切换为顶部两角固定。",
       "engine": "ARCSim 0.2.1",
       "source": "ARCSim 作者代码的明确数值派生 v009，固定材料、网格和时间设置。",
-      "url": "https://graphics.berkeley.edu/resources/ARCSim/",
+      "url": "https://graphics.eecs.berkeley.edu/resources/ARCSim/",
       "version": "ARCSim · v009",
       "scope": "固定离散模型；完整原生重复、资产搬迁及冻结运行时复跑。数值敏感性单独披露。",
       "A": [
