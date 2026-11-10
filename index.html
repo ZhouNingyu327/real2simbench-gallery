@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f3ed">
+  <meta name="description" content="探索八个刚体与布料物理场景，交互查看时间、初态、环境和视角泛化。48段原始仿真视频，支持同步对照与物理时钟。">
+  <title>Real2SimBench · 物理泛化场景展厅</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+ <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"/></symbol>
+ <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+ <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 9M3 4v6h6"/></symbol>
+ <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+ <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+ <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></symbol>
+ <symbol id="i-link" viewBox="0 0 24 24"><path d="m9 15 6-6M8 16l-1 1a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0M16 8l1-1a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0" transform="translate(1 0) scale(.92)"/></symbol>
+ <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+ <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+ <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+ <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+ <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+ <symbol id="i-key" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M5 9h1m3 0h1m3 0h1m3 0h1M5 13h1m3 0h1m3 0h1m3 0h1M8 16h8"/></symbol>
+</svg>
+<header class="site-header">
+ <a class="brand" href="#scene=R01&axis=A" aria-label="Real2SimBench 首页"><img src="favicon.svg" width="36" height="36" alt=""><span><strong>Real2SimBench</strong><small>PHYSICS GENERALIZATION GALLERY</small></span></a>
+ <div class="header-middle"><span class="edition">研究场景展厅</span><span class="header-stat"><b>08</b> 场景<span> / </span><b>48</b> 视频</span></div>
+ <div class="header-actions"><button id="overviewBtn" class="quiet-button"><svg><use href="#i-grid"/></svg><span>场景概览</span></button><button id="presentBtn" class="outline-button" title="进入演示模式 (F)"><svg><use href="#i-expand"/></svg><span>演示模式</span></button></div>
+</header>
+<div class="workspace">
+ <button id="drawerOverlay" class="drawer-overlay" aria-label="关闭场景列表" hidden></button>
+ <aside class="navigator" id="navigator" aria-label="场景选择">
+  <div class="nav-heading"><span class="eyebrow">SCENE LIBRARY</span><span class="small-count" id="navCount">8 / 8</span><button id="closeDrawer" class="icon-button mobile-only" aria-label="关闭场景列表"><svg><use href="#i-close"/></svg></button></div>
+  <label class="search-field"><svg><use href="#i-search"/></svg><input id="sceneSearch" type="search" placeholder="搜索场景、物理过程" aria-label="搜索场景"><kbd>/</kbd></label>
+  <div class="group-tabs" role="group" aria-label="筛选类别"><button data-group="all" class="active" aria-pressed="true">全部</button><button data-group="rigid" aria-pressed="false">刚体</button><button data-group="cloth" aria-pressed="false">布料</button></div>
+  <nav id="sceneList" class="scene-list" aria-label="八个仿真场景"></nav>
+  <div class="nav-footer"><span class="status-dot"></span><span>原生仿真视频 · 固定来源版本</span><button id="helpBtn" class="icon-button" title="键盘快捷键" aria-label="键盘快捷键"><svg><use href="#i-key"/></svg></button></div>
+ </aside>
+ <main class="main">
+  <section class="scene-heading" aria-labelledby="sceneTitle">
+   <div class="heading-top"><button id="openDrawer" class="icon-button mobile-only" aria-label="选择场景"><svg><use href="#i-menu"/></svg></button><div class="scene-kicker"><span id="sceneGroup">刚体与关节</span><span class="divider">/</span><span id="sceneId">R01</span><span id="sceneEdition" class="revision-tag" hidden>修正版</span></div><div class="scene-step"><button id="prevScene" class="icon-button" title="上一个场景" aria-label="上一个场景"><svg><use href="#i-left"/></svg></button><span id="scenePosition">01 / 08</span><button id="nextScene" class="icon-button" title="下一个场景" aria-label="下一个场景"><svg><use href="#i-right"/></svg></button></div></div>
+   <h1 id="sceneTitle">重力驱动的物理摆</h1><p id="sceneDescription"></p>
+  </section>
+  <div class="axis-bar">
+   <div class="axis-tabs" role="tablist" aria-label="选择泛化轴">
+    <button data-axis="REF" role="tab" aria-selected="false"><b>REF</b><span>基准</span></button>
+    <button data-axis="A" role="tab" aria-selected="true" class="active"><b>A</b><span>初态 / 驱动</span></button>
+    <button data-axis="E" role="tab" aria-selected="false"><b>E</b><span>环境 / 约束</span></button>
+    <button data-axis="V" role="tab" aria-selected="false"><b>V</b><span>观察视角</span></button>
+    <button data-axis="T" role="tab" aria-selected="false"><b>T</b><span>时间外推</span></button>
+   </div>
+   <div class="view-switch" role="group" aria-label="播放器布局"><button id="splitView" class="active" aria-pressed="true" title="并排对照">并排</button><button id="singleView" aria-pressed="false" title="单片查看">单片</button></div>
+  </div>
+  <p id="presentationChange" class="presentation-change" aria-live="polite"></p>
+  <section class="player-stage" aria-label="仿真视频对照">
+   <div class="stage-status"><span id="modeHint"><span class="status-dot"></span>同一物理时刻对照</span><span id="topicHint"></span></div>
+   <div id="videoGrid" class="video-grid">
+    <article class="video-panel" id="leftPanel"><header><span><b id="leftBadge">REF</b><span id="leftLabel">基准条件</span></span><output id="leftClock">0.00 s</output></header><div class="video-frame"><video id="leftVideo" muted playsinline preload="metadata" aria-label="基准视频"></video><span class="video-loading" id="leftLoading">载入视频</span></div><footer><span id="leftMeta"></span><a id="leftDownload" class="download-video" download title="下载此原始视频" aria-label="下载左侧原始视频"><svg><use href="#i-download"/></svg></a></footer></article>
+    <article class="video-panel target-panel" id="rightPanel"><header><span><b id="rightBadge">A</b><span id="rightLabel">初态变化</span></span><output id="rightClock">0.00 s</output></header><div class="video-frame"><video id="rightVideo" muted playsinline preload="metadata" aria-label="泛化视频"></video><span class="video-loading" id="rightLoading">载入视频</span></div><footer><span id="rightMeta"></span><a id="rightDownload" class="download-video" download title="下载此原始视频" aria-label="下载右侧原始视频"><svg><use href="#i-download"/></svg></a></footer></article>
+   </div>
+   <div class="transport">
+    <div class="transport-top"><div class="play-actions"><button id="playBtn" class="play-button" aria-label="同步播放"><svg><use href="#i-play"/></svg><span>同步播放</span></button><button id="resetBtn" class="icon-button" title="从头播放" aria-label="从头重播"><svg><use href="#i-reset"/></svg></button><span class="transport-divider"></span><button id="backFrame" class="frame-button" title="前一帧 (←)" aria-label="前一帧">−1<span>帧</span></button><button id="forwardFrame" class="frame-button" title="后一帧 (→)" aria-label="后一帧">+1<span>帧</span></button></div><div class="speed-actions"><label>速度 <select id="speedSelect" aria-label="播放速度"><option value="0.25">¼×</option><option value="0.5">½×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label><label class="loop-label"><input id="loopToggle" type="checkbox">循环</label><button id="copyLink" class="icon-button" title="复制当前场景和泛化轴的链接" aria-label="复制展示链接"><svg><use href="#i-link"/></svg></button></div></div>
+    <div class="timeline-row"><output class="clock"><b id="currentTime">0.00</b><span> / </span><span id="totalTime">4.00</span><small>s</small></output><div class="timeline-wrap"><div class="timeline-background"><span id="observedZone"></span><span id="futureZone"></span><span id="timelineFill"></span><i id="cutLine" hidden></i></div><input id="timeline" type="range" min="0" max="4" step="0.0166666667" value="0" aria-label="物理时间轴"></div><span class="frame-counter" id="frameCounter">000 / 240</span></div>
+    <div class="timeline-caption"><span id="timelineHint">物理时钟 · 原始视频</span><div id="cutActions" hidden><button id="observeBtn">重播观测</button><button id="futureBtn">从切点看未来 →</button></div></div>
+   </div>
+  </section>
+  <div class="main-foot"><span id="sourceFooter"></span><button id="dataBtn" class="text-button"><svg><use href="#i-info"/></svg>数据与来源说明</button></div>
+ </main>
+ <aside class="inspector" aria-label="当前场景说明">
+  <div class="inspector-heading"><span class="eyebrow">GENERALIZATION NOTE</span><span id="axisPill" class="axis-pill">A</span></div>
+  <h2 id="inspectorTitle">初始条件与驱动</h2><p id="inspectorIntro"></p>
+  <div class="parameter-box" id="parameterBox"><span id="parameterName" class="parameter-name"></span><div class="parameter-values"><div><small id="beforeName">REF</small><strong id="beforeValue"></strong></div><span class="parameter-arrow">→</span><div><small id="afterName">A</small><strong id="afterValue"></strong></div></div></div>
+  <div class="intervention-copy"><span class="note-caption" id="interventionCaption">本次改变</span><p id="interventionText"></p></div>
+  <div class="field-note"><span class="note-caption">观察提示</span><p id="sceneNote"></p><button id="slowStart" class="text-button" hidden>¼ 速从头看上滑 →</button></div>
+  <div class="scene-facts"><div><span>物理过程</span><b id="factTopic"></b></div><div><span>求解器</span><b id="factEngine"></b></div><div><span>完整窗口</span><b id="factWindow"></b></div><div><span>源采样</span><b id="factSampling"></b></div></div>
+  <details class="source-details"><summary>模型来源与验证口径<svg><use href="#i-info"/></svg></summary><p id="sourceText"></p><p id="scopeText"></p><a id="sourceLink" target="_blank" rel="noopener noreferrer">查看开源来源 ↗</a></details>
+  <div class="inspector-footer"><span class="status-dot"></span>视频来自已归档的原生仿真轨迹</div>
+ </aside>
+</div>
+<footer class="site-footer"><span>Real2SimBench <i> / </i> 独立制作的物理泛化场景</span><span>研究展示 · <a href="data/数据说明.md" download>数据说明</a><i> / </i><span>2026.11</span></span></footer>
+<dialog id="overviewDialog" class="overview-dialog"><div class="dialog-heading"><div><span class="eyebrow">EIGHT PHYSICAL SCENES</span><h2>从具体的物理过程开始</h2><p>选择一个场景，比较它在不同条件下的运动。</p></div><button class="icon-button" data-close-dialog aria-label="关闭场景概览"><svg><use href="#i-close"/></svg></button></div><div id="overviewGrid" class="overview-grid"></div></dialog>
+<dialog id="dataDialog" class="data-dialog"><div class="dialog-heading"><div><span class="eyebrow">PROVENANCE & DATA</span><h2>视频背后是可追溯的仿真轨迹</h2></div><button class="icon-button" data-close-dialog aria-label="关闭数据说明"><svg><use href="#i-close"/></svg></button></div><p>展示收录刚体 v2 与布料 v1 的八个精选场景，共 48 段原始视频。调整播放速度仅影响网页观看，原始视频字节、帧率和物理时钟保持原交付。</p><div class="data-points"><div><b>Meshes</b><span>逐帧表面几何与固定拓扑</span></div><div><b>Dynamics</b><span>固定身份材料点的运动轨迹</span></div><div><b>Native GT</b><span>原生状态、速度与源物理时间</span></div><div><b>Provenance</b><span>固定源版本、参数及验收记录</span></div></div><p>完整 GT 由项目维护者另行提供。布料采用固定源离散模型口径，数值敏感性有记录；双摆采用错层铰接修正版。本网页用于场景展示，没有运行大模型评分。</p><div id="localResources" hidden></div><div class="source-links"><a href="https://github.com/newton-physics/newton" target="_blank" rel="noopener noreferrer">Newton ↗</a><a href="https://github.com/st-tech/ppf-contact-solver" target="_blank" rel="noopener noreferrer">PPF ↗</a><a href="https://graphics.berkeley.edu/resources/ARCSim/" target="_blank" rel="noopener noreferrer">ARCSim ↗</a><a href="https://github.com/4DCodeBench/4DCodeBench" target="_blank" rel="noopener noreferrer">4DCodeBench 格式参考 ↗</a></div><div class="license-note">独立制作的数据，不是 4DCodeBench 官方发布。来源许可：<a href="licenses/NEWTON_LICENSE.md">Newton</a> · <a href="licenses/PPF_LICENSE.txt">PPF</a> · <a href="licenses/ARCSIM_LICENSE.txt">ARCSim</a>。ARCSim 场景按研究／非商业许可使用。</div></dialog>
+<dialog id="helpDialog" class="help-dialog"><div class="dialog-heading"><h2>键盘也能流畅展示</h2><button class="icon-button" data-close-dialog aria-label="关闭快捷键说明"><svg><use href="#i-close"/></svg></button></div><dl><dt><kbd>Space</kbd></dt><dd>播放 / 暂停</dd><dt><kbd>←</kbd> <kbd>→</kbd></dt><dd>逐帧后退 / 前进</dd><dt><kbd>A</kbd> <kbd>E</kbd> <kbd>V</kbd> <kbd>T</kbd> <kbd>R</kbd></dt><dd>切换泛化轴 / 基准</dd><dt><kbd>F</kbd></dt><dd>进入 / 退出演示模式</dd><dt><kbd>/</kbd></dt><dd>搜索场景</dd><dt><kbd>1</kbd>…<kbd>8</kbd></dt><dd>选择场景</dd></dl></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript>请启用 JavaScript 使用交互展厅。原始视频位于 media 目录，场景说明位于 data/display-catalog.json。</noscript>
+</body></html>

@@ -1,0 +1,342 @@
+{
+  "original_approved_video_bytes_preserved": true,
+  "display_video_count": 48,
+  "assets": [
+    {
+      "scene": "R01",
+      "variant": "REF",
+      "path": "media/R01_REF.mp4",
+      "bytes": 743620,
+      "SHA256": "06e49b45eeda1fa97cefd3521ed673b2d95843dab5275c48369214e8c9267337"
+    },
+    {
+      "scene": "R01",
+      "variant": "T_OBS",
+      "path": "media/R01_T_OBS.mp4",
+      "bytes": 248599,
+      "SHA256": "aa9da0d04e8299865f68375c909999c057bbb5e34295dd83b9044e8630fbaf5f"
+    },
+    {
+      "scene": "R01",
+      "variant": "T_FUTURE",
+      "path": "media/R01_T_FUTURE.mp4",
+      "bytes": 458618,
+      "SHA256": "e04d93672fe29c38907e68e321a64caa24b6b2b69c7573ed5f3b35d31be53fa2"
+    },
+    {
+      "scene": "R01",
+      "variant": "A",
+      "path": "media/R01_A.mp4",
+      "bytes": 828428,
+      "SHA256": "39cd2b63e5740e7b0b5212089bbc13225fc732f1dccfc87427846abe4f6c9bfb"
+    },
+    {
+      "scene": "R01",
+      "variant": "E",
+      "path": "media/R01_E.mp4",
+      "bytes": 581191,
+      "SHA256": "a302d6697536fd813e70403c478f19d3df7523383a7c781e252bfbc7907a0bf3"
+    },
+    {
+      "scene": "R01",
+      "variant": "V",
+      "path": "media/R01_V.mp4",
+      "bytes": 651146,
+      "SHA256": "ed4baace30725a4eeb1cc6eb0b54d20573db1d5f267f2c60c3593fe0bba67ebc"
+    },
+    {
+      "scene": "R02",
+      "variant": "REF",
+      "path": "media/R02_REF.mp4",
+      "bytes": 231343,
+      "SHA256": "3b4bc704ed765b102d520b98ef328e1c74575b4747ab48333c8eed3f285c90f2"
+    },
+    {
+      "scene": "R02",
+      "variant": "T_OBS",
+      "path": "media/R02_T_OBS.mp4",
+      "bytes": 180738,
+      "SHA256": "b0906c1dc91210355827342008ae645322d0c4cb1ffbd8475d77bc5b8ce30190"
+    },
+    {
+      "scene": "R02",
+      "variant": "T_FUTURE",
+      "path": "media/R02_T_FUTURE.mp4",
+      "bytes": 193340,
+      "SHA256": "d1553690870c4915c7678fbc10c9e8b805435f02ad6e6a5432c97b380280a203"
+    },
+    {
+      "scene": "R02",
+      "variant": "A",
+      "path": "media/R02_A.mp4",
+      "bytes": 230786,
+      "SHA256": "bc4ffc8a9320d3adbb9e86ffcc457389c04b51fafd9e2ade92adad1570e9b2e4"
+    },
+    {
+      "scene": "R02",
+      "variant": "E",
+      "path": "media/R02_E.mp4",
+      "bytes": 195096,
+      "SHA256": "83d6f9fdc40d6bd1e29c0369d4844260a6f9d05931d425a328897b67be7b0323"
+    },
+    {
+      "scene": "R02",
+      "variant": "V",
+      "path": "media/R02_V.mp4",
+      "bytes": 245520,
+      "SHA256": "cf30e2a8246b8e2a101f2b49c02c012b77c3cd209fddf56e9fc8ed8c4aea4d59"
+    },
+    {
+      "scene": "R03",
+      "variant": "REF",
+      "path": "media/R03_REF.mp4",
+      "bytes": 268797,
+      "SHA256": "d411c207fe36cd838b82bbd6607322cc9508d665981149ea10dd05f47fc8ecbe"
+    },
+    {
+      "scene": "R03",
+      "variant": "T_OBS",
+      "path": "media/R03_T_OBS.mp4",
+      "bytes": 172749,
+      "SHA256": "ea4361c35bee14f10c96c833464e4e754c3ebefc83913ae3f90496cc5cf417ce"
+    },
+    {
+      "scene": "R03",
+      "variant": "T_FUTURE",
+      "path": "media/R03_T_FUTURE.mp4",
+      "bytes": 233620,
+      "SHA256": "55cff742a53958e1d935be466b87f5a91c8f3dcfb734d8d701ce70532ab83a3d"
+    },
+    {
+      "scene": "R03",
+      "variant": "A",
+      "path": "media/R03_A.mp4",
+      "bytes": 294062,
+      "SHA256": "64c626b67c7bd1880f86797e6b31291eab002cade6532ced99a8ce5f4f3c74b2"
+    },
+    {
+      "scene": "R03",
+      "variant": "E",
+      "path": "media/R03_E.mp4",
+      "bytes": 265800,
+      "SHA256": "b66bdcc5fb5580179283756c44c330e31db6f495ba8e8ba19e1b53d9ca31b5d5"
+    },
+    {
+      "scene": "R03",
+      "variant": "V",
+      "path": "media/R03_V.mp4",
+      "bytes": 268972,
+      "SHA256": "26446fcb9e1f7b4c8917a29f93069ac6d530882c579055c9ad3bf18f3acf7a80"
+    },
+    {
+      "scene": "R04",
+      "variant": "REF",
+      "path": "media/R04_REF.mp4",
+      "bytes": 650293,
+      "SHA256": "64ec553c07f17b58d67c69d4abb8ece90bd1e4d922acf8641369f02904e7f067"
+    },
+    {
+      "scene": "R04",
+      "variant": "T_OBS",
+      "path": "media/R04_T_OBS.mp4",
+      "bytes": 277430,
+      "SHA256": "d8bbd432a1d4cb531009db5d0a1eb5faad7acfe6296c042025b33b7bd702423d"
+    },
+    {
+      "scene": "R04",
+      "variant": "T_FUTURE",
+      "path": "media/R04_T_FUTURE.mp4",
+      "bytes": 404706,
+      "SHA256": "f0826fc176097505d10302a6d238cf4687fc4f41d98ab6b0f561d6c7c908ef81"
+    },
+    {
+      "scene": "R04",
+      "variant": "A",
+      "path": "media/R04_A.mp4",
+      "bytes": 623932,
+      "SHA256": "c5a7416df3759b0baee59846a3440740124598451b233a742eb2a27975700867"
+    },
+    {
+      "scene": "R04",
+      "variant": "E",
+      "path": "media/R04_E.mp4",
+      "bytes": 624751,
+      "SHA256": "1a18b62d9ee6c43376ceb915d995f71b1ffc95be1b9685d4f4f81361909b513b"
+    },
+    {
+      "scene": "R04",
+      "variant": "V",
+      "path": "media/R04_V.mp4",
+      "bytes": 582256,
+      "SHA256": "39ad5dd8d221466af9324db45e1798c00bde069ec79aa0134ef0b4bf460f87fc"
+    },
+    {
+      "scene": "S01",
+      "variant": "REF",
+      "path": "media/S01_REF.mp4",
+      "bytes": 267298,
+      "SHA256": "64547eb61225c5fa3e75a041015c47038599110f4ba86454271a844cdd5e84da"
+    },
+    {
+      "scene": "S01",
+      "variant": "T_OBS",
+      "path": "media/S01_T_OBS.mp4",
+      "bytes": 117346,
+      "SHA256": "58200cace8b3ae32bf25798928bbe6ae87c6ce5c345e9dce8a951aba018de593"
+    },
+    {
+      "scene": "S01",
+      "variant": "T_FUTURE",
+      "path": "media/S01_T_FUTURE.mp4",
+      "bytes": 201162,
+      "SHA256": "8758c308a13a2ee30ac08ba9b61bc182f84dee28c0abcd3a358c371fc3fe2a1d"
+    },
+    {
+      "scene": "S01",
+      "variant": "A",
+      "path": "media/S01_A.mp4",
+      "bytes": 322089,
+      "SHA256": "d5c334fe522d95bf3553934c4ab30e3d47d23323c8f043fea29a0231d25dded9"
+    },
+    {
+      "scene": "S01",
+      "variant": "E",
+      "path": "media/S01_E.mp4",
+      "bytes": 299288,
+      "SHA256": "1912520eb9d74097d2948f63e294e5f9fbaf46af778f6ad40d490a37559d79d9"
+    },
+    {
+      "scene": "S01",
+      "variant": "V",
+      "path": "media/S01_V.mp4",
+      "bytes": 326058,
+      "SHA256": "427173911acea04dd386f2cc7fa471c6ed60ac90c06cf76f52832437bdeeac05"
+    },
+    {
+      "scene": "S02",
+      "variant": "REF",
+      "path": "media/S02_REF.mp4",
+      "bytes": 526241,
+      "SHA256": "d078498c0532b6e5e949d23106e6c5751eca4127ebe38666c2103825caa5a0cd"
+    },
+    {
+      "scene": "S02",
+      "variant": "T_OBS",
+      "path": "media/S02_T_OBS.mp4",
+      "bytes": 224498,
+      "SHA256": "2a2105dd48da239e2a5dca78706e09b97886e83286e39cff33c40753fc8ae821"
+    },
+    {
+      "scene": "S02",
+      "variant": "T_FUTURE",
+      "path": "media/S02_T_FUTURE.mp4",
+      "bytes": 329416,
+      "SHA256": "331acfe631bb5f15d38569cbdc06292c32f4d9e923cbffd2c98473c576e47907"
+    },
+    {
+      "scene": "S02",
+      "variant": "A",
+      "path": "media/S02_A.mp4",
+      "bytes": 531940,
+      "SHA256": "2267fc524de5fa5d96f802941cfdb4783d00d060fd173254fbd4a25cc999fb54"
+    },
+    {
+      "scene": "S02",
+      "variant": "E",
+      "path": "media/S02_E.mp4",
+      "bytes": 633428,
+      "SHA256": "bacff9c0dab112eed80dbf3e7e9865923f1d2b176f04926a30ac829b9cb1ebef"
+    },
+    {
+      "scene": "S02",
+      "variant": "V",
+      "path": "media/S02_V.mp4",
+      "bytes": 604814,
+      "SHA256": "bb2418fb4d35939b5ea0f30fc7573b4f149e60dddc055f24b16d55c8ca97503f"
+    },
+    {
+      "scene": "S05",
+      "variant": "REF",
+      "path": "media/S05_REF.mp4",
+      "bytes": 2118089,
+      "SHA256": "cde3399da93bbe359ac6fb8f7945b239f5d2a01fa5184a7155c30156502302d6"
+    },
+    {
+      "scene": "S05",
+      "variant": "T_OBS",
+      "path": "media/S05_T_OBS.mp4",
+      "bytes": 442300,
+      "SHA256": "27ff02054fc1e77aaf0931d183ec85283694579193a73b2ffbd476b1ea3354bb"
+    },
+    {
+      "scene": "S05",
+      "variant": "T_FUTURE",
+      "path": "media/S05_T_FUTURE.mp4",
+      "bytes": 1807900,
+      "SHA256": "d2fd6e6ca702341666c5ebf3c288fd527b0df6721f0166a50277ab38da60d967"
+    },
+    {
+      "scene": "S05",
+      "variant": "A",
+      "path": "media/S05_A.mp4",
+      "bytes": 2337374,
+      "SHA256": "8c45b5ead90536a7fdc9eb8db05adc2862abd8030f9cc132e63d68b9a60bd467"
+    },
+    {
+      "scene": "S05",
+      "variant": "E",
+      "path": "media/S05_E.mp4",
+      "bytes": 2500968,
+      "SHA256": "9d8b20d4c364ed8be45a599cb4439bec12b8ac619720e9cb7ebd194ae6cbc85f"
+    },
+    {
+      "scene": "S05",
+      "variant": "V",
+      "path": "media/S05_V.mp4",
+      "bytes": 2187617,
+      "SHA256": "56b164346979568bee33eacff67f38e0253119c21eb06c6e42815b8c637568b5"
+    },
+    {
+      "scene": "FLAG",
+      "variant": "REF",
+      "path": "media/FLAG_REF.mp4",
+      "bytes": 720304,
+      "SHA256": "8330a46904b8c97fc6f8c86054dea003909f91f14a5fccbb3837803bd6d0740d"
+    },
+    {
+      "scene": "FLAG",
+      "variant": "T_OBS",
+      "path": "media/FLAG_T_OBS.mp4",
+      "bytes": 343500,
+      "SHA256": "84fe93a47df92b70d930645494654004a271990914adce0445e458c31d76c156"
+    },
+    {
+      "scene": "FLAG",
+      "variant": "T_FUTURE",
+      "path": "media/FLAG_T_FUTURE.mp4",
+      "bytes": 537725,
+      "SHA256": "2022be3b7101454c20696335a4699d7b0311b0c54332c2cfa10860eadb1858aa"
+    },
+    {
+      "scene": "FLAG",
+      "variant": "A",
+      "path": "media/FLAG_A.mp4",
+      "bytes": 750634,
+      "SHA256": "0fe126b6fbf9132e6530abadebbc32b19973d198ba5ca2028a883dfdef88cf3e"
+    },
+    {
+      "scene": "FLAG",
+      "variant": "E",
+      "path": "media/FLAG_E.mp4",
+      "bytes": 628126,
+      "SHA256": "998a7d0dbc54fea1af0b36e5a5aed035a5231dcc87906ef057d06886f7bf07fb"
+    },
+    {
+      "scene": "FLAG",
+      "variant": "V",
+      "path": "media/FLAG_V.mp4",
+      "bytes": 753572,
+      "SHA256": "c15b322db6d7b4c6fe55f275093425f30f9a6c44bd3266f7162389663c21f0c3"
+    }
+  ]
+}
