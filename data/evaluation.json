@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_beijing": "2026-11-11T02:26:28+08:00",
+  "updated_beijing": "2026-11-11T04:17:45+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Accepted version plus every independent scene attempt source frozen before new artifacts or GT/source downloads become public.",
@@ -15,7 +15,7 @@
           "metrics": []
         },
         "A": {
-          "phase": "offline_rebuild",
+          "phase": "ready_for_scoring",
           "publication_hold": true,
           "metrics": []
         },
@@ -30,7 +30,14 @@
           "metrics": []
         }
       },
-      "downloads": {}
+      "downloads": {},
+      "E_scope": {
+        "group": "gravity_field_extension",
+        "core_geometry_group_eligible": false,
+        "interpretation": "Gravity field changes; outside the plan core static boundary geometry intervention.",
+        "world_s0_preserved": "see per-field evidence; no blanket theta claim",
+        "formal_new_scene_admitted": true
+      }
     },
     "R02": {
       "archived": false,
@@ -42,7 +49,7 @@
           "metrics": []
         },
         "A": {
-          "phase": "queued",
+          "phase": "ready_for_scoring",
           "publication_hold": true,
           "metrics": []
         },
@@ -57,19 +64,26 @@
           "metrics": []
         }
       },
-      "downloads": {}
+      "downloads": {},
+      "E_scope": {
+        "group": "geometry_with_relative_placement",
+        "core_geometry_group_eligible": false,
+        "interpretation": "Slope geometry changes and object world initial pose changes to retain relative placement/gap; not world-s0-constant, reported separately.",
+        "world_s0_preserved": false,
+        "formal_new_scene_admitted": true
+      }
     },
     "R03": {
       "archived": false,
       "release": "Rigid4_Eval_v2_20261110",
       "tasks": {
         "T": {
-          "phase": "offline_rebuild",
+          "phase": "ready_for_scoring",
           "publication_hold": true,
           "metrics": []
         },
         "A": {
-          "phase": "queued",
+          "phase": "offline_rebuild",
           "publication_hold": true,
           "metrics": []
         },
@@ -84,19 +98,26 @@
           "metrics": []
         }
       },
-      "downloads": {}
+      "downloads": {},
+      "E_scope": {
+        "group": "core_static_geometry",
+        "core_geometry_group_eligible": true,
+        "interpretation": "Static wall/container boundary geometry changes.",
+        "world_s0_preserved": "see per-field evidence; no blanket theta claim",
+        "formal_new_scene_admitted": true
+      }
     },
     "R04": {
       "archived": false,
       "release": "Rigid4_Eval_v2_20261110",
       "tasks": {
         "T": {
-          "phase": "offline_rebuild",
+          "phase": "ready_for_scoring",
           "publication_hold": true,
           "metrics": []
         },
         "A": {
-          "phase": "queued",
+          "phase": "offline_rebuild",
           "publication_hold": true,
           "metrics": []
         },
@@ -111,7 +132,14 @@
           "metrics": []
         }
       },
-      "downloads": {}
+      "downloads": {},
+      "E_scope": {
+        "group": "internal_constraint_extension",
+        "core_geometry_group_eligible": false,
+        "interpretation": "Internal articulated joint locks/releases; not counted as core external static boundary geometry.",
+        "world_s0_preserved": "see per-field evidence; no blanket theta claim",
+        "formal_new_scene_admitted": true
+      }
     },
     "S01": {
       "archived": false,
@@ -121,10 +149,11 @@
           "phase": "ready_for_scoring",
           "publication_hold": true,
           "metrics": [],
+          "formal_submission_status": "format_failure_original_video_missing",
           "delivery_note": "原提交缺少必需的 render.mp4；正式指标记为缺失。冻结源码重建属于独立诊断，不计入正式成绩。"
         },
         "A": {
-          "phase": "queued",
+          "phase": "agent_running",
           "publication_hold": true,
           "metrics": []
         },
@@ -139,19 +168,28 @@
           "metrics": []
         }
       },
-      "downloads": {}
+      "downloads": {},
+      "E_scope": {
+        "group": "core_static_geometry",
+        "core_geometry_group_eligible": true,
+        "interpretation": "Static support geometry count/spacing changes.",
+        "world_s0_preserved": "see per-field evidence; no blanket theta claim",
+        "formal_new_scene_admitted": true
+      }
     },
     "S02": {
       "archived": false,
       "release": "Cloth4_Eval_v1_20261110",
       "tasks": {
         "T": {
-          "phase": "offline_rebuild",
+          "phase": "ready_for_scoring",
           "publication_hold": true,
-          "metrics": []
+          "metrics": [],
+          "formal_submission_status": "source_rebuild_timeout",
+          "delivery_note": "冻结源码重建达到原有时限，程序可执行性未通过；已提交产物的可用指标仅说明该产物，不代表可复现。"
         },
         "A": {
-          "phase": "queued",
+          "phase": "offline_rebuild",
           "publication_hold": true,
           "metrics": []
         },
@@ -166,40 +204,20 @@
           "metrics": []
         }
       },
-      "downloads": {}
+      "downloads": {},
+      "E_scope": {
+        "group": "core_static_geometry",
+        "core_geometry_group_eligible": true,
+        "interpretation": "Static plane orientation/height changes.",
+        "world_s0_preserved": "see per-field evidence; no blanket theta claim",
+        "formal_new_scene_admitted": true
+      }
     },
     "S05": {
       "archived": false,
       "release": "Cloth4_Eval_v1_20261110",
       "tasks": {
         "T": {
-          "phase": "agent_running",
-          "publication_hold": true,
-          "metrics": []
-        },
-        "A": {
-          "phase": "queued",
-          "publication_hold": true,
-          "metrics": []
-        },
-        "E": {
-          "phase": "queued",
-          "publication_hold": true,
-          "metrics": []
-        },
-        "V": {
-          "phase": "queued",
-          "publication_hold": true,
-          "metrics": []
-        }
-      },
-      "downloads": {}
-    },
-    "FLAG": {
-      "archived": true,
-      "release": "Cloth4_Eval_v1_20261110",
-      "tasks": {
-        "T": {
           "phase": "offline_rebuild",
           "publication_hold": true,
           "metrics": []
@@ -220,7 +238,48 @@
           "metrics": []
         }
       },
-      "downloads": {}
+      "downloads": {},
+      "E_scope": {
+        "group": "boundary_constraint_extension",
+        "core_geometry_group_eligible": false,
+        "interpretation": "Cloth boundary pin/release constraint changes; reported as a separate extension.",
+        "world_s0_preserved": "see per-field evidence; no blanket theta claim",
+        "formal_new_scene_admitted": true
+      }
+    },
+    "FLAG": {
+      "archived": true,
+      "release": "Cloth4_Eval_v1_20261110",
+      "tasks": {
+        "T": {
+          "phase": "ready_for_scoring",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "A": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "E": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        },
+        "V": {
+          "phase": "queued",
+          "publication_hold": true,
+          "metrics": []
+        }
+      },
+      "downloads": {},
+      "E_scope": {
+        "group": "legacy_boundary_constraint_extension",
+        "core_geometry_group_eligible": false,
+        "interpretation": "Historical flag pin constraint change; archived outside the latest eight-scene set.",
+        "world_s0_preserved": "see per-field evidence; no blanket theta claim",
+        "formal_new_scene_admitted": false
+      }
     },
     "TABLECLOTH": {
       "archived": false,
@@ -247,7 +306,8 @@
           "metrics": []
         }
       },
-      "downloads": {}
+      "downloads": {},
+      "E_scope": null
     }
   }
 }
