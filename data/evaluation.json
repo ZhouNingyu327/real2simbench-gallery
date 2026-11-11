@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T13:16:42+08:00",
+  "updated_beijing": "2026-11-11T13:17:19+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task results may be released against already-public accepted GT. New GT and code downloads require related-scene source freezes. Tablecloth GT/hidden-query artifacts remain private.",
