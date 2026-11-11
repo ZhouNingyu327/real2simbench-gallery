@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T14:35:30+08:00",
+  "updated_beijing": "2026-11-11T14:36:04+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task media may be released. User expressly authorized completed TABLECLOTH REF/T/A/V and GPT T/A/V media; strict E, numeric GT, source and authoring remain withheld.",
@@ -4853,6 +4853,24 @@
             "GT_target_world_tree_sha256": "8ce793b07ff6605a769dfac023c3f71aa4f7d4521da01fa0755637fa58ac4913",
             "observation_sha256": "cde3399da93bbe359ac6fb8f7945b239f5d2a01fa5184a7155c30156502302d6",
             "GT_target_video_sha256": "8c45b5ead90536a7fdc9eb8db05adc2862abd8030f9cc132e63d68b9a60bd467"
+          },
+          "prediction": {
+            "href": "media/gpt/CL4_S05_A_GPT.mp4",
+            "sha256": "e5d6dfcbb2d6cf1f413654a547b7499a0e231ab70bddf66bd8bfe0078cd61901",
+            "frames": 361,
+            "source_frame_slice": [
+              0,
+              361
+            ]
+          },
+          "comparison": {
+            "href": "media/gpt/CL4_S05_A_GT_left_GPT_right.mp4",
+            "sha256": "ad34566c61fdeb5fcafa58ed2ed3c41f2e78766b488573637904184b7f2f4253",
+            "frames": 361,
+            "source_frame_slice": [
+              0,
+              361
+            ]
           }
         },
         "E": {
