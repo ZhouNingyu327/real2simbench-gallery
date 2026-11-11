@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T11:42:44+08:00",
+  "updated_beijing": "2026-11-11T12:30:47+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task results may be released against already-public accepted GT. New GT and code downloads require related-scene source freezes. Tablecloth GT/hidden-query artifacts remain private.",
@@ -625,7 +625,7 @@
           }
         },
         "E": {
-          "phase": "agent_running",
+          "phase": "offline_rebuild",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -1266,7 +1266,7 @@
           }
         },
         "E": {
-          "phase": "queued",
+          "phase": "agent_running",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -1907,7 +1907,7 @@
           }
         },
         "E": {
-          "phase": "queued",
+          "phase": "agent_running",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -2548,7 +2548,7 @@
           }
         },
         "E": {
-          "phase": "queued",
+          "phase": "agent_running",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -3115,7 +3115,7 @@
           }
         },
         "E": {
-          "phase": "queued",
+          "phase": "agent_running",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -4111,19 +4111,19 @@
       "release": "fixed-discrete reference phase v001; E pending",
       "tasks": {
         "T": {
-          "phase": "agent_running",
+          "phase": "ready_for_scoring",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
         },
         "A": {
-          "phase": "agent_running",
+          "phase": "ready_for_scoring",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
         },
         "V": {
-          "phase": "agent_running",
+          "phase": "offline_rebuild",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
