@@ -1,6 +1,6 @@
 {
   "original_approved_video_bytes_preserved": true,
-  "display_video_count": 48,
+  "display_video_count": 47,
   "assets": [
     {
       "scene": "R01",
@@ -297,46 +297,39 @@
       "SHA256": "56b164346979568bee33eacff67f38e0253119c21eb06c6e42815b8c637568b5"
     },
     {
-      "scene": "FLAG",
+      "scene": "TABLECLOTH",
       "variant": "REF",
-      "path": "media/FLAG_REF.mp4",
-      "bytes": 720304,
-      "SHA256": "8330a46904b8c97fc6f8c86054dea003909f91f14a5fccbb3837803bd6d0740d"
+      "path": "media/TABLECLOTH_REF.mp4",
+      "bytes": 1301813,
+      "SHA256": "20da273357305600f8e766cd78dad46e8c478ca8ab2ebd8bd798245598afb8ee"
     },
     {
-      "scene": "FLAG",
+      "scene": "TABLECLOTH",
       "variant": "T_OBS",
-      "path": "media/FLAG_T_OBS.mp4",
-      "bytes": 343500,
-      "SHA256": "84fe93a47df92b70d930645494654004a271990914adce0445e458c31d76c156"
+      "path": "media/TABLECLOTH_T_OBS.mp4",
+      "bytes": 639244,
+      "SHA256": "713a2ced000bfc61a56570a4206ce006aa24f800fae0634d2b8f896e5866a548"
     },
     {
-      "scene": "FLAG",
+      "scene": "TABLECLOTH",
       "variant": "T_FUTURE",
-      "path": "media/FLAG_T_FUTURE.mp4",
-      "bytes": 537725,
-      "SHA256": "2022be3b7101454c20696335a4699d7b0311b0c54332c2cfa10860eadb1858aa"
+      "path": "media/TABLECLOTH_T_FUTURE.mp4",
+      "bytes": 663365,
+      "SHA256": "e4c5b7ee8e7b5696c03b242bace7f667f7bf77b99bccecdfb1e9ec0b19b436a6"
     },
     {
-      "scene": "FLAG",
+      "scene": "TABLECLOTH",
       "variant": "A",
-      "path": "media/FLAG_A.mp4",
-      "bytes": 750634,
-      "SHA256": "0fe126b6fbf9132e6530abadebbc32b19973d198ba5ca2028a883dfdef88cf3e"
+      "path": "media/TABLECLOTH_A.mp4",
+      "bytes": 1308669,
+      "SHA256": "a2114114017bc755010887607b6a4b9be35a5ea9ae436f6ae44cd79bdab139ec"
     },
     {
-      "scene": "FLAG",
-      "variant": "E",
-      "path": "media/FLAG_E.mp4",
-      "bytes": 628126,
-      "SHA256": "998a7d0dbc54fea1af0b36e5a5aed035a5231dcc87906ef057d06886f7bf07fb"
-    },
-    {
-      "scene": "FLAG",
+      "scene": "TABLECLOTH",
       "variant": "V",
-      "path": "media/FLAG_V.mp4",
-      "bytes": 753572,
-      "SHA256": "c15b322db6d7b4c6fe55f275093425f30f9a6c44bd3266f7162389663c21f0c3"
+      "path": "media/TABLECLOTH_V.mp4",
+      "bytes": 1235401,
+      "SHA256": "5915412478db6e208676c031d68200818a9933e9d0345d90a994b7e82e5e47f5"
     }
   ]
 }

@@ -10,6 +10,7 @@
   var state = { scene: "R01", axis: "A", group: "all", search: "", layout: "split", speed: 1, playing: false, loading: false, failed: false, clock: 0, temporal: "left", epoch: 0, raf: 0, tick: 0, seeking: false };
   var slots = ["left", "right"].map(function (id) { return { id: id, video: $(id + "Video"), panel: $(id + "Panel"), loading: $(id + "Loading"), clip: null, abort: null }; });
   var toastTimer;
+  if ($("gtClipCount")) $("gtClipCount").textContent = String(catalog.clipCount);
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function fmt(t) { return Number.isFinite(t) ? t.toFixed(2) : "0.00"; }
   function pad(n) { return String(n).padStart(3, "0"); }
@@ -31,10 +32,11 @@
     slots.forEach(function (p) { $(p.id + "Clock").textContent = fmt(sourceTime(p)) + " s"; p.panel.classList.toggle("is-active", state.axis !== "T" || p.id === state.temporal); });
   }
   function paintPlay() {
-    $("playBtn").disabled = state.loading;
+    var pending = current().pending_axes && current().pending_axes[state.axis] && !current().clips[state.axis];
+    $("playBtn").disabled = state.loading || Boolean(pending);
     $("playBtn").setAttribute("aria-pressed", String(state.playing));
     $("playBtn").setAttribute("aria-label", state.playing ? "暂停播放" : (state.axis === "T" ? "顺序播放" : (isSingle() ? "播放视频" : "同步播放")));
-    $("playBtn").innerHTML = '<svg><use href="#i-' + (state.playing ? "pause" : "play") + '"/></svg><span>' + (state.loading ? "载入视频" : state.playing ? "暂停" : state.axis === "T" ? "顺序播放" : isSingle() ? "播放" : "同步播放") + "</span>";
+    $("playBtn").innerHTML = '<svg><use href="#i-' + (state.playing ? "pause" : "play") + '"/></svg><span>' + (pending ? "待验收" : state.loading ? "载入视频" : state.playing ? "暂停" : state.axis === "T" ? "顺序播放" : isSingle() ? "播放" : "同步播放") + "</span>";
   }
   function pause() {
     state.playing = false;
@@ -74,6 +76,7 @@
   }
   async function play() {
     if (state.loading) return;
+    if (!slots[1].clip) return;
     if (state.failed) { loadCurrent(); return; }
     if (state.clock >= current().duration - 1e-8) seek(0, false);
     var epoch = state.epoch;
@@ -107,7 +110,7 @@
   slots.forEach(function (p) {
     p.video.addEventListener("ended", function () { ended(p); });
     p.video.addEventListener("click", function () { state.playing ? pause() : play(); });
-    p.video.addEventListener("loadeddata", function () { p.loading.hidden = true; });
+    p.video.addEventListener("loadeddata", function () { if (p.clip) p.loading.hidden = true; });
     p.video.addEventListener("error", function () { if (p.clip) { p.loading.hidden = false; p.loading.textContent = "视频载入失败"; } });
   });
   function filtered() {
@@ -118,7 +121,7 @@
     var list = filtered(), html = "", group = "";
     list.forEach(function (s) {
       if (group !== s.group) { group = s.group; html += '<div class="list-group-title">' + esc(s.groupLabel) + " / " + (group === "rigid" ? "RIGID" : "CLOTH") + "</div>"; }
-      html += '<button class="scene-item' + (s.id === state.scene ? " active" : "") + '" data-scene="' + s.id + '" aria-pressed="' + String(s.id === state.scene) + '" aria-label="打开' + esc(s.short) + '"><img src="' + s.clips.REF.poster + '" alt="" loading="lazy"><span><strong>' + esc(s.short) + (s.id === "FLAG" ? " · 归档" : "") + '</strong><small><span>' + s.id + '</span><span class="scene-number">' + fmt(s.duration) + " s</span></small></span></button>";
+      html += '<button class="scene-item' + (s.id === state.scene ? " active" : "") + '" data-scene="' + s.id + '" aria-pressed="' + String(s.id === state.scene) + '" aria-label="打开' + esc(s.short) + '"><img src="' + s.clips.REF.poster + '" alt="" loading="lazy"><span><strong>' + esc(s.short) + '</strong><small><span>' + s.id + '</span><span class="scene-number">' + fmt(s.duration) + " s</span></small></span></button>";
     });
     $("sceneList").innerHTML = html || '<p class="empty-search">没有匹配的场景。试试“布料”“碰撞”或场景编号。</p>';
     $("navCount").textContent = list.length + " / 8";
@@ -142,7 +145,7 @@
     document.title = s.short + " · " + axis + " | Real2SimBench";
     $("sceneTitle").textContent = s.name; $("sceneDescription").textContent = s.description;
     $("sceneGroup").textContent = s.groupLabel; $("sceneId").textContent = s.id;
-    $("sceneEdition").hidden = !["R04", "FLAG"].includes(s.id); $("sceneEdition").textContent = s.id === "FLAG" ? "历史归档" : "错层铰接 v002";
+    $("sceneEdition").hidden = !["R04", "TABLECLOTH"].includes(s.id); $("sceneEdition").textContent = s.id === "TABLECLOTH" ? "T/A/V 已展示 · E 待验收" : "错层铰接 v002";
     $("scenePosition").textContent = String(scenes.indexOf(s) + 1).padStart(2, "0") + " / 08";
     $("topicHint").textContent = s.topic; $("factTopic").textContent = s.topic;
     $("factEngine").textContent = s.engine; $("factWindow").textContent = "0–" + fmt(s.duration) + " s";
@@ -154,8 +157,9 @@
     $("splitView").classList.toggle("active", !single); $("singleView").classList.toggle("active", single);
     $("splitView").setAttribute("aria-pressed", String(!single)); $("singleView").setAttribute("aria-pressed", String(single));
     $("splitView").disabled = axis === "REF"; $("singleView").disabled = isT;
-    document.querySelectorAll("[data-axis]").forEach(function (b) { var on = b.dataset.axis === axis; b.classList.toggle("active", on); b.setAttribute("aria-selected", String(on)); b.tabIndex = on ? 0 : -1; });
-    $("modeHint").innerHTML = '<span class="status-dot"></span>' + (isT ? "观测 → 未来 · 顺序播放" : single ? "原始仿真视频" : "同一物理时刻对照");
+    document.querySelectorAll("[data-axis]").forEach(function (b) { var on = b.dataset.axis === axis; b.classList.toggle("active", on); b.setAttribute("aria-selected", String(on)); b.tabIndex = on ? 0 : -1; if (b.dataset.axis === "E") b.querySelector("span").textContent = s.pending_axes && s.pending_axes.E ? "待验收" : "环境 / 约束"; });
+    var pending = s.pending_axes && s.pending_axes[axis] && !s.clips[axis];
+    $("modeHint").innerHTML = '<span class="status-dot"></span>' + (pending ? "此轴视频待验收 · 左侧为 REF" : isT ? "观测 → 未来 · 顺序播放" : single ? "原始仿真视频" : "同一物理时刻对照");
     $("totalTime").textContent = fmt(s.duration);
     $("timeline").max = String(s.duration); $("timeline").step = String(1 / s.fps);
     $("timelineHint").textContent = isT ? "连续物理时钟 · 切点 " + fmt(s.cut) + " s" : "物理时钟 · 调速不改变源轨迹";
@@ -184,6 +188,15 @@
     if (p.abort) p.abort.abort();
     p.abort = new AbortController();
     var signal = p.abort.signal;
+    if (!clip) {
+      p.clip = null; p.video.pause(); p.video.removeAttribute("src"); p.video.removeAttribute("poster"); p.video.load();
+      $(p.id + "Badge").textContent = badge; $(p.id + "Label").textContent = "待验收";
+      $(p.id + "Meta").textContent = "尚无可展示视频";
+      $(p.id + "Download").removeAttribute("href"); $(p.id + "Download").setAttribute("aria-disabled", "true");
+      p.loading.textContent = current().pending_axes && current().pending_axes[state.axis] || "视频待补充"; p.loading.hidden = false;
+      return Promise.resolve();
+    }
+    $(p.id + "Download").removeAttribute("aria-disabled");
     p.clip = clip; p.loading.textContent = "载入视频"; p.loading.hidden = false;
     $(p.id + "Badge").textContent = badge; $(p.id + "Label").textContent = label;
     $(p.id + "Meta").textContent = clip.frames + " 帧 · " + clip.fps + " fps · " + fmt(clip.start) + "–" + fmt(clip.end) + " s";
@@ -206,7 +219,7 @@
       await Promise.all([attach(slots[0], left, axis === "T" ? "T_OBS" : "REF", axis === "T" ? "观测段" : "基准条件"), attach(slots[1], right, axis === "T" ? "T_FUTURE" : axis, axis === "T" ? "未来段" : labels[axis])]);
       if (epoch !== state.epoch) return;
       state.loading = false; state.seeking = false;
-      slots.forEach(function (p) { if (p.video.readyState >= 2) p.loading.hidden = true; });
+      slots.forEach(function (p) { if (p.clip && p.video.readyState >= 2) p.loading.hidden = true; });
       seek(0, false); paintPlay(); document.body.dataset.ready = "true";
     } catch (error) {
       if (epoch !== state.epoch || error.name === "AbortError") return;
@@ -259,6 +272,7 @@
   });
   function readHash() {
     var p = new URLSearchParams(location.hash.slice(1));
+    if (p.get("scene") === "FLAG") p.set("scene", "TABLECLOTH");
     if (byId[p.get("scene")]) state.scene = p.get("scene");
     if (axes.includes(p.get("axis"))) state.axis = p.get("axis");
     if (["single", "split"].includes(p.get("view"))) state.layout = p.get("view");

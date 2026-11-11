@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "authorized_display": true,
+  "scene": "TABLECLOTH",
+  "eligible_axes": [
+    "T",
+    "A",
+    "V"
+  ],
+  "pending_axes": [
+    "E"
+  ],
+  "GT_display_clips": [
+    "REF",
+    "T_OBS",
+    "T_FUTURE",
+    "A",
+    "V"
+  ],
+  "source_admission_sha256": "2bbd441c99cd703ec284de83381a75518e6f8ab707354876c9910031e061e532",
+  "source_commit": "9c6cbe3a5bef09a967ca8d420056adfafdf1fc9a",
+  "videos": [
+    {
+      "scene": "TABLECLOTH",
+      "variant": "REF",
+      "path": "media/TABLECLOTH_REF.mp4",
+      "bytes": 1301813,
+      "SHA256": "20da273357305600f8e766cd78dad46e8c478ca8ab2ebd8bd798245598afb8ee"
+    },
+    {
+      "scene": "TABLECLOTH",
+      "variant": "T_OBS",
+      "path": "media/TABLECLOTH_T_OBS.mp4",
+      "bytes": 639244,
+      "SHA256": "713a2ced000bfc61a56570a4206ce006aa24f800fae0634d2b8f896e5866a548"
+    },
+    {
+      "scene": "TABLECLOTH",
+      "variant": "T_FUTURE",
+      "path": "media/TABLECLOTH_T_FUTURE.mp4",
+      "bytes": 663365,
+      "SHA256": "e4c5b7ee8e7b5696c03b242bace7f667f7bf77b99bccecdfb1e9ec0b19b436a6"
+    },
+    {
+      "scene": "TABLECLOTH",
+      "variant": "A",
+      "path": "media/TABLECLOTH_A.mp4",
+      "bytes": 1308669,
+      "SHA256": "a2114114017bc755010887607b6a4b9be35a5ea9ae436f6ae44cd79bdab139ec"
+    },
+    {
+      "scene": "TABLECLOTH",
+      "variant": "V",
+      "path": "media/TABLECLOTH_V.mp4",
+      "bytes": 1235401,
+      "SHA256": "5915412478db6e208676c031d68200818a9933e9d0345d90a994b7e82e5e47f5"
+    }
+  ],
+  "complete_GT_and_source_downloads_released": false,
+  "qualification": "Fixed discrete reference phase; full strict-E admission and continuum convergence are not claimed."
+}

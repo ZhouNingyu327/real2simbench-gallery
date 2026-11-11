@@ -1,8 +1,8 @@
 window.SHOWCASE = {
   "title": "Real2SimBench",
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "sceneCount": 8,
-  "clipCount": 48,
+  "clipCount": 47,
   "scenes": [
     {
       "id": "R01",
@@ -635,94 +635,88 @@ window.SHOWCASE = {
       "cut": 2.0
     },
     {
-      "id": "FLAG",
+      "id": "TABLECLOTH",
       "group": "cloth",
       "groupLabel": "布料",
-      "name": "恒定风场中的旗帜",
-      "short": "风中旗帜",
-      "en": "Flag in steady wind",
-      "topic": "风载变形与附着约束",
-      "description": "旗帜在恒定风场中产生褶皱和摆动。比较风速变化，以及从竖边两端固定切换为顶部两角固定。",
-      "engine": "ARCSim 0.2.1",
-      "source": "ARCSim 作者代码的明确数值派生 v009，固定材料、网格和时间设置。",
-      "url": "https://graphics.eecs.berkeley.edu/resources/ARCSim/",
-      "version": "ARCSim · v009",
-      "scope": "固定离散模型；完整原生重复、资产搬迁及冻结运行时复跑。数值敏感性单独披露。",
+      "name": "抽桌布与餐具接触",
+      "short": "抽桌布",
+      "en": "Tablecloth pull",
+      "topic": "摩擦传递与布料接触",
+      "description": "从桌布开始抽动起，观察餐具与布料之间的接触和摩擦传递。比较相同名义拉动距离下，慢拉与快拉产生的不同运动。",
+      "engine": "Codim-IPC",
+      "source": "固定版本 Codim-IPC 的 tableClothPull 模型，保留源材料、接触求解器和时间步；A 调整拉动速度及依赖的停止时间。",
+      "url": "https://github.com/ipc-sim/Codim-IPC/tree/9c6cbe3a5bef09a967ca8d420056adfafdf1fc9a",
+      "version": "Codim-IPC · 9c6cbe3 · reference v001",
+      "release": "TableclothPull reference phase v001",
+      "scope": "REF/A 完整独立重复与 301 个原生状态检查；T/A/V 按固定离散模型准入。步长敏感性已披露，不宣称连续体收敛或真实材料标定。严格 E 尚待验收。",
       "A": [
-        "恒定风速向量",
-        "[2, 0, 0] m/s",
-        "[3, 0, 0] m/s"
+        "拉动速度（名义位移保持 1 m）",
+        "0.5 m/s",
+        "4 m/s"
       ],
       "E": [
-        "旗帜附着点",
-        "竖边两端",
-        "顶部两角"
+        "环境与约束",
+        "基准桌面",
+        "待独立验收"
       ],
-      "note": "A 保留已验收的 3 m/s 风场；展示不包含后续未通过验收的强风尝试。",
-      "release": "Cloth4_Eval_v1_20261110",
-      "fps": 25,
       "interventions": {
-        "A": "只将恒定风速向量从[2,0,0]改为[3,0,0]m/s；采用已验收v009。",
-        "E": "只将竖边两端附着改为顶部两角附着。"
+        "A": "只改变规定拉动速度及其依赖的停止时间：0.5 → 4 m/s，名义拉动距离同为 1 m。",
+        "E": "严格几何／约束 E 的完整独立重复与物理验收尚未完成，目前不展示 E 视频。"
       },
+      "note": "观看 A 对照时，请同时观察桌布离开桌面的速度与餐具位移。当前展示完整 0–3 秒窗口，T 切点为 1.48 秒；E 视频待验收后补充。",
+      "pending_axes": {
+        "E": "E 视频待完整独立重复与物理验收，目前尚未发布。"
+      },
+      "fps": 25,
+      "duration": 3.0,
+      "cut": 1.48,
       "clips": {
         "REF": {
-          "src": "media/FLAG_REF.mp4",
-          "poster": "posters/FLAG_REF.jpg",
-          "frames": 101,
-          "fps": 25,
-          "start": 0.0,
-          "end": 4.0,
-          "encodedDuration": 4.04
-        },
-        "T_OBS": {
-          "src": "media/FLAG_T_OBS.mp4",
-          "poster": "posters/FLAG_T_OBS.jpg",
-          "frames": 25,
-          "fps": 25,
-          "start": 0.0,
-          "end": 0.96,
-          "encodedDuration": 1.0
-        },
-        "T_FUTURE": {
-          "src": "media/FLAG_T_FUTURE.mp4",
-          "poster": "posters/FLAG_T_FUTURE.jpg",
+          "src": "media/TABLECLOTH_REF.mp4",
+          "poster": "posters/TABLECLOTH_REF.jpg",
           "frames": 76,
           "fps": 25,
-          "start": 1.0,
-          "end": 4.0,
+          "start": 0.0,
+          "end": 3.0,
           "encodedDuration": 3.04
         },
-        "A": {
-          "src": "media/FLAG_A.mp4",
-          "poster": "posters/FLAG_A.jpg",
-          "frames": 101,
+        "T_OBS": {
+          "src": "media/TABLECLOTH_T_OBS.mp4",
+          "poster": "posters/TABLECLOTH_T_OBS.jpg",
+          "frames": 37,
           "fps": 25,
           "start": 0.0,
-          "end": 4.0,
-          "encodedDuration": 4.04
+          "end": 1.44,
+          "encodedDuration": 1.48
         },
-        "E": {
-          "src": "media/FLAG_E.mp4",
-          "poster": "posters/FLAG_E.jpg",
-          "frames": 101,
+        "T_FUTURE": {
+          "src": "media/TABLECLOTH_T_FUTURE.mp4",
+          "poster": "posters/TABLECLOTH_T_FUTURE.jpg",
+          "frames": 39,
+          "fps": 25,
+          "start": 1.48,
+          "end": 3.0,
+          "encodedDuration": 1.56
+        },
+        "A": {
+          "src": "media/TABLECLOTH_A.mp4",
+          "poster": "posters/TABLECLOTH_A.jpg",
+          "frames": 76,
           "fps": 25,
           "start": 0.0,
-          "end": 4.0,
-          "encodedDuration": 4.04
+          "end": 3.0,
+          "encodedDuration": 3.04
         },
         "V": {
-          "src": "media/FLAG_V.mp4",
-          "poster": "posters/FLAG_V.jpg",
-          "frames": 101,
+          "src": "media/TABLECLOTH_V.mp4",
+          "poster": "posters/TABLECLOTH_V.jpg",
+          "frames": 76,
           "fps": 25,
           "start": 0.0,
-          "end": 4.0,
-          "encodedDuration": 4.04
+          "end": 3.0,
+          "encodedDuration": 3.04
         }
-      },
-      "duration": 4.0,
-      "cut": 1.0
+      }
     }
   ]
 };

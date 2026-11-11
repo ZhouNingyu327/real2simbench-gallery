@@ -16,18 +16,19 @@
     if (!record) return;
     var job = record.tasks[axis], lines = [], downloads = record.downloads || {};
     lines.push('<div class="eval-heading"><div><span class="eyebrow">GPT EVALUATION / VERIFIED ARTIFACTS</span><h2>模型重建与下载</h2></div><span class="eval-model">Codex · gpt-6.1-sol · medium</span></div>');
-    lines.push('<p class="eval-scope">正式更新范围：R01–R04、S01、S02、S05、抽桌布。已冻结任务分批展示真实模型结果；FLAG 只作历史归档。抽桌布 T/A/V 已按固定离散协议首启，严格 E 仍待准入，GT 继续私有。</p>');
+    lines.push('<p class="eval-scope">八场景：R01–R04、S01、S02、S05、抽桌布。已完成视频先行展示，分数逐项补充。抽桌布已替换旗帜，提供 REF、T 前后段、A、V 及 GPT 对照；严格 E 视频待验收。</p>');
     lines.push('<p class="eval-warning">旧七场景 GT 在评测前已公开可得，现有访问审计不能证明无污染。分项分数不等于整体物理准确率；缺失与超时单列。</p>');
     if (record.archived) lines.push('<p class="eval-warning">FLAG 是旧版本归档，成绩不计入本轮正式八场景。</p>');
     if (!job) lines.push('<p class="eval-status">选择 T / A / E / V 查看对应尝试。T 的模型未来段对应上方 T_FUTURE，观测段单独报告。</p>');
     else {
       var visibleStatus = job.formal_submission_status || job.phase;
       lines.push('<p class="eval-status"><b>' + esc(scene + " / " + axis) + '</b><span>' + esc(labels[visibleStatus] || visibleStatus) + '</span></p>');
-      if (job.publication_hold) lines.push('<p class="eval-note">本任务新增产物仍在发布门槛内。新 GT 与代码下载须相关场景候选源码冻结；抽桌布还须严格 E 准入。</p>');
+      if (job.publication_hold) lines.push('<p class="eval-note">本任务视频尚未就绪或仍待验收。已完成视频不等待评分；完整 GT 与源码下载另行整理。</p>');
       if (job.delivery_note) lines.push('<p class="eval-warning">' + esc(job.delivery_note) + '</p>');
       if (job.V_flags) lines.push('<p class="eval-note">V 的三维几何读数不证明相机或视频遵从。物理轨迹不变性：' + (job.V_flags.physical_invariance_violation === false ? '未检测到违例' : job.V_flags.physical_invariance_violation === true ? '存在违例' : '待核验') + '；已知相机约定：' + (job.V_flags.camera_contract_violation === false ? '通过' : job.V_flags.camera_contract_violation === true ? '存在违例' : '待核验') + '。</p>');
       if (job.comparison) lines.push('<figure class="eval-video"><video controls playsinline preload="metadata" src="' + esc(job.comparison.href) + '" aria-label="GT 左侧与 GPT 右侧对照"></video><figcaption>GT 左 / GPT 右 · ' + (axis === "T" ? "T_FUTURE" : esc(axis)) + ' · 同一源时间窗口</figcaption></figure>');
       if (job.prediction) lines.push('<details class="eval-prediction"><summary>单独查看 GPT 生成视频</summary><video controls playsinline preload="none" src="' + esc(job.prediction.href) + '" aria-label="GPT 生成视频"></video><a download href="' + esc(job.prediction.href) + '">下载模型视频</a></details>');
+      if (job.prediction && (!job.metrics || !job.metrics.some(function (m) { return m.status === "ok"; }))) lines.push('<p class="eval-note">模型视频已生成；评分待补充。</p>');
       if (job.metrics && job.metrics.length) {
         lines.push('<div class="eval-metrics">');
         job.metrics.forEach(function (m) { lines.push('<div class="eval-metric"><span>' + esc(names[m.metric] || m.metric) + '</span><strong>' + (m.status === "ok" && Number.isFinite(m.value) ? Number(m.value).toPrecision(6) : esc(labels[m.status] || m.status)) + '</strong><small>' + esc(m.window) + (m.reading_class ? " · " + esc(m.reading_class) : "") + (m.reason ? " · " + esc(m.reason) : "") + '</small></div>'); });
@@ -46,7 +47,7 @@
     }
     if (axis === "E" && record.E_scope) lines.push('<p class="eval-note">E 分类：' + esc(record.E_scope.group) + '。' + esc(record.E_scope.interpretation) + '</p>');
     lines.push('<div class="eval-downloads">' + link(downloads.gt, "GT 数据包") + link(downloads.source, "GT 生成代码") + link(downloads.prediction_source, "GPT 冻结源码") + '</div>');
-    lines.push('<details class="eval-method"><summary>指标口径、版本与访问审计</summary><p>' + esc(record.release) + '。视频与评测输入逐项 SHA256 核对。TIPS 反映视觉语义相似度；等时 Chamfer 使用 GT 初始动态点云半径归一，越低越好。两者均不能单独证明动力学或接触正确。原始互穿读数受开放布面与连接几何影响。</p><p>mesh_watertight 是网格几何诊断。开放布料曲面本来可以不封闭，其 0 读数不能直接解释成物理失败，也不用于跨类别 Overall。</p><p>兼容固定 4DCodeBench 指标，不等同原论文榜单；缺失、失败、超时分别列示，绝不补 0，不计算 Overall。DINOv3 与相关 GeoPhys 暂缓。</p><p>旧 GT 展示早于评测公开可得；已有网络访问日志审计只发现模型服务域名，未发现展厅或 GT 路径访问模式。这不构成无污染证明。新桌布内容在物理验收与相关源码冻结后发布。</p></details>');
+    lines.push('<details class="eval-method"><summary>指标口径、版本与访问审计</summary><p>' + esc(record.release) + '。视频与评测输入逐项 SHA256 核对。TIPS 反映视觉语义相似度；等时 Chamfer 使用 GT 初始动态点云半径归一，越低越好。两者均不能单独证明动力学或接触正确。原始互穿读数受开放布面与连接几何影响。</p><p>mesh_watertight 是网格几何诊断。开放布料曲面本来可以不封闭，其 0 读数不能直接解释成物理失败，也不用于跨类别 Overall。</p><p>兼容固定 4DCodeBench 指标，不等同原论文榜单；缺失、失败、超时分别列示，绝不补 0，不计算 Overall。DINOv3 与相关 GeoPhys 暂缓。</p><p>旧 GT 展示早于评测公开可得；已有网络访问日志审计只发现模型服务域名，未发现展厅或 GT 路径访问模式。这不构成无污染证明。抽桌布 T/A/V 的当前模型源码已冻结，本次先发布已准入展示视频；后续任务将记录这一公开时间。</p></details>');
     lines.push('<details class="eval-method"><summary>配准窗口、单次尝试与隔离边界</summary><p>主评分采用 observed/reference-frozen_v1：T 只用 T_OBS，A/E 只用 q_ref，冻结变换、采样权重与伙伴再应用目标窗口。T 同时报观测段和未来段。Scene3D 本身只比较该窗口首帧；Dynamic IoU 与 TIPS 不使用空间配准。旧独立窗口配准保留在兼容诊断栏，不计作新版主评分。</p><p>每任务固定模型、medium、单次6h预算。15份命令构造期基础设施失败在模型调用与其计时建立前发生，原证据保留；修复后才首启真实尝试，未重试已运行模型。缺失、重建超时与模型超时分别列示。</p><p>同构建器实测中宿主 GT、native、私有 query 和其他任务路径均不可见。模型阶段持有自己的认证与网络代理；查询阶段不挂载认证、代理或参考视频，但固定程序副本可写。这不构成无污染或不可逃逸证明。</p></details>');
     lines.push('<p class="eval-updated">数据快照：' + esc(data.updated_beijing) + ' · 成绩逐项更新，任务结束不等于提交合格。</p>');
     panel.innerHTML = lines.join("");
