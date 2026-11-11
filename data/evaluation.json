@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T11:18:54+08:00",
+  "updated_beijing": "2026-11-11T11:42:44+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task results may be released against already-public accepted GT. New GT and code downloads require related-scene source freezes. Tablecloth GT/hidden-query artifacts remain private.",
@@ -3969,43 +3969,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.989538705907762,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "61dc129adbfadcb22e88257749f86da70f52a3cd962ea4c8acb767ccc786cca7",
+              "fit_manifest_sha256": "e8b783d99ba8937a4a681ee8efcb88116025335f4f982c89e945a37dcb023a5d"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.953974528121762,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "18836d91f3bba0b5bfb0590b109e5508af1cf161afeaffabe7717193211ebd1a",
+              "fit_manifest_sha256": "e8b783d99ba8937a4a681ee8efcb88116025335f4f982c89e945a37dcb023a5d"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9344506258323051,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "00b4841d800385e2bf44b87c10281960f889e1fe1f8a46a2dee026b869f2f518",
+              "fit_manifest_sha256": "e8b783d99ba8937a4a681ee8efcb88116025335f4f982c89e945a37dcb023a5d"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.9119978513797173,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "9ed192cfac5b9336ae5960049c409dd2c7063fb10c227cb1f5a3b4cf26bdbbae",
+              "fit_manifest_sha256": "e8b783d99ba8937a4a681ee8efcb88116025335f4f982c89e945a37dcb023a5d"
             }
           ],
           "diagnostic_metrics": [],
