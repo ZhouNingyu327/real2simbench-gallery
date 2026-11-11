@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T11:12:37+08:00",
+  "updated_beijing": "2026-11-11T11:18:54+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task results may be released against already-public accepted GT. New GT and code downloads require related-scene source freezes. Tablecloth GT/hidden-query artifacts remain private.",
@@ -215,43 +215,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9979695314541459,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "2904216e24f9c480932a6656708275fb1a107b82b5a9882b10a7e97795cb3f88",
+              "fit_manifest_sha256": "4b5d81c6d2b3cdd8bde24cce0cb3457c84b214259b6c57e29b54971e58df31c1"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9958833145210519,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "68b01afaadcc401a328a1b2a17eb39e4658d72d8e9dc555265aa80ebe2df891e",
+              "fit_manifest_sha256": "4b5d81c6d2b3cdd8bde24cce0cb3457c84b214259b6c57e29b54971e58df31c1"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9872688325782288,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "dec3b6d092adbb274e7696e25f09c864d1af5ad46a1dd586a449f7f7c12cfd92",
+              "fit_manifest_sha256": "4b5d81c6d2b3cdd8bde24cce0cb3457c84b214259b6c57e29b54971e58df31c1"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.9960587328632804,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "3d0ff913f489c2c18d92107639d7607d91a15a1a7cef4a0479807df2f9cf36df",
+              "fit_manifest_sha256": "4b5d81c6d2b3cdd8bde24cce0cb3457c84b214259b6c57e29b54971e58df31c1"
             }
           ],
           "diagnostic_metrics": [
@@ -553,43 +553,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9846833096817136,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "7a8c706e31b041f06cb04c3bd7c409bfedf754dbe5fcbe41b9f9207ef61a1670",
+              "fit_manifest_sha256": "a7bcbd5993cdde222c51e48dfb259d45dec8bf4f9250b471425cffc8a80ff0c3"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.7599296690896153,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "4845f485045a31f80b7f472fadc2fc209201dd0fc25521ed89e1fe03b6d4868f",
+              "fit_manifest_sha256": "a7bcbd5993cdde222c51e48dfb259d45dec8bf4f9250b471425cffc8a80ff0c3"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9403123261323856,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "712f8b9cbc6ee9f0b94e3c34224f7d2a5a6b2310fe48c94dcbb82544f3fae9a5",
+              "fit_manifest_sha256": "a7bcbd5993cdde222c51e48dfb259d45dec8bf4f9250b471425cffc8a80ff0c3"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.9620962761699516,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "4f71a3e30500dd9492265f37eb2df75c8b605188c3a1782049541bed74e55619",
+              "fit_manifest_sha256": "a7bcbd5993cdde222c51e48dfb259d45dec8bf4f9250b471425cffc8a80ff0c3"
             }
           ],
           "diagnostic_metrics": [],
@@ -856,43 +856,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9937209808267653,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "5ad1b5b51a4ce41c98913348067d07513d05e1906bf34f3cdc876415497b0cda",
+              "fit_manifest_sha256": "b5e3a95216d3a7c8b396c4a1624100267bf4d39a17f9f53ee2ca7a1872b89b45"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9903123460244387,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "f24d9ee65e267991059b324b91baee347943b268f062dd2f8bede2269d5130e5",
+              "fit_manifest_sha256": "b5e3a95216d3a7c8b396c4a1624100267bf4d39a17f9f53ee2ca7a1872b89b45"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9926488321684638,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "c9b6ad4520a137ea9656b721269974d594aace4b81b7bad7cdb63596ef6190db",
+              "fit_manifest_sha256": "b5e3a95216d3a7c8b396c4a1624100267bf4d39a17f9f53ee2ca7a1872b89b45"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.9969434865414545,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "b19ad897f1ee0663af6cafe9d51e92f1bad602f2d1db22533e003fc0582691a2",
+              "fit_manifest_sha256": "b5e3a95216d3a7c8b396c4a1624100267bf4d39a17f9f53ee2ca7a1872b89b45"
             }
           ],
           "diagnostic_metrics": [
@@ -1084,43 +1084,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9946524165570736,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "7562e737329194ded3ccc7677749ab352dd918f05d8acaed89b0034625a4074b",
+              "fit_manifest_sha256": "cd7968c4c18e69461674358adccd5afdee3edbcc42650b5d97b80530d9b1657d"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9905439216818195,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "b4a0f3bb4739ba1059949f35e189951e1370ebc95c4133051d2b0e85c8b5ca21",
+              "fit_manifest_sha256": "cd7968c4c18e69461674358adccd5afdee3edbcc42650b5d97b80530d9b1657d"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9920685977056534,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "8badf91a8e43cab349bcf475166832a05e5f1583815add18afa4690fba422e06",
+              "fit_manifest_sha256": "cd7968c4c18e69461674358adccd5afdee3edbcc42650b5d97b80530d9b1657d"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.9954447372427548,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "df9b2ce5e057cfa3db8a4de2cd6363cea5fb9d2387ea9c2435907c719f1ad9b8",
+              "fit_manifest_sha256": "cd7968c4c18e69461674358adccd5afdee3edbcc42650b5d97b80530d9b1657d"
             },
             {
               "metric": "equal_timestamp_dynamic_chamfer",
@@ -1497,43 +1497,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9900064207613468,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "df58800747ed02528bef6572c32f6efdff6b5dfa517523fd9491f526bf440aff",
+              "fit_manifest_sha256": "757217739460f3313e4cfda39f73b7f50683ed62d85e2a2a5e87337e3e26d963"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9940623853181023,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "6c822b025fc9529bee2022ed2db2dd537f69caf7bb7ffdf0a3bd29adc08f16f1",
+              "fit_manifest_sha256": "757217739460f3313e4cfda39f73b7f50683ed62d85e2a2a5e87337e3e26d963"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9900832560846773,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "ea9961752e5f096290e3d9c96011532c1e27567a3afad3476a45486e11106a38",
+              "fit_manifest_sha256": "757217739460f3313e4cfda39f73b7f50683ed62d85e2a2a5e87337e3e26d963"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.9484263239560317,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "1e4350e65946d509e3b1220407cb2929985638a34f7d66ddccd61e613df99a11",
+              "fit_manifest_sha256": "757217739460f3313e4cfda39f73b7f50683ed62d85e2a2a5e87337e3e26d963"
             }
           ],
           "diagnostic_metrics": [
@@ -1725,42 +1725,42 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9908229317516088,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "73dd0567c7965956867dc06fec71745f65d7900c81b49a52eac0dbe71bd6ac41",
+              "fit_manifest_sha256": "3c864ca993425e3e05a0cefe92f9f80c540a20cad2eeb7c1a12e5879b9f146bd"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9788229356054217,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "4dd2f8f6ed71bab9214678aca2677fa9e5076517e2e388b7da0ac070096f595f",
+              "fit_manifest_sha256": "3c864ca993425e3e05a0cefe92f9f80c540a20cad2eeb7c1a12e5879b9f146bd"
             },
             {
               "metric": "trajectory_dtw",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "cf0b32bc3bd5a9479749609bb0cfee4d8c118e97ebd49dfbf442045227a9df75",
               "fit_manifest_sha256": null
             },
             {
               "metric": "emd_step",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "9ac7bd895ab4a9872d3156945450dc05261dbe3ff5483d846ce9219aafc24891",
               "fit_manifest_sha256": null
             },
             {
@@ -2138,43 +2138,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9934702096506953,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "4eacc57bc7f359ea7a5d63b0115f8e422b8f0c4140fa72f28a8b79c5ada8847e",
+              "fit_manifest_sha256": "03e2bd52b766a32089e3c520db61f8711edfc1582be5891cffc3634c4ebb6f0e"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.994478042179253,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "fede4d97b80381b1a9369831d8bbfb9cd95309cf330e9eb92f838fee279e7571",
+              "fit_manifest_sha256": "03e2bd52b766a32089e3c520db61f8711edfc1582be5891cffc3634c4ebb6f0e"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9587230492843135,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "3920859ce48cfb1ec9083ed34fef4aaaa00a6c8a52a3132f3828b74e63c324c6",
+              "fit_manifest_sha256": "03e2bd52b766a32089e3c520db61f8711edfc1582be5891cffc3634c4ebb6f0e"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.9950839990636942,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "225aca2bf3d745643cb34fd9be10fbfbf722093aecb305d74689ee110f2c0b57",
+              "fit_manifest_sha256": "03e2bd52b766a32089e3c520db61f8711edfc1582be5891cffc3634c4ebb6f0e"
             }
           ],
           "diagnostic_metrics": [
@@ -2366,43 +2366,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9919059658423066,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "4067887b31ce6c328120ec07e7146c7f26a5d8f338060b2612620fb2a2e309b5",
+              "fit_manifest_sha256": "0c53d562a9dab0c6572cab24969a6f5f1d5faa041cd1550bc26e433223e7649f"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.6927755493670702,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "0477f5bcd1b540fb680d61eb421098f789077ae76b3f4f2afb4ec4a62e53577b",
+              "fit_manifest_sha256": "0c53d562a9dab0c6572cab24969a6f5f1d5faa041cd1550bc26e433223e7649f"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.7323598138070011,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "9b0dc77bee60dae3951728922448a1e0136063553c225ee4ee170cba619d01f1",
+              "fit_manifest_sha256": "0c53d562a9dab0c6572cab24969a6f5f1d5faa041cd1550bc26e433223e7649f"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.8600366069128054,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "d4d7f0499b1f89d99c38c508a212bbda5dfd02a86926f55ff344aad74cec3015",
+              "fit_manifest_sha256": "0c53d562a9dab0c6572cab24969a6f5f1d5faa041cd1550bc26e433223e7649f"
             },
             {
               "metric": "equal_timestamp_dynamic_chamfer",
@@ -2630,41 +2630,41 @@
             {
               "metric": "scene_3d",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "T_FUTURE",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "model_world_video_missing",
+              "metric_json_sha256": "db2415f51abf513258f8291d39f29dd3cd1fdaf3869d5fdb7c2f0dc6e3bc18d8",
               "fit_manifest_sha256": null
             },
             {
               "metric": "occupancy_dtw",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "T_FUTURE",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "model_world_video_missing",
+              "metric_json_sha256": "5e8cbeb653a7f580130bfcf7f9ae3f32abba6531f7457d8a7c4f4601392a2496",
               "fit_manifest_sha256": null
             },
             {
               "metric": "trajectory_dtw",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "T_FUTURE",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "model_world_video_missing",
+              "metric_json_sha256": "747479b19a6b463c4e94fe66587d0b225b8e4e1980f28a9babf80bf0144e3166",
               "fit_manifest_sha256": null
             },
             {
               "metric": "emd_step",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "T_FUTURE",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "model_world_video_missing",
+              "metric_json_sha256": "2c79347486939215588224c25aaea3116cfec87664a27acf5e5f081f70541d07",
               "fit_manifest_sha256": null
             },
             {
@@ -2720,41 +2720,41 @@
             {
               "metric": "scene_3d",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "model_world_video_missing",
+              "metric_json_sha256": "73dcb8f02a02cf7794e4b50ca73967579a0ddf55ef10aaf41713e71647b75724",
               "fit_manifest_sha256": null
             },
             {
               "metric": "occupancy_dtw",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "model_world_video_missing",
+              "metric_json_sha256": "74709fac665a10acc5196e37a0b2464ac7e0ac3760c4e9385148c062f83f0b4a",
               "fit_manifest_sha256": null
             },
             {
               "metric": "trajectory_dtw",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "model_world_video_missing",
+              "metric_json_sha256": "a4ba920941cecb11f2820cd041a5aaf2fa0796731ac3867c2898ad52bc6c26d6",
               "fit_manifest_sha256": null
             },
             {
               "metric": "emd_step",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "model_world_video_missing",
+              "metric_json_sha256": "9d08cdf133cd9c89cdf506c757e2f06cf7069e85ff7513b445bbc9cbc88c03a0",
               "fit_manifest_sha256": null
             }
           ],
@@ -2932,41 +2932,41 @@
             {
               "metric": "scene_3d",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "ae007d32debbcd5038892132e296b92f34dadf0181f783616018fab83aa77660",
               "fit_manifest_sha256": null
             },
             {
               "metric": "occupancy_dtw",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "171eb056eac5cb373639d7e26239801120ca0e13602dd6ba0810efa891250669",
               "fit_manifest_sha256": null
             },
             {
               "metric": "trajectory_dtw",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "8afeee772084cab096cf273b2470b0d7915d1651eac5ed6a798c14bd5ded958f",
               "fit_manifest_sha256": null
             },
             {
               "metric": "emd_step",
               "value": null,
-              "status": "pending",
+              "status": "unavailable",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "6875774f1a2ac94714847be17068fae9d41a6e5fcefe29939d98eba79b94f525",
               "fit_manifest_sha256": null
             },
             {
@@ -3346,43 +3346,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.990647692233324,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "9cc71799cd6c8697d4027d9e089eff689ad146c5e82378c21e3e073f0f461989",
+              "fit_manifest_sha256": "f730754e4ac70aac74d02a0ced4f38ac596664cd321718d9efcf35a1266cdaef"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9631607219344005,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "d6960c2f5161a25a9790932d02f873fa41234fd790111c645cac602404ba1e88",
+              "fit_manifest_sha256": "f730754e4ac70aac74d02a0ced4f38ac596664cd321718d9efcf35a1266cdaef"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9910538504243078,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "340cd78a6fce992554fe3f90df2d75f337c800376ed63f4deace4fb596b6bd9e",
+              "fit_manifest_sha256": "f730754e4ac70aac74d02a0ced4f38ac596664cd321718d9efcf35a1266cdaef"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.9561859703918579,
+              "status": "ok",
               "window": "T_OBS",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "41e299b23fec3fa3ddf5cc6b6eabeca880b5ba9f50d772e8401d109545947017",
+              "fit_manifest_sha256": "f730754e4ac70aac74d02a0ced4f38ac596664cd321718d9efcf35a1266cdaef"
             }
           ],
           "diagnostic_metrics": [
@@ -3576,43 +3576,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9999994623088924,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "443ea57cf182887f9e25734f515916387f522f0cfd61b745740e3b2fa35349c4",
+              "fit_manifest_sha256": "ef9eb2300d0bae13292f9dd2013cfd8392523aa8286731e62d6187e8a6f17076"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.8667139553547125,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "e5cf147a540db74a3315705104398912e6eb3965ee3b0dd60bb6868dd3ecf8b4",
+              "fit_manifest_sha256": "ef9eb2300d0bae13292f9dd2013cfd8392523aa8286731e62d6187e8a6f17076"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9352072456048504,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "ab898a886e49164bb79785611f9942e413fadafbee7396d982cb8d42fc2d96d4",
+              "fit_manifest_sha256": "ef9eb2300d0bae13292f9dd2013cfd8392523aa8286731e62d6187e8a6f17076"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.8682053075520058,
+              "status": "ok",
               "window": "A",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "60bde16a262a81f666e96a4a4407939200234b8737e5ce8b714ec158b0a8f1af",
+              "fit_manifest_sha256": "ef9eb2300d0bae13292f9dd2013cfd8392523aa8286731e62d6187e8a6f17076"
             },
             {
               "metric": "equal_timestamp_dynamic_chamfer",
@@ -3859,43 +3859,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9594255611300468,
+              "status": "ok",
               "window": "T_FUTURE",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "c40d34022e7b266cba4dcafc110dc7b9c82a2d3a752ce5448a8ef2d77176e9fc",
+              "fit_manifest_sha256": "e8b783d99ba8937a4a681ee8efcb88116025335f4f982c89e945a37dcb023a5d"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.5862722797319293,
+              "status": "ok",
               "window": "T_FUTURE",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "f85f88a0153b4822d34b7c4797f40f5f3a09a9b733c0dd25d6b627a59cded57d",
+              "fit_manifest_sha256": "e8b783d99ba8937a4a681ee8efcb88116025335f4f982c89e945a37dcb023a5d"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9224952943205267,
+              "status": "ok",
               "window": "T_FUTURE",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "17d0bbba925b8f23ce4ff97321994368d4d99860d9382be3824b632e6566c0b4",
+              "fit_manifest_sha256": "e8b783d99ba8937a4a681ee8efcb88116025335f4f982c89e945a37dcb023a5d"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.8593843316482894,
+              "status": "ok",
               "window": "T_FUTURE",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "aed478c3c9c360bfe711b53cc5cee3d91c5bc687e2d6816396afcc96ff2e16d4",
+              "fit_manifest_sha256": "e8b783d99ba8937a4a681ee8efcb88116025335f4f982c89e945a37dcb023a5d"
             },
             {
               "metric": "equal_timestamp_dynamic_chamfer",
