@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T12:56:21+08:00",
+  "updated_beijing": "2026-11-11T12:58:17+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task results may be released against already-public accepted GT. New GT and code downloads require related-scene source freezes. Tablecloth GT/hidden-query artifacts remain private.",
@@ -2174,7 +2174,15 @@
               181
             ]
           },
-          "media_validation": "pending_local_full_decode"
+          "comparison": {
+            "href": "media/gpt/RA4_R03_E_GT_left_GPT_right.mp4",
+            "sha256": "ab0ba7e8e357e919fdfcf1b0905da46226ec05a06f7648ead62f381737339c75",
+            "frames": 181,
+            "source_frame_slice": [
+              0,
+              181
+            ]
+          }
         },
         "V": {
           "phase": "queued",
