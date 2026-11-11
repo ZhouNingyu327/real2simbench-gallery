@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T14:45:16+08:00",
+  "updated_beijing": "2026-11-12T00:03:45+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task media may be released. User expressly authorized completed TABLECLOTH REF/T/A/V and GPT T/A/V media; strict E, numeric GT, source and authoring remain withheld.",
@@ -365,7 +365,12 @@
               60,
               241
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "A": {
           "phase": "ready_for_scoring",
@@ -622,7 +627,12 @@
               0,
               241
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "E": {
           "phase": "ready_for_scoring",
@@ -879,7 +889,12 @@
               0,
               241
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "V": {
           "phase": "ready_for_scoring",
@@ -996,7 +1011,12 @@
               0,
               241
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         }
       },
       "downloads": {},
@@ -1368,7 +1388,12 @@
               60,
               121
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "A": {
           "phase": "ready_for_scoring",
@@ -1625,7 +1650,12 @@
               0,
               121
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "E": {
           "phase": "ready_for_scoring",
@@ -1882,13 +1912,53 @@
               0,
               121
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "V": {
-          "phase": "offline_rebuild",
-          "publication_hold": true,
+          "phase": "ready_for_scoring",
+          "publication_hold": false,
           "metrics": [],
-          "diagnostic_metrics": []
+          "diagnostic_metrics": [],
+          "version_binding": {
+            "source_freeze_manifest_sha256": "5bd794a01ed2836f158d14b674a6201956bc5f8e4dd95dd20e0aa9f6077067b8",
+            "source_freeze_unix": 1794377778.621013,
+            "original_submission_video_sha256": "524f83038552f9097199e2a5f088780ac383ad1317e5de84fb2e5c4112878d35",
+            "scored_video_sha256": "570258d8cd247dd034ece16b068a3edfe695b821c6c05a17bc48bc797630f36f",
+            "original_submission_world_tree_sha256": "848cde35fdbac380301603b79eed980dce33c7e87c59b07ce368ddd1074f13de",
+            "scored_world_tree_sha256": "2fbac0e985e7662d242463e575e2fd9857faf27a0f0d74ce32d01994abe85d78",
+            "GT_reference_world_tree_sha256": "7df6f4d49c2a3b3ed2c4c1754be7073a9bd3bc8a4d6b13c3a9e3834cddf02a18",
+            "GT_target_world_tree_sha256": "ccd369f5b1ee7d93b7ca69b4b3b4b056de77a6712e91b8c935284f0f45062eea",
+            "observation_sha256": "3b4bc704ed765b102d520b98ef328e1c74575b4747ab48333c8eed3f285c90f2",
+            "GT_target_video_sha256": "cf30e2a8246b8e2a101f2b49c02c012b77c3cd209fddf56e9fc8ed8c4aea4d59"
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0,
+          "prediction": {
+            "href": "media/gpt/RA4_R02_V_GPT.mp4",
+            "sha256": "570258d8cd247dd034ece16b068a3edfe695b821c6c05a17bc48bc797630f36f",
+            "frames": 121,
+            "source_frame_slice": [
+              0,
+              121
+            ]
+          },
+          "comparison": {
+            "href": "media/gpt/RA4_R02_V_GT_left_GPT_right.mp4",
+            "sha256": "b9922d66d2e8dfdc9c52fec37635bcdd7f44a8a9826e9088e31b269b7ea047dc",
+            "frames": 121,
+            "source_frame_slice": [
+              0,
+              121
+            ]
+          }
         }
       },
       "downloads": {},
@@ -2260,7 +2330,12 @@
               60,
               181
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "A": {
           "phase": "ready_for_scoring",
@@ -2517,7 +2592,12 @@
               0,
               181
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "E": {
           "phase": "ready_for_scoring",
@@ -2774,13 +2854,53 @@
               0,
               181
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "V": {
-          "phase": "offline_rebuild",
-          "publication_hold": true,
+          "phase": "ready_for_scoring",
+          "publication_hold": false,
           "metrics": [],
-          "diagnostic_metrics": []
+          "diagnostic_metrics": [],
+          "version_binding": {
+            "source_freeze_manifest_sha256": "3de47fada7bac5409856a6c2a5823fc01286e7d75169144d9e2537d1844a7cdf",
+            "source_freeze_unix": 1794378116.8340418,
+            "original_submission_video_sha256": "597d43d1711063de2411df2e0b506f6565433e832d0483805d2118c8282444c6",
+            "scored_video_sha256": "763b332c35bf445bbfe038a6bd027a630580fe059d2a7ef4fc89eaa2401e206e",
+            "original_submission_world_tree_sha256": "a5196c8116f63322e5a6ef4006ec8da2815511d7c240901ce98730a6a38615cc",
+            "scored_world_tree_sha256": "cc9a900224974b2f8a36167f84becee287dd87ee3573f62a3ed146d5dec6358b",
+            "GT_reference_world_tree_sha256": "f4ffb7aaa942e9d649690e82b8f07656906afbb02e6feeabe54e0ed8ff1e9c72",
+            "GT_target_world_tree_sha256": "eec750fb4aee9be1203419f9f144d20c944fc3bfb9a462d9ff0d0513d049fe2a",
+            "observation_sha256": "d411c207fe36cd838b82bbd6607322cc9508d665981149ea10dd05f47fc8ecbe",
+            "GT_target_video_sha256": "26446fcb9e1f7b4c8917a29f93069ac6d530882c579055c9ad3bf18f3acf7a80"
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0,
+          "prediction": {
+            "href": "media/gpt/RA4_R03_V_GPT.mp4",
+            "sha256": "763b332c35bf445bbfe038a6bd027a630580fe059d2a7ef4fc89eaa2401e206e",
+            "frames": 181,
+            "source_frame_slice": [
+              0,
+              181
+            ]
+          },
+          "comparison": {
+            "href": "media/gpt/RA4_R03_V_GT_left_GPT_right.mp4",
+            "sha256": "2ed82c7e6c6b00f666743578810bc38aaa3480aa327247dc92565fbf817065ff",
+            "frames": 181,
+            "source_frame_slice": [
+              0,
+              181
+            ]
+          }
         }
       },
       "downloads": {},
@@ -3152,7 +3272,12 @@
               150,
               401
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "A": {
           "phase": "ready_for_scoring",
@@ -3409,19 +3534,96 @@
               0,
               401
             ]
-          }
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0
         },
         "E": {
-          "phase": "offline_rebuild",
-          "publication_hold": true,
+          "phase": "ready_for_scoring",
+          "publication_hold": false,
           "metrics": [],
-          "diagnostic_metrics": []
+          "diagnostic_metrics": [],
+          "version_binding": {
+            "source_freeze_manifest_sha256": "db39ec51504db1eca90503914743bfb71e983bc934c2ca44f88d38fd591bca89",
+            "source_freeze_unix": 1794374954.5907717,
+            "original_submission_video_sha256": "1da57c4df4c1a1df0419d1a1b346fab67c105cba8c254f3edee4943c78d3ee13",
+            "scored_video_sha256": "916fabedbccdc0e2c3b33d3e7f8d6a3f27ad08f6e0650cddd96e42e002111187",
+            "original_submission_world_tree_sha256": "5ba9fe905d6d30e2fb629ba17500894884d2015634c5443eb6a54afedcd5071a",
+            "scored_world_tree_sha256": "f8f5cde67ee12ede63b497605d2bd2261dc911c5d1e028b60de13fd969958870",
+            "GT_reference_world_tree_sha256": "4117629393f5a5084830fda6bee74f57c502fc8ec8acf731d9a4ae0374f2d011",
+            "GT_target_world_tree_sha256": "0535c53439fa0a3583d97d40f86d1c5342b175612524eebb2c93fe788d74948d",
+            "observation_sha256": "64ec553c07f17b58d67c69d4abb8ece90bd1e4d922acf8641369f02904e7f067",
+            "GT_target_video_sha256": "1a18b62d9ee6c43376ceb915d995f71b1ffc95be1b9685d4f4f81361909b513b"
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 0,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 0,
+          "target_format_validator_exit": 0,
+          "prediction": {
+            "href": "media/gpt/RA4_R04_E_GPT.mp4",
+            "sha256": "916fabedbccdc0e2c3b33d3e7f8d6a3f27ad08f6e0650cddd96e42e002111187",
+            "frames": 401,
+            "source_frame_slice": [
+              0,
+              401
+            ]
+          },
+          "comparison": {
+            "href": "media/gpt/RA4_R04_E_GT_left_GPT_right.mp4",
+            "sha256": "e8c593515f8742e76f21c802b3b7cf44cec0bbeca95bee15a6cf518d57d6a35c",
+            "frames": 401,
+            "source_frame_slice": [
+              0,
+              401
+            ]
+          }
         },
         "V": {
-          "phase": "agent_running",
-          "publication_hold": true,
+          "phase": "ready_for_scoring",
+          "publication_hold": false,
           "metrics": [],
-          "diagnostic_metrics": []
+          "diagnostic_metrics": [],
+          "version_binding": {
+            "source_freeze_manifest_sha256": "fc2f4243f0418cc273c0613c8c5a21400e2fc92f587c17f829b7f0e88ffb0b55",
+            "source_freeze_unix": 1794398447.919779,
+            "original_submission_video_sha256": "5457d0e5806c8121e631f33fc9a2d8af36d6e2b3c31be35562d9fe305df8b7bf",
+            "scored_video_sha256": "6ab1a9f28d0fc23c996f7d96fed66c2d4d604599f79951ef21b41c2c9a421a99",
+            "original_submission_world_tree_sha256": "3a81d1fdf5d3b0adee73a0cb757b146147373efd5cecc969a9f29c1e09970d32",
+            "scored_world_tree_sha256": "70c3fc1b91e179f880b74232db6090a75d5f564ea233e1b57424d8c08303e24d",
+            "GT_reference_world_tree_sha256": "4117629393f5a5084830fda6bee74f57c502fc8ec8acf731d9a4ae0374f2d011",
+            "GT_target_world_tree_sha256": "0251ef33d3c91ae1af26defbb46f532dcc291b83cdc6bdcfa33d1585e2eb1eed",
+            "observation_sha256": "64ec553c07f17b58d67c69d4abb8ece90bd1e4d922acf8641369f02904e7f067",
+            "GT_target_video_sha256": "39ad5dd8d221466af9324db45e1798c00bde069ec79aa0134ef0b4bf460f87fc"
+          },
+          "media_delivery_verified": true,
+          "original_agent_exit": 124,
+          "source_rebuild_exit": 0,
+          "original_format_validator_exit": 1,
+          "target_format_validator_exit": 1,
+          "formal_submission_status": "gate_failed",
+          "delivery_note": "原格式检查未通过。模型达到原6h时限；提交目录含README.md，违反仅允许.py和.sh文件的约束。现展示已校验的原样视频和GT对照；格式失败记录保留，不作为评测通过。",
+          "prediction": {
+            "href": "media/gpt/RA4_R04_V_GPT.mp4",
+            "sha256": "6ab1a9f28d0fc23c996f7d96fed66c2d4d604599f79951ef21b41c2c9a421a99",
+            "frames": 401,
+            "source_frame_slice": [
+              0,
+              401
+            ]
+          },
+          "comparison": {
+            "href": "media/gpt/RA4_R04_V_GT_left_GPT_right.mp4",
+            "sha256": "2492196b75563fc63dbe56ebfc075bcba81467601a7340fb48b27adb209a7d0b",
+            "frames": 401,
+            "source_frame_slice": [
+              0,
+              401
+            ]
+          }
         }
       },
       "downloads": {},
@@ -6545,5 +6747,11 @@
       "downloads": {},
       "E_scope": null
     }
+  },
+  "last_scoped_update": {
+    "scope": "Rigid4 all16 GPT task videos and GT comparisons",
+    "cloth_snapshot_unchanged": true,
+    "source_verified_utc": "2026-11-11T15:58:15Z",
+    "original_failures_preserved": true
   }
 }
