@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T13:40:30+08:00",
+  "updated_beijing": "2026-11-11T14:01:07+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task media may be released. User expressly authorized completed TABLECLOTH REF/T/A/V and GPT T/A/V media; strict E, numeric GT, source and authoring remain withheld.",
@@ -792,7 +792,7 @@
           }
         },
         "V": {
-          "phase": "agent_running",
+          "phase": "offline_rebuild",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -2937,7 +2937,7 @@
           "diagnostic_metrics": []
         },
         "V": {
-          "phase": "queued",
+          "phase": "agent_running",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -4258,10 +4258,121 @@
           "diagnostic_metrics": []
         },
         "V": {
-          "phase": "offline_rebuild",
-          "publication_hold": true,
-          "metrics": [],
-          "diagnostic_metrics": []
+          "phase": "ready_for_scoring",
+          "publication_hold": false,
+          "metrics": [
+            {
+              "metric": "scene_3d",
+              "value": null,
+              "status": "pending",
+              "window": "V",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "occupancy_dtw",
+              "value": null,
+              "status": "pending",
+              "window": "V",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "trajectory_dtw",
+              "value": null,
+              "status": "pending",
+              "window": "V",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "emd_step",
+              "value": null,
+              "status": "pending",
+              "window": "V",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "scene_3d",
+              "value": null,
+              "status": "pending",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "occupancy_dtw",
+              "value": null,
+              "status": "pending",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "trajectory_dtw",
+              "value": null,
+              "status": "pending",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "emd_step",
+              "value": null,
+              "status": "pending",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            }
+          ],
+          "diagnostic_metrics": [],
+          "version_binding": {
+            "source_freeze_manifest_sha256": "031febe203e86cd7c98e7ea7145e5395434d92a9db00d403a631dc3d7313189d",
+            "source_freeze_unix": 1794375288.7808003,
+            "original_submission_video_sha256": "7f08f666f5abb179da3ded1cd99e1b1fff6f0f3702a32c3dba3e7d47d99766b6",
+            "scored_video_sha256": "64c9d8be32d245a55873115421528b611c5970a3ef0f1c1d10310d0575974855",
+            "original_submission_world_tree_sha256": "e73c3ff23aa0606be6f1167e1f734d38b44ac0c5efedc09ff3edadcfb2c394b2",
+            "scored_world_tree_sha256": "d6b695166b986ad3b0a9dc479354c4e931fffc1934442bb248d98e83c3194f3c",
+            "GT_reference_world_tree_sha256": "4a18ee294749c622b4f56b8af9914877c2198ea4d95db39b2556c6129957d36b",
+            "GT_target_world_tree_sha256": "5e8599226290ff2e07419418d51d08fea30658e099fad69e8d6bb39f02b928dd",
+            "observation_sha256": "d078498c0532b6e5e949d23106e6c5751eca4127ebe38666c2103825caa5a0cd",
+            "GT_target_video_sha256": "bb2418fb4d35939b5ea0f30fc7573b4f149e60dddc055f24b16d55c8ca97503f"
+          },
+          "prediction": {
+            "href": "media/gpt/CL4_S02_V_GPT.mp4",
+            "sha256": "64c9d8be32d245a55873115421528b611c5970a3ef0f1c1d10310d0575974855",
+            "frames": 101,
+            "source_frame_slice": [
+              0,
+              101
+            ]
+          },
+          "comparison": {
+            "href": "media/gpt/CL4_S02_V_GT_left_GPT_right.mp4",
+            "sha256": "fd36b9b1d65cee6b83059faf53a37b1cad4858d172742cacced8da3fbfb40413",
+            "frames": 101,
+            "source_frame_slice": [
+              0,
+              101
+            ]
+          }
         }
       },
       "downloads": {},
