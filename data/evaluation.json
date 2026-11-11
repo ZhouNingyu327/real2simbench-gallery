@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T12:30:47+08:00",
+  "updated_beijing": "2026-11-11T12:53:48+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task results may be released against already-public accepted GT. New GT and code downloads require related-scene source freezes. Tablecloth GT/hidden-query artifacts remain private.",
@@ -625,13 +625,174 @@
           }
         },
         "E": {
-          "phase": "offline_rebuild",
-          "publication_hold": true,
-          "metrics": [],
-          "diagnostic_metrics": []
+          "phase": "ready_for_scoring",
+          "publication_hold": false,
+          "metrics": [
+            {
+              "metric": "scene_3d",
+              "value": 0.9979704059660435,
+              "status": "ok",
+              "window": "E",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": null,
+              "metric_json_sha256": "796233865dc0b2e22c4931857a80e9de88f66018f10acefb33555d17c869da87",
+              "fit_manifest_sha256": "80e445c567edfeed70d1427ac1805996b2bdf0ea2e97de5875a6e76747d6f530"
+            },
+            {
+              "metric": "occupancy_dtw",
+              "value": 0.9933623988472391,
+              "status": "ok",
+              "window": "E",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": null,
+              "metric_json_sha256": "a774acf308170a727fb00080d96fc323fde155bac78bce0f05d877df5e7d97e8",
+              "fit_manifest_sha256": "80e445c567edfeed70d1427ac1805996b2bdf0ea2e97de5875a6e76747d6f530"
+            },
+            {
+              "metric": "trajectory_dtw",
+              "value": null,
+              "status": "unavailable",
+              "window": "E",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "9b8ff1d0fcd7db79d5f8186666fef3c82f673c3667a9705855580253ed1520c3",
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "emd_step",
+              "value": null,
+              "status": "unavailable",
+              "window": "E",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "8dd32df7df8ab39372710588a299b94828f6ba64f212d146af4c8a9c763e251e",
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "equal_timestamp_dynamic_chamfer",
+              "value": 0.009255608787009238,
+              "status": "ok",
+              "window": "REF_FIT",
+              "reading_class": "registration-independent reading",
+              "reason": null,
+              "metric_json_sha256": "2ad4453a58cce571049875f63fc49110dcbe111af95b56ccc888b42af977bc38",
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "mesh_watertight",
+              "value": 1.0,
+              "status": "ok",
+              "window": "REF_FIT",
+              "reading_class": "registration-independent reading",
+              "reason": null,
+              "metric_json_sha256": "88f53f9c94032d6d0955cd4ecd93afe1f4c21f3e417b6f45135b5034461ff7c4",
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "mesh_manifold",
+              "value": 1.0,
+              "status": "ok",
+              "window": "REF_FIT",
+              "reading_class": "registration-independent reading",
+              "reason": null,
+              "metric_json_sha256": "88f53f9c94032d6d0955cd4ecd93afe1f4c21f3e417b6f45135b5034461ff7c4",
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "mesh_clean_faces",
+              "value": 1.0,
+              "status": "ok",
+              "window": "REF_FIT",
+              "reading_class": "registration-independent reading",
+              "reason": null,
+              "metric_json_sha256": "88f53f9c94032d6d0955cd4ecd93afe1f4c21f3e417b6f45135b5034461ff7c4",
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "mesh_no_self_intersection",
+              "value": 1.0,
+              "status": "ok",
+              "window": "REF_FIT",
+              "reading_class": "registration-independent reading",
+              "reason": null,
+              "metric_json_sha256": "88f53f9c94032d6d0955cd4ecd93afe1f4c21f3e417b6f45135b5034461ff7c4",
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "scene_3d",
+              "value": 0.9979704059660435,
+              "status": "ok",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": null,
+              "metric_json_sha256": "158c9923c45944454a943f92649b975c1e16f67707633e83b5e0eae2a6a8b354",
+              "fit_manifest_sha256": "80e445c567edfeed70d1427ac1805996b2bdf0ea2e97de5875a6e76747d6f530"
+            },
+            {
+              "metric": "occupancy_dtw",
+              "value": 0.9957923551264685,
+              "status": "ok",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": null,
+              "metric_json_sha256": "7cd095abae6d6d7562446420fa41e9f2d1bd50eedb36a3f771485187fa9684d8",
+              "fit_manifest_sha256": "80e445c567edfeed70d1427ac1805996b2bdf0ea2e97de5875a6e76747d6f530"
+            },
+            {
+              "metric": "trajectory_dtw",
+              "value": 0.9800558744251475,
+              "status": "ok",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": null,
+              "metric_json_sha256": "88581aeff640695ab821f9ca462f2d58c4f4e5a232cf67d01f52c0d498fb174a",
+              "fit_manifest_sha256": "80e445c567edfeed70d1427ac1805996b2bdf0ea2e97de5875a6e76747d6f530"
+            },
+            {
+              "metric": "emd_step",
+              "value": 0.9985345843625688,
+              "status": "ok",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": null,
+              "metric_json_sha256": "b44a16d40007660a5353cc310412ba2d133fdc91f5c757c9bb257ae1e88a5c7c",
+              "fit_manifest_sha256": "80e445c567edfeed70d1427ac1805996b2bdf0ea2e97de5875a6e76747d6f530"
+            }
+          ],
+          "diagnostic_metrics": [],
+          "version_binding": {
+            "source_freeze_manifest_sha256": "40fefb3afaf58fc25aee6f0fda10a353797edee2dcdc0933b3fbbafe54e2e9b0",
+            "source_freeze_unix": 1794369492.6978745,
+            "original_submission_video_sha256": "95d6e150541c3b3485a5bb682229b0a43459fb757e8d9a1d0f5a28a18942ef09",
+            "scored_video_sha256": "8e796495aa708c2933453893ff841ed382fd4f1a3661edcf6e0137db8025cf77",
+            "original_submission_world_tree_sha256": "03154ba170efdb52ff7ac745a05469614ff6d8a00d287b69355b01861ea5e02a",
+            "scored_world_tree_sha256": "2f00fb526000e8a5adab4e2e91d1c143a3665ee7f64e489190f295cfae828128",
+            "GT_reference_world_tree_sha256": "902f5e549edb438ded0930f286f776449551fcb86fb151980d695e044d1d044a",
+            "GT_target_world_tree_sha256": "f24412cf68395cb284406d62d58ae192c430984979d72b69493cb1b204cb88b1",
+            "observation_sha256": "06e49b45eeda1fa97cefd3521ed673b2d95843dab5275c48369214e8c9267337",
+            "GT_target_video_sha256": "a302d6697536fd813e70403c478f19d3df7523383a7c781e252bfbc7907a0bf3"
+          },
+          "prediction": {
+            "href": "media/gpt/RA4_R01_E_GPT.mp4",
+            "sha256": "8e796495aa708c2933453893ff841ed382fd4f1a3661edcf6e0137db8025cf77",
+            "frames": 241,
+            "source_frame_slice": [
+              0,
+              241
+            ]
+          },
+          "comparison": {
+            "href": "media/gpt/RA4_R01_E_GT_left_GPT_right.mp4",
+            "sha256": "6566da3d24a6c1ef8bd998297e5f39ca93f0e48db4cd63c523f0318f5114aec5",
+            "frames": 241,
+            "source_frame_slice": [
+              0,
+              241
+            ]
+          }
         },
         "V": {
-          "phase": "queued",
+          "phase": "agent_running",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -1907,10 +2068,112 @@
           }
         },
         "E": {
-          "phase": "agent_running",
-          "publication_hold": true,
-          "metrics": [],
-          "diagnostic_metrics": []
+          "phase": "ready_for_scoring",
+          "publication_hold": false,
+          "metrics": [
+            {
+              "metric": "scene_3d",
+              "value": 0.9903248362243176,
+              "status": "ok",
+              "window": "E",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": null,
+              "metric_json_sha256": "2cd8f69896758b65637aa302e2e66dcc69d1d8c4db1a48cc8e50e4c033ff3d8d",
+              "fit_manifest_sha256": "329225435d1ffb28300b1af0aab942bd31c669d0053f0f962fd00acf35772901"
+            },
+            {
+              "metric": "occupancy_dtw",
+              "value": 0.9902144949301146,
+              "status": "ok",
+              "window": "E",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": null,
+              "metric_json_sha256": "5065c81c93cdba4a6cbc1201205dc0f84e011189dca7e0a644499cfd71228120",
+              "fit_manifest_sha256": "329225435d1ffb28300b1af0aab942bd31c669d0053f0f962fd00acf35772901"
+            },
+            {
+              "metric": "trajectory_dtw",
+              "value": null,
+              "status": "unavailable",
+              "window": "E",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "b8e10c0355506928ff47223936c56a4e969792ca2abcbf84107931bac94ef9be",
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "emd_step",
+              "value": null,
+              "status": "unavailable",
+              "window": "E",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "frozen_mapping_unavailable",
+              "metric_json_sha256": "4ca2067206b7b7ea0e5819805ff639f9b471f14bf269f9b06d682b607eb26ecd",
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "scene_3d",
+              "value": null,
+              "status": "pending",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "occupancy_dtw",
+              "value": null,
+              "status": "pending",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "trajectory_dtw",
+              "value": null,
+              "status": "pending",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            },
+            {
+              "metric": "emd_step",
+              "value": null,
+              "status": "pending",
+              "window": "REF_FIT",
+              "reading_class": "observed/reference-frozen_v1",
+              "reason": "not_yet_computed",
+              "metric_json_sha256": null,
+              "fit_manifest_sha256": null
+            }
+          ],
+          "diagnostic_metrics": [],
+          "version_binding": {
+            "source_freeze_manifest_sha256": "e34799529132de42526f1520e337b3ef9b20e5fbd976238485c4db8b464dbfbc",
+            "source_freeze_unix": 1794372056.025524,
+            "original_submission_video_sha256": "7728c180453c5d2952dd0ea58d9646f12366bc429ce0828a00671df980fcf0ad",
+            "scored_video_sha256": "e193274b048114ef1a3c960e8470df440440fdf860c17cea9800653c24348382",
+            "original_submission_world_tree_sha256": "f915d7d92cd4b0e2163247bc31628b0675c599fc233b07518f289f963c6348b8",
+            "scored_world_tree_sha256": "26e1fbae8af9daf6490a7dfa83826b4ffd7c988363598e6f186d6164c4594f3c",
+            "GT_reference_world_tree_sha256": "f4ffb7aaa942e9d649690e82b8f07656906afbb02e6feeabe54e0ed8ff1e9c72",
+            "GT_target_world_tree_sha256": "19bd639ab80e82ebee3c4b4d88f268ee9619dbce631c06ee50bf4ff7b4b4cdc2",
+            "observation_sha256": "d411c207fe36cd838b82bbd6607322cc9508d665981149ea10dd05f47fc8ecbe",
+            "GT_target_video_sha256": "b66bdcc5fb5580179283756c44c330e31db6f495ba8e8ba19e1b53d9ca31b5d5"
+          },
+          "prediction": {
+            "href": "media/gpt/RA4_R03_E_GPT.mp4",
+            "sha256": "e193274b048114ef1a3c960e8470df440440fdf860c17cea9800653c24348382",
+            "frames": 181,
+            "source_frame_slice": [
+              0,
+              181
+            ]
+          }
         },
         "V": {
           "phase": "queued",
@@ -3041,43 +3304,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.8876964077353477,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "988b406e72c9ba47ba855fcc90cbfe4c26f9cbdada9c9a75e020a4983029f343",
+              "fit_manifest_sha256": "f23b5e24f2d185d19bed4be3e0bce6fe4f9af4957d6c4aad18c82737ed14dda8"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.7082681823521852,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "004ea5b4e781264c1b58e81cff579e06adaeba5b16026899158db01c9a862ba6",
+              "fit_manifest_sha256": "f23b5e24f2d185d19bed4be3e0bce6fe4f9af4957d6c4aad18c82737ed14dda8"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.7668706260303679,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "a43ca544927dc805c1f1ac9caa55870199bbf97ec5b17c21603818f9a311303d",
+              "fit_manifest_sha256": "f23b5e24f2d185d19bed4be3e0bce6fe4f9af4957d6c4aad18c82737ed14dda8"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.8268648615357597,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "94c93f219c239ad988d1649317f9f6f30b9f1f45b973fbca189181d059d410ca",
+              "fit_manifest_sha256": "f23b5e24f2d185d19bed4be3e0bce6fe4f9af4957d6c4aad18c82737ed14dda8"
             }
           ],
           "diagnostic_metrics": [],
@@ -3686,43 +3949,43 @@
             },
             {
               "metric": "scene_3d",
-              "value": null,
-              "status": "pending",
+              "value": 0.9999994623088924,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "9ba6e9610d378a24acff9bed27c98e8287d0fb94312c7d6d8edfeee41f2efe3f",
+              "fit_manifest_sha256": "ef9eb2300d0bae13292f9dd2013cfd8392523aa8286731e62d6187e8a6f17076"
             },
             {
               "metric": "occupancy_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.906978712688821,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "1b76089d3039f550b604cc762c642ca44601a963c8e1c3d4f7de872e5806e02d",
+              "fit_manifest_sha256": "ef9eb2300d0bae13292f9dd2013cfd8392523aa8286731e62d6187e8a6f17076"
             },
             {
               "metric": "trajectory_dtw",
-              "value": null,
-              "status": "pending",
+              "value": 0.9673488875182414,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "210221dedbd5275bcdb303d336c6c70ce9ffad111f16505e358acbbc527c4d6c",
+              "fit_manifest_sha256": "ef9eb2300d0bae13292f9dd2013cfd8392523aa8286731e62d6187e8a6f17076"
             },
             {
               "metric": "emd_step",
-              "value": null,
-              "status": "pending",
+              "value": 0.8896254172376583,
+              "status": "ok",
               "window": "REF_FIT",
               "reading_class": "observed/reference-frozen_v1",
-              "reason": "not_yet_computed",
-              "metric_json_sha256": null,
-              "fit_manifest_sha256": null
+              "reason": null,
+              "metric_json_sha256": "4414274fd5a9a3bc4b69f11d5ba1d07ca5780c4b507dea8d55c53f0790a84b85",
+              "fit_manifest_sha256": "ef9eb2300d0bae13292f9dd2013cfd8392523aa8286731e62d6187e8a6f17076"
             }
           ],
           "diagnostic_metrics": [],
@@ -3758,7 +4021,7 @@
           }
         },
         "E": {
-          "phase": "agent_running",
+          "phase": "offline_rebuild",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -4047,7 +4310,7 @@
           "diagnostic_metrics": []
         },
         "E": {
-          "phase": "queued",
+          "phase": "agent_running",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
@@ -4123,7 +4386,7 @@
           "diagnostic_metrics": []
         },
         "V": {
-          "phase": "offline_rebuild",
+          "phase": "ready_for_scoring",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
