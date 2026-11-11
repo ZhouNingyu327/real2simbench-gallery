@@ -17,6 +17,7 @@
     var job = record.tasks[axis], lines = [], downloads = record.downloads || {};
     lines.push('<div class="eval-heading"><div><span class="eyebrow">GPT EVALUATION / VERIFIED ARTIFACTS</span><h2>模型重建与下载</h2></div><span class="eval-model">Codex · gpt-6.1-sol · medium</span></div>');
     lines.push('<p class="eval-scope">正式更新范围：R01–R04、S01、S02、S05、抽桌布。已冻结任务分批展示真实模型结果；FLAG 只作历史归档。抽桌布 T/A/V 已按固定离散协议首启，严格 E 仍待准入，GT 继续私有。</p>');
+    lines.push('<p class="eval-warning">旧七场景 GT 在评测前已公开可得，现有访问审计不能证明无污染。分项分数不等于整体物理准确率；缺失与超时单列。</p>');
     if (record.archived) lines.push('<p class="eval-warning">FLAG 是旧版本归档，成绩不计入本轮正式八场景。</p>');
     if (!job) lines.push('<p class="eval-status">选择 T / A / E / V 查看对应尝试。T 的模型未来段对应上方 T_FUTURE，观测段单独报告。</p>');
     else {
