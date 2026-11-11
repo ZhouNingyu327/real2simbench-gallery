@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_beijing": "2026-11-11T13:30:06+08:00",
+  "updated_beijing": "2026-11-11T13:40:30+08:00",
   "model": "gpt-6.1-sol",
   "effort": "medium",
   "publication_policy": "Frozen individual GPT task media may be released. User expressly authorized completed TABLECLOTH REF/T/A/V and GPT T/A/V media; strict E, numeric GT, source and authoring remain withheld.",
@@ -4258,7 +4258,7 @@
           "diagnostic_metrics": []
         },
         "V": {
-          "phase": "agent_running",
+          "phase": "offline_rebuild",
           "publication_hold": true,
           "metrics": [],
           "diagnostic_metrics": []
