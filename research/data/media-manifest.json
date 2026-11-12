@@ -1,0 +1,466 @@
+{
+  "media": [
+    {
+      "case": "RG_TENDON_20261112",
+      "axis": "REF",
+      "url": "media/RG_TENDON_20261112_REF.mp4",
+      "poster": "posters/RG_TENDON_20261112_REF.jpg",
+      "sha256": "019b6ba3ebaa841f3aafda7202b37a4a3ad817f3101fe51f3e7d78a39161995c",
+      "bytes": 239362,
+      "frames": 151,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "RG_TENDON_20261112",
+      "axis": "A",
+      "url": "media/RG_TENDON_20261112_A.mp4",
+      "poster": "posters/RG_TENDON_20261112_A.jpg",
+      "sha256": "9c49fa864ae52603ad8a9913202303aa26045d91d5ef88be42c53cbfd5e8ec57",
+      "bytes": 250638,
+      "frames": 151,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "RG_TENDON_20261112",
+      "axis": "E",
+      "url": "media/RG_TENDON_20261112_E.mp4",
+      "poster": "posters/RG_TENDON_20261112_E.jpg",
+      "sha256": "49b264c547e2dd79071b74169fb934d87d4ce5758b330315da679743948cd5ed",
+      "bytes": 106738,
+      "frames": 151,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "RG_TENDON_20261112",
+      "axis": "V",
+      "url": "media/RG_TENDON_20261112_V.mp4",
+      "poster": "posters/RG_TENDON_20261112_V.jpg",
+      "sha256": "f51fa7a6d5659f6f37bc1235adb712cfda4d9879e1af25af69e24f89f92f3043",
+      "bytes": 252553,
+      "frames": 151,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "RG_ADHESION_20261112",
+      "axis": "REF",
+      "url": "media/RG_ADHESION_20261112_REF.mp4",
+      "poster": "posters/RG_ADHESION_20261112_REF.jpg",
+      "sha256": "78123b2f00ca0d8adf040c76eea0cb32ea6e9ed0fb293cda70b998306b076ce6",
+      "bytes": 244913,
+      "frames": 151,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "RG_ADHESION_20261112",
+      "axis": "A",
+      "url": "media/RG_ADHESION_20261112_A.mp4",
+      "poster": "posters/RG_ADHESION_20261112_A.jpg",
+      "sha256": "dd0188a5eca8ea6e9639fbf19a57c28a2c3c3ab58e157aeed4ffedae4f7b2195",
+      "bytes": 221992,
+      "frames": 151,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "RG_ADHESION_20261112",
+      "axis": "E",
+      "url": "media/RG_ADHESION_20261112_E.mp4",
+      "poster": "posters/RG_ADHESION_20261112_E.jpg",
+      "sha256": "ac200a1577d29651ed2610d52e1b937cc28ceb4ede3501064638b563c53a21cc",
+      "bytes": 164421,
+      "frames": 151,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "RG_ADHESION_20261112",
+      "axis": "V",
+      "url": "media/RG_ADHESION_20261112_V.mp4",
+      "poster": "posters/RG_ADHESION_20261112_V.jpg",
+      "sha256": "e9752bfe10e31111c8bcab0385b52e204e62d23fb201937a9703b951d5581d77",
+      "bytes": 271993,
+      "frames": 151,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F01_20261112",
+      "axis": "REF",
+      "url": "media/FG_F01_20261112_REF.mp4",
+      "poster": "posters/FG_F01_20261112_REF.jpg",
+      "sha256": "9ddb497ba1128e602e29836b322563cf0f63ff1b6222b210fe982f1403bd6133",
+      "bytes": 425039,
+      "frames": 101,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F01_20261112",
+      "axis": "A",
+      "url": "media/FG_F01_20261112_A.mp4",
+      "poster": "posters/FG_F01_20261112_A.jpg",
+      "sha256": "6991f9916d0b3ddf579a5643026365c8b2015b0b11f9daabf9f6aa70f45fad03",
+      "bytes": 1072805,
+      "frames": 101,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F01_20261112",
+      "axis": "E",
+      "url": "media/FG_F01_20261112_E.mp4",
+      "poster": "posters/FG_F01_20261112_E.jpg",
+      "sha256": "2877d31bc3b96762f2de94a69463dfedac9563a2dcff6314116fa997977cf4e9",
+      "bytes": 360149,
+      "frames": 101,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F01_20261112",
+      "axis": "V",
+      "url": "media/FG_F01_20261112_V.mp4",
+      "poster": "posters/FG_F01_20261112_V.jpg",
+      "sha256": "b477afebeb02e8d4c4e017b210b64cbf6ce03bda897cd2cdd46397563560878f",
+      "bytes": 403998,
+      "frames": 101,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F02_COMPACT_20261112",
+      "axis": "REF",
+      "url": "media/FG_F02_COMPACT_20261112_REF.mp4",
+      "poster": "posters/FG_F02_COMPACT_20261112_REF.jpg",
+      "sha256": "41abdc11117e71364f0f83bc184d9f3aa970cd8c5a25c35ae49fb7c189e6c108",
+      "bytes": 46276,
+      "frames": 76,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F02_COMPACT_20261112",
+      "axis": "A",
+      "url": "media/FG_F02_COMPACT_20261112_A.mp4",
+      "poster": "posters/FG_F02_COMPACT_20261112_A.jpg",
+      "sha256": "73c2a939ba51f6f7207b9f5c45392a67a633bb2ab9e7ec870bfb954952cbbb19",
+      "bytes": 54885,
+      "frames": 76,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F02_COMPACT_20261112",
+      "axis": "E",
+      "url": "media/FG_F02_COMPACT_20261112_E.mp4",
+      "poster": "posters/FG_F02_COMPACT_20261112_E.jpg",
+      "sha256": "fc669f50fb417439d848206f76e34d1de453541ec0ceb00a564c8bf99266c333",
+      "bytes": 45685,
+      "frames": 76,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F02_COMPACT_20261112",
+      "axis": "V",
+      "url": "media/FG_F02_COMPACT_20261112_V.mp4",
+      "poster": "posters/FG_F02_COMPACT_20261112_V.jpg",
+      "sha256": "dd994f1194788d01cf8bc9eae856ba637ec7a4ecb332d80acf3056026ca54acc",
+      "bytes": 45212,
+      "frames": 76,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F03_20261112",
+      "axis": "REF",
+      "url": "media/FG_F03_20261112_REF.mp4",
+      "poster": "posters/FG_F03_20261112_REF.jpg",
+      "sha256": "f80789de4b0b68906b7bbfee7425ffef87dda53e0ab01711b7614e371f9441f5",
+      "bytes": 869044,
+      "frames": 101,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F03_20261112",
+      "axis": "A",
+      "url": "media/FG_F03_20261112_A.mp4",
+      "poster": "posters/FG_F03_20261112_A.jpg",
+      "sha256": "704d0fda22ba7278477671b9edcda5e20b068b23f67799e894c247fc962272e8",
+      "bytes": 853210,
+      "frames": 101,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F03_20261112",
+      "axis": "E",
+      "url": "media/FG_F03_20261112_E.mp4",
+      "poster": "posters/FG_F03_20261112_E.jpg",
+      "sha256": "b1ecc37ce4285a7a4deb44f591d5228c2f7ec92bdcd681bf674c7facfccb1cec",
+      "bytes": 1020129,
+      "frames": 101,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_F03_20261112",
+      "axis": "V",
+      "url": "media/FG_F03_20261112_V.mp4",
+      "poster": "posters/FG_F03_20261112_V.jpg",
+      "sha256": "ea2e5f57508564b8397fa42def3455bbfae868c70f4ae93dc4250a41e1c6074e",
+      "bytes": 811451,
+      "frames": 101,
+      "fps": 25,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_G02_20261112",
+      "axis": "REF",
+      "url": "media/FG_G02_20261112_REF.mp4",
+      "poster": "posters/FG_G02_20261112_REF.jpg",
+      "sha256": "e782bfef2959781cf5a453e1561141f8654a92d1fc62888a05ae82add0af1db3",
+      "bytes": 366616,
+      "frames": 251,
+      "fps": 23.703083868134154,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_G02_20261112",
+      "axis": "A",
+      "url": "media/FG_G02_20261112_A.mp4",
+      "poster": "posters/FG_G02_20261112_A.jpg",
+      "sha256": "0386a55706d1d3c6a08116de20a63fe9bf3a0396b47e2d93ba6ae1657aec00b7",
+      "bytes": 500040,
+      "frames": 251,
+      "fps": 23.703083868134154,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_G02_20261112",
+      "axis": "E",
+      "url": "media/FG_G02_20261112_E.mp4",
+      "poster": "posters/FG_G02_20261112_E.jpg",
+      "sha256": "35614499cab8352a2a1b747dd38054100dbf0d17fe6f877b868c58a09ef6343c",
+      "bytes": 665581,
+      "frames": 251,
+      "fps": 23.703083868134154,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "FG_G02_20261112",
+      "axis": "V",
+      "url": "media/FG_G02_20261112_V.mp4",
+      "poster": "posters/FG_G02_20261112_V.jpg",
+      "sha256": "6ef143218dc51b537699e2061048c465d571ab574e6eecbbe04ffa55e6d65ad5",
+      "bytes": 369194,
+      "frames": 251,
+      "fps": 23.703083868134154,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_HOIST_20261112",
+      "axis": "REF",
+      "url": "media/GL_HOIST_20261112_REF.mp4",
+      "poster": "posters/GL_HOIST_20261112_REF.jpg",
+      "sha256": "cc2429c820072f3ec20c5d5f1b29063898e024e55eeb0aea795543d53b2d7a5f",
+      "bytes": 100112,
+      "frames": 181,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_HOIST_20261112",
+      "axis": "A",
+      "url": "media/GL_HOIST_20261112_A.mp4",
+      "poster": "posters/GL_HOIST_20261112_A.jpg",
+      "sha256": "9e251e7c29760d61e27a631cd8b18b37d3c0fbf84d6a3a041139fca6d926d937",
+      "bytes": 118780,
+      "frames": 181,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_HOIST_20261112",
+      "axis": "E",
+      "url": "media/GL_HOIST_20261112_E.mp4",
+      "poster": "posters/GL_HOIST_20261112_E.jpg",
+      "sha256": "cec18e18f805b01cc0bb736a21f2e2d579a420a18a838de127ff79840b5fdc98",
+      "bytes": 129909,
+      "frames": 181,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_HOIST_20261112",
+      "axis": "V",
+      "url": "media/GL_HOIST_20261112_V.mp4",
+      "poster": "posters/GL_HOIST_20261112_V.jpg",
+      "sha256": "a24d9db05f36e0223451f6a649259536e5d8e58081ef5ff3ce455d8cc9563310",
+      "bytes": 82664,
+      "frames": 181,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_FOLD_20261112",
+      "axis": "REF",
+      "url": "media/GL_FOLD_20261112_REF.mp4",
+      "poster": "posters/GL_FOLD_20261112_REF.jpg",
+      "sha256": "262d43b598ffbfaa0ed14d57f6aaea89bb7b8c1819f46d1dcfdffce054d4dbd6",
+      "bytes": 132456,
+      "frames": 271,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_FOLD_20261112",
+      "axis": "A",
+      "url": "media/GL_FOLD_20261112_A.mp4",
+      "poster": "posters/GL_FOLD_20261112_A.jpg",
+      "sha256": "e72f6f03deb8ab2fee4548b5df409002354d97bb228f2f487dcbbaf6e75d589c",
+      "bytes": 140809,
+      "frames": 271,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_FOLD_20261112",
+      "axis": "E",
+      "url": "media/GL_FOLD_20261112_E.mp4",
+      "poster": "posters/GL_FOLD_20261112_E.jpg",
+      "sha256": "4e6ff48cee29d46e2bb1378fc3d15d7c734b6b6b8dff78935abb386aaa812b61",
+      "bytes": 140624,
+      "frames": 271,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_FOLD_20261112",
+      "axis": "V",
+      "url": "media/GL_FOLD_20261112_V.mp4",
+      "poster": "posters/GL_FOLD_20261112_V.jpg",
+      "sha256": "ff746d5c6dfc638e1a435668e28d99357c32bf3adf80a09d2a81cb114fdcc5c7",
+      "bytes": 144215,
+      "frames": 271,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_SLEEVE_20261112",
+      "axis": "REF",
+      "url": "media/GL_SLEEVE_20261112_REF.mp4",
+      "poster": "posters/GL_SLEEVE_20261112_REF.jpg",
+      "sha256": "716fa15456144fa0745dce668798941942442157c9b18e6299d777af3929a5f1",
+      "bytes": 91785,
+      "frames": 211,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_SLEEVE_20261112",
+      "axis": "A",
+      "url": "media/GL_SLEEVE_20261112_A.mp4",
+      "poster": "posters/GL_SLEEVE_20261112_A.jpg",
+      "sha256": "8e0253e71f32042790134a7ed6b4ed91db7b5fab8959ca7d4be3659a9400fdf4",
+      "bytes": 91174,
+      "frames": 211,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_SLEEVE_20261112",
+      "axis": "E",
+      "url": "media/GL_SLEEVE_20261112_E.mp4",
+      "poster": "posters/GL_SLEEVE_20261112_E.jpg",
+      "sha256": "ac9d3c375b925ac18f975f61635d49e376df3c7fc4c7f2296444444bd94d9bca",
+      "bytes": 129640,
+      "frames": 211,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "GL_SLEEVE_20261112",
+      "axis": "V",
+      "url": "media/GL_SLEEVE_20261112_V.mp4",
+      "poster": "posters/GL_SLEEVE_20261112_V.jpg",
+      "sha256": "421cbff5ae9bc626e964661b90f8288d2d3b5058bb657eeac0a123eb31aa17f8",
+      "bytes": 73984,
+      "frames": 211,
+      "fps": 60,
+      "source_full_decode_verified": true
+    },
+    {
+      "case": "TABLECLOTH_E_prediction",
+      "axis": "GT_vs_model",
+      "url": "media/TABLECLOTH_E_prediction_comparison.mp4",
+      "sha256": "3657e2da68c48c686dfada4580295a57388b125dc4733341f7a334829a2756a4",
+      "bytes": 127423,
+      "frames": 76,
+      "fps": 25,
+      "source_full_decode_verified": true
+    }
+  ],
+  "case_downloads": [
+    {
+      "id": "RG_TENDON_20261112",
+      "url": "downloads/RG_TENDON_20261112-media.zip",
+      "sha256": "52d3367bbdd6a051b354976dc317e3fe16e5260a9d03d3728c9af2219f3333a4",
+      "bytes": 854500
+    },
+    {
+      "id": "RG_ADHESION_20261112",
+      "url": "downloads/RG_ADHESION_20261112-media.zip",
+      "sha256": "5275bce388154bcb12cc60ef92b1ae7f29f78f33edc8b1a12611d6fd95f746d9",
+      "bytes": 908544
+    },
+    {
+      "id": "FG_F01_20261112",
+      "url": "downloads/FG_F01_20261112-media.zip",
+      "sha256": "0603f2f627469364a4dd35439a800f25d67453e48081421fb7bbb8b99147d49c",
+      "bytes": 2267239
+    },
+    {
+      "id": "FG_F02_COMPACT_20261112",
+      "url": "downloads/FG_F02_COMPACT_20261112-media.zip",
+      "sha256": "f7ead032afa112182b90f1e8ffd9fa464daae5e3d7e5074b412b585f0c90949d",
+      "bytes": 197385
+    },
+    {
+      "id": "FG_F03_20261112",
+      "url": "downloads/FG_F03_20261112-media.zip",
+      "sha256": "64a4e9306521e57fe2d606249a03330c08254b9aa817843427d846ee9f5ab18b",
+      "bytes": 3559241
+    },
+    {
+      "id": "FG_G02_20261112",
+      "url": "downloads/FG_G02_20261112-media.zip",
+      "sha256": "e0ede5ecd3d1b2654a79a0b7908a5e7d124402fa08d43aa48fee586d663ccf19",
+      "bytes": 1906759
+    },
+    {
+      "id": "GL_HOIST_20261112",
+      "url": "downloads/GL_HOIST_20261112-media.zip",
+      "sha256": "de502a16709eabdf0b408329b2aeebcdf2f5a7f50821c94a757c0505df695279",
+      "bytes": 436916
+    },
+    {
+      "id": "GL_FOLD_20261112",
+      "url": "downloads/GL_FOLD_20261112-media.zip",
+      "sha256": "32b1a8174157e0435d06c03553ba1c0e202ca7490871a98a84b573d1bcfac499",
+      "bytes": 563493
+    },
+    {
+      "id": "GL_SLEEVE_20261112",
+      "url": "downloads/GL_SLEEVE_20261112-media.zip",
+      "sha256": "2bfee60a96c6c61d1aaf48c7742dfcbdba14f6e7cffd7e04978e5e3a709aebcf",
+      "bytes": 392070
+    }
+  ]
+}

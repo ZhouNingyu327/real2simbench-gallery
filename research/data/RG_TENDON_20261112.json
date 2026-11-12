@@ -1,0 +1,75 @@
+{
+  "id": "RG_TENDON_20261112",
+  "title": "滑轮约束与单侧释放",
+  "summary": "运动部件通过滑轮路径和单侧肌腱约束相互影响。案例比较改变初始运动与撤去一侧约束后的响应，用于观察约束传递、接触及自由释放能否被一致地预测。当前展示采用明确派生的 tendon v7 配置。",
+  "mechanism": "MuJoCo 在刚体与关节状态上求解约束和接触。肌腱在这里表达路径及单侧限制；约束存在或撤去会改变可发生的运动。画面中的绳线是无质量约束示意，其曲线形状不代表真实绳索的弹性、弯曲或材料运动。",
+  "setup": [
+    "场景以固定版本 MuJoCo 的基础几何与约束机制构建，v7 对关节阻抗作了明示派生；不将它写成未经修改的上游默认例。主视频为151帧、25帧/秒，覆盖同一段6秒物理过程。",
+    "REF、A、E 保持可比的场景身份与输出约定，分别观察基准运动、初态干预和约束释放。V 提供另一视角；观察重点是部件之间的运动联系，而不是绳线的视觉形变。"
+  ],
+  "axes": {
+    "REF": "固定 v7 派生配置下的参考运动。",
+    "A": "改变初始运动，观察同一约束系统如何传递运动差异。",
+    "E": "撤去单侧肌腱约束，观察约束释放后的自由响应。",
+    "V": "改变观察相机，展示参考运动的另一视角。"
+  },
+  "gt": [
+    "保留原生关节状态、刚体姿态、接触摘要与刚体物质网格轨迹。",
+    "关节、体姿态和可见网格有各自的时间绑定说明；保存视频帧不等于保存全部求解器内部步。"
+  ],
+  "validation": [
+    "交付记录确认 REF/A/E 独立重复、关节与接触门槛，以及便携 REF 原生重放已核验。",
+    "当前 v7 与此前未合格的 v6 E 分开记录；旧失败没有被计入当前通过项。"
+  ],
+  "limitations": [
+    "结论适用于这套固定离散合成模型，未进行实物参数校准，也未证明连续收敛。",
+    "无质量肌腱绘图不是物质网格 GT，不能据此评测绳索材料轨迹。"
+  ],
+  "reproducibility": [
+    "来源固定为 MuJoCo 3.3.7 的指定提交，派生版本与原生数据一并留档。",
+    "原生重放验证支持该参考配置的再现；导出轨迹本身不构成完整可续算内部状态的证明。"
+  ],
+  "sources": [
+    {
+      "title": "MuJoCo 3.3.7 固定源版本",
+      "url": "https://github.com/google-deepmind/mujoco/tree/f1d45bd5422c74beddfb0d1deb590a02583d21de",
+      "commit": "f1d45bd5422c74beddfb0d1deb590a02583d21de",
+      "license": "Apache-2.0"
+    }
+  ],
+  "status_label": "固定离散检查与参考重放已核验",
+  "status_kind": "good",
+  "category": "rigid",
+  "short_id": "RG-01",
+  "frames": 151,
+  "fps": 25,
+  "fps_label": "25",
+  "videos": {
+    "REF": {
+      "url": "media/RG_TENDON_20261112_REF.mp4",
+      "poster": "posters/RG_TENDON_20261112_REF.jpg",
+      "sha256": "019b6ba3ebaa841f3aafda7202b37a4a3ad817f3101fe51f3e7d78a39161995c",
+      "bytes": 239362
+    },
+    "A": {
+      "url": "media/RG_TENDON_20261112_A.mp4",
+      "poster": "posters/RG_TENDON_20261112_A.jpg",
+      "sha256": "9c49fa864ae52603ad8a9913202303aa26045d91d5ef88be42c53cbfd5e8ec57",
+      "bytes": 250638
+    },
+    "E": {
+      "url": "media/RG_TENDON_20261112_E.mp4",
+      "poster": "posters/RG_TENDON_20261112_E.jpg",
+      "sha256": "49b264c547e2dd79071b74169fb934d87d4ce5758b330315da679743948cd5ed",
+      "bytes": 106738
+    },
+    "V": {
+      "url": "media/RG_TENDON_20261112_V.mp4",
+      "poster": "posters/RG_TENDON_20261112_V.jpg",
+      "sha256": "f51fa7a6d5659f6f37bc1235adb712cfda4d9879e1af25af69e24f89f92f3043",
+      "bytes": 252553
+    }
+  },
+  "poster": "posters/RG_TENDON_20261112_overview.jpg",
+  "download": "downloads/RG_TENDON_20261112-media.zip"
+}

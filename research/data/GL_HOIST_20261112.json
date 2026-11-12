@@ -1,0 +1,81 @@
+{
+  "id": "GL_HOIST_20261112",
+  "title": "双肩理想夹持提升与单侧释放",
+  "summary": "开口 T 恤由肩部理想夹持点提升，衣身在重力下展开并变形。增大提升动作与释放右侧夹持点分别改变驱动和约束，便于观察整体运动、局部褶皱及单侧下垂。该案例使用规定夹持，未模拟真实衣夹的接触结构。",
+  "mechanism": "PPF CPU 求解器推动衣料网格随材料力、重力和接触演化；肩部理想夹持点通过规定运动驱动衣服。提高动作幅度改变外部驱动，释放一个夹持点则改变受约束的自由度，二者对衣身姿态的作用不同。",
+  "setup": [
+    "衣服是本项目原创的预缝合开口 T 恤资产，采用 MIT 许可；求解器使用固定提交的 PPF CPU，采用 Apache-2.0 许可。主视频181帧、60帧/秒，覆盖3秒过程。",
+    "比较在同一物理时刻进行，关注肩部带动、衣身展开和释放后的左右不对称响应。理想夹持不可见，画面不应被解释为实际夹子抓取、夹持摩擦或衣服从夹子滑脱的验证。"
+  ],
+  "axes": {
+    "REF": "双肩理想夹持下的参考提升。",
+    "A": "增大提升动作，观察同一衣服的运动与形变响应。",
+    "E": "释放右侧夹持点，观察单侧失去约束后的下垂与摆动。",
+    "V": "从另一相机观察参考过程。"
+  },
+  "gt": [
+    "保留材质顶点轨迹、拓扑、质量和原生端点速度，衣料网格具有持续材质身份。",
+    "原生端点与展示插值时钟分别记录；保存帧不能当作每个内部求解步。"
+  ],
+  "validation": [
+    "完整原生数据和归档交付回执已保留，四个主视频均有完整解码及 SHA 校验记录。",
+    "报告明确区分已有交付与物理资格边界，数值阻尼敏感性需要随案例说明，不能仅凭提升外观宣称真实材料准确。"
+  ],
+  "limitations": [
+    "材料尚未实物标定，理想肩部夹持不能代表真实夹子接触系统。",
+    "这里只展示提升和约束释放；没有人体、完整穿衣策略或抓取成功率结论，也不宣称连续收敛。"
+  ],
+  "reproducibility": [
+    "固定 PPF 源版本，并保留原创资产、实际构建器、CPU 二进制和兼容补丁补充。",
+    "源码树存在换行差异及部分构建兼容改动，已分范围说明；不将其描述成整树零修改或完整内部状态检查点。"
+  ],
+  "sources": [
+    {
+      "title": "PPF Contact Solver 固定源版本",
+      "url": "https://github.com/st-tech/ppf-contact-solver/tree/ac4084729b457a5d66ebc62424ff4836b3587360",
+      "commit": "ac4084729b457a5d66ebc62424ff4836b3587360",
+      "license": "Apache-2.0"
+    },
+    {
+      "title": "本项目原创预缝合开口 T 恤资产",
+      "url": null,
+      "commit": null,
+      "license": "MIT"
+    }
+  ],
+  "status_label": "原生数据完整，理想夹持与材料局限已标明",
+  "status_kind": "caution",
+  "category": "garments",
+  "short_id": "GL-01",
+  "frames": 181,
+  "fps": 60,
+  "fps_label": "60",
+  "videos": {
+    "REF": {
+      "url": "media/GL_HOIST_20261112_REF.mp4",
+      "poster": "posters/GL_HOIST_20261112_REF.jpg",
+      "sha256": "cc2429c820072f3ec20c5d5f1b29063898e024e55eeb0aea795543d53b2d7a5f",
+      "bytes": 100112
+    },
+    "A": {
+      "url": "media/GL_HOIST_20261112_A.mp4",
+      "poster": "posters/GL_HOIST_20261112_A.jpg",
+      "sha256": "9e251e7c29760d61e27a631cd8b18b37d3c0fbf84d6a3a041139fca6d926d937",
+      "bytes": 118780
+    },
+    "E": {
+      "url": "media/GL_HOIST_20261112_E.mp4",
+      "poster": "posters/GL_HOIST_20261112_E.jpg",
+      "sha256": "cec18e18f805b01cc0bb736a21f2e2d579a420a18a838de127ff79840b5fdc98",
+      "bytes": 129909
+    },
+    "V": {
+      "url": "media/GL_HOIST_20261112_V.mp4",
+      "poster": "posters/GL_HOIST_20261112_V.jpg",
+      "sha256": "a24d9db05f36e0223451f6a649259536e5d8e58081ef5ff3ce455d8cc9563310",
+      "bytes": 82664
+    }
+  },
+  "poster": "posters/GL_HOIST_20261112_overview.jpg",
+  "download": "downloads/GL_HOIST_20261112-media.zip"
+}

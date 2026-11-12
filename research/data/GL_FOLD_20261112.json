@@ -1,0 +1,81 @@
+{
+  "id": "GL_FOLD_20261112",
+  "title": "理想夹持下的单次下摆翻折",
+  "summary": "开口 T 恤在规定夹持条件下完成一次下摆翻折，用于观察驱动位移、衣料接触和固定点释放之间的关系。案例保留完整原生衣料数据，适合比较单次翻折过程；它没有验证完整叠衣流程或工业折叠策略。",
+  "mechanism": "规定驱动带动下摆产生位移，衣料随重力、材料形变及接触继续演化。增加翻折位移影响折叠范围和运动路径；释放右领口固定则改变上部支撑，使整体姿态与折痕演化受到不同的边界条件影响。",
+  "setup": [
+    "使用固定提交的 PPF CPU 和原创预缝合开口 T 恤资产，求解器与资产分别采用 Apache-2.0 和 MIT 许可。主视频271帧、60帧/秒，覆盖4.5秒。",
+    "观察对象包括翻折进行中的材质运动与接触，而不只是一张最终折叠外形。此前失败版本与当前版本分开保留；当前结果不被写成可泛化到任意衣物的策略。"
+  ],
+  "axes": {
+    "REF": "既定夹持和位移下的一次下摆翻折。",
+    "A": "增加翻折位移，观察单次动作幅度改变的影响。",
+    "E": "释放右领口固定，观察支撑条件变化后的衣料运动。",
+    "V": "从另一视角观察参考翻折。"
+  },
+  "gt": [
+    "材质顶点轨迹、拓扑、质量、原生端点速度与插值时钟均随交付保留。",
+    "材质顶点对应关系用于分析折叠与变形；展示帧率不代表内部积分步长。"
+  ],
+  "validation": [
+    "折叠与袖口组合交付记录确认固定离散 QA 及归档 CRC、成员 SHA 核验；四个翻折主视频均有完整解码记录。",
+    "组合最终归档的独立便携重放尚未执行，因此封包完整与求解器再现不能合并为一个通过结论。"
+  ],
+  "limitations": [
+    "仅为一次下摆翻折，未覆盖完整叠衣顺序、重抓取、整理或工业策略成功率。",
+    "夹持是理想约束，材料未实物标定；固定离散 QA 不构成连续收敛或真实棉布材料验证。"
+  ],
+  "reproducibility": [
+    "固定 PPF 提交，原创衣服、实际构建器、CPU 二进制与兼容补丁独立保留。",
+    "数值限制和相机对照补充与封包一同解释，不用视频可播放代替原生重放验证，也不声称完整可续算内部状态。"
+  ],
+  "sources": [
+    {
+      "title": "PPF Contact Solver 固定源版本",
+      "url": "https://github.com/st-tech/ppf-contact-solver/tree/ac4084729b457a5d66ebc62424ff4836b3587360",
+      "commit": "ac4084729b457a5d66ebc62424ff4836b3587360",
+      "license": "Apache-2.0"
+    },
+    {
+      "title": "本项目原创预缝合开口 T 恤资产",
+      "url": null,
+      "commit": null,
+      "license": "MIT"
+    }
+  ],
+  "status_label": "固定离散 QA 已核验，组合归档重放待完成",
+  "status_kind": "caution",
+  "category": "garments",
+  "short_id": "GL-02",
+  "frames": 271,
+  "fps": 60,
+  "fps_label": "60",
+  "videos": {
+    "REF": {
+      "url": "media/GL_FOLD_20261112_REF.mp4",
+      "poster": "posters/GL_FOLD_20261112_REF.jpg",
+      "sha256": "262d43b598ffbfaa0ed14d57f6aaea89bb7b8c1819f46d1dcfdffce054d4dbd6",
+      "bytes": 132456
+    },
+    "A": {
+      "url": "media/GL_FOLD_20261112_A.mp4",
+      "poster": "posters/GL_FOLD_20261112_A.jpg",
+      "sha256": "e72f6f03deb8ab2fee4548b5df409002354d97bb228f2f487dcbbaf6e75d589c",
+      "bytes": 140809
+    },
+    "E": {
+      "url": "media/GL_FOLD_20261112_E.mp4",
+      "poster": "posters/GL_FOLD_20261112_E.jpg",
+      "sha256": "4e6ff48cee29d46e2bb1378fc3d15d7c734b6b6b8dff78935abb386aaa812b61",
+      "bytes": 140624
+    },
+    "V": {
+      "url": "media/GL_FOLD_20261112_V.mp4",
+      "poster": "posters/GL_FOLD_20261112_V.jpg",
+      "sha256": "ff746d5c6dfc638e1a435668e28d99357c32bf3adf80a09d2a81cb114fdcc5c7",
+      "bytes": 144215
+    }
+  },
+  "poster": "posters/GL_FOLD_20261112_overview.jpg",
+  "download": "downloads/GL_FOLD_20261112-media.zip"
+}

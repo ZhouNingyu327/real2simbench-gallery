@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f4ee">
+  <meta name="description" content="9个新增物理泛化研究案例：刚体与关节、流体、颗粒和服装。同步对照基准与干预视频，逐例说明物理机制、来源、GT、复现线索和验证局限。">
+  <title>物理泛化案例研究 · Real2SimBench</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="research.css?v=20261112-1">
+  <script src="research.js?v=20261112-1" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="../"><img src="../favicon.svg" width="34" height="34" alt=""><span><strong>Real2SimBench</strong><small>PHYSICS GENERALIZATION GALLERY</small></span></a>
+  <nav aria-label="展厅导航"><a href="../">原八场景展厅 ↗</a><a href="#cases" class="active">物理泛化案例</a><a href="#evaluation-observation">模型观察</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><p class="eyebrow">RESEARCH EDITION / 2026.11.12</p><h1>物理泛化案例研究</h1><p class="hero-description">改变初态、驱动或环境，观察同一物理过程如何响应。这里逐项展示新增场景的基准、受控干预与验证边界。</p><a class="jump-link" href="#cases">选择案例，开始对照 <span>↓</span></a></div>
+    <div class="edition-stats" aria-label="新增案例规模"><div><b>09</b><span>求解器研究案例</span></div><div><b>36</b><span>主视频 · T切段另计</span></div><div><b>04</b><span>物理类别</span></div></div>
+  </section>
+  <aside class="reading-note"><b>如何阅读</b><p><strong>A / E</strong> 展示初态、动作、环境或约束的受控改变；<strong>V</strong> 是同一轨迹换相机，不算新的物理机制。各案例单独标出已核验的范围；视频完整、重复一致，也不自动代表真实材料校准或连续收敛通过。</p></aside>
+  <section id="cases" class="cases-section" aria-labelledby="cases-heading">
+    <div class="section-heading"><div><p class="eyebrow">CONTROLLED PHYSICAL INTERVENTIONS</p><h2 id="cases-heading">从一个具体过程开始</h2></div><label class="search"><span>⌕</span><input id="caseSearch" type="search" placeholder="搜索机制、场景或求解器" aria-label="搜索新增研究案例"></label></div>
+    <div class="filter-row" role="group" aria-label="筛选物理类别"><button data-filter="all" class="active" aria-pressed="true">全部 <span>9</span></button><button data-filter="rigid" aria-pressed="false">刚体与关节</button><button data-filter="fluids" aria-pressed="false">流体</button><button data-filter="grains" aria-pressed="false">颗粒</button><button data-filter="garments" aria-pressed="false">服装操作</button></div>
+    <div class="case-layout">
+      <nav id="caseNav" class="case-nav" aria-label="九个研究案例"><p class="loading">正在载入案例…</p></nav>
+      <article id="caseArticle" class="case-article" hidden>
+        <div class="case-kicker"><span id="caseCategory"></span><span id="caseStatus" class="status-badge"></span></div>
+        <h2 id="caseTitle"></h2><p id="caseSummary" class="case-summary"></p>
+        <div class="axis-row"><div class="axis-tabs" role="tablist" aria-label="选择对照条件"><button data-axis="A" role="tab" aria-selected="false"><b>A</b><span>初态 / 动作</span></button><button data-axis="E" role="tab" aria-selected="true" class="active"><b>E</b><span>环境 / 约束</span></button><button data-axis="V" role="tab" aria-selected="false"><b>V</b><span>观察视角</span></button></div><button id="copyCaseLink" class="quiet" type="button">复制案例链接</button></div>
+        <div class="change-note"><span id="axisLabel">本次改变</span><p id="axisDescription"></p></div>
+        <section class="comparison" aria-label="基准与泛化视频同步对照">
+          <div class="video-grid">
+            <div class="video-panel"><header><span><b>REF</b> 基准条件</span><button data-fullscreen="referenceVideo" aria-label="放大基准视频">放大 ↗</button></header><video id="referenceVideo" muted playsinline preload="metadata" aria-label="基准条件视频"></video><footer><span id="referenceCaption"></span><a id="referenceDownload" download>下载REF原片 ↓</a></footer></div>
+            <div class="video-panel target"><header><span><b id="targetAxis">E</b> <span id="targetLabel">环境 / 约束</span></span><button data-fullscreen="targetVideo" aria-label="放大泛化视频">放大 ↗</button></header><video id="targetVideo" muted playsinline preload="metadata" aria-label="泛化条件视频"></video><footer><span id="targetCaption"></span><a id="targetDownload" download>下载对照原片 ↓</a></footer></div>
+          </div>
+          <div class="transport"><div class="transport-actions"><button id="syncPlay" class="primary" type="button">同步播放</button><button id="restart" class="quiet" type="button">从头</button><button id="previousFrame" class="quiet" type="button" aria-label="前一帧">−1帧</button><button id="nextFrame" class="quiet" type="button" aria-label="后一帧">+1帧</button><label class="speed">速度 <select id="playbackSpeed" aria-label="同步播放速度"><option value="0.25">¼×</option><option value="0.5">½×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label><label class="loop"><input id="loopVideos" type="checkbox" checked>循环</label></div><div class="timeline-row"><output id="videoClock" aria-label="展示时间">0.000 s</output><input id="frameSlider" type="range" min="0" max="1" step="1" value="0" aria-label="同步展示帧"><output id="frameCount">0 / 0</output></div><p id="playerStatus" class="player-status" role="status">载入原始视频元数据…</p></div>
+        </section>
+        <div class="download-row"><a id="caseDownload" class="download-package" download>下载本案例展示媒体包 ↓</a><span>REF / A / E / V原片、案例说明与SHA256；不含原生GT或内部测试配置。</span></div>
+        <section class="case-text"><h3>物理过程与场景设置</h3><p id="mechanism"></p><div id="setup"></div></section>
+        <div class="detail-grid"><section class="detail-card"><h3>保留了哪些GT与导出</h3><ul id="gtFacts"></ul></section><section class="detail-card"><h3>已完成的核查</h3><ul id="validationFacts"></ul></section></div>
+        <section class="limitations"><h3>验证边界与未解决问题</h3><ul id="limitations"></ul></section>
+        <section class="case-text"><h3>复现线索与来源</h3><div id="reproducibility"></div><div id="sources" class="source-list"></div><p class="small-note">源版本、派生设置和原生记录分别保留。下方许可描述对应上游代码或已注明的资产，不将其自动解释为对全部实验产物的统一授权。</p></section>
+      </article>
+      <div id="emptyState" class="empty-state" hidden>没有符合条件的案例。可以清空搜索或切换类别。</div>
+    </div>
+  </section>
+  <section id="evaluation-observation" class="model-observation" aria-labelledby="observation-title">
+    <div class="observation-copy"><p class="eyebrow">MODEL GENERALIZATION OBSERVATION</p><span class="status-badge diagnostic">预测错误 · 原始结果保留</span><h2 id="observation-title">抽桌布E：视频已交付，物理预测仍出错</h2><p>左侧是GT，右侧是模型预测。GT中的瓶与盘留在桌上；预测将它们随桌布带落。这个对照说明，场景外观接近并不等于物理泛化成功。</p><p>本项为独立补充观察，76帧、25fps，保留已运行的预测结果。它不替换原试次，也不改写原有评测分数、缺失或超时记录。</p><a class="jump-link" href="media/TABLECLOTH_E_prediction_comparison.mp4" download>下载GT / 预测对照原片 ↓</a></div>
+    <div><video id="modelObservationVideo" controls muted playsinline preload="metadata" src="media/TABLECLOTH_E_prediction_comparison.mp4" aria-label="抽桌布E的GT与模型预测对照"></video><p class="video-legend">左 GT / 右 模型预测 · 3.04秒 · 独立补充观察</p></div>
+  </section>
+  <section class="data-scope"><h2>展示媒体与完整研究数据分开</h2><p>本页发布可观看的视频、案例介绍与来源链接。原生仿真状态、粒子或材料点轨迹、适用的mesh / dynamics、相机、时间映射和配置另行归档；原生GT、隐藏测试设置与控制记录不包含在公开媒体包中。</p><p>F01最终封包尚未闭环；F03仍有显著数值敏感性；袖口A效果偏弱。所有结果按各自证据范围说明，不将待解决项记作完全验收通过。</p></section>
+</main>
+<footer class="footer"><a href="../">← 返回原八场景展厅</a><span>Real2SimBench · 新增研究案例单列 · 2026.11</span></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<noscript>请启用JavaScript使用同步对照。公开案例说明位于 data/cases.json；原始展示视频位于 media/，展示媒体包位于 downloads/。</noscript>
+</body>
+</html>

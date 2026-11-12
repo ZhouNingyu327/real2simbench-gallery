@@ -1,0 +1,75 @@
+{
+  "id": "FG_F01_20261112",
+  "title": "双溃坝液体惯性对撞",
+  "summary": "两侧液体释放后向容器内部运动，形成惯性对撞与随后的回流。案例从官方 DoubleDamBreak 场景派生，以相向初速度和新增斜挡板分别改变初态与环境，观察液体碰撞、偏转和铺展。数值 GT 已保留，最终封包回执尚未完成核实。",
+  "mechanism": "SPlisHSPlasH 用粒子离散液体，求解其在重力、压力作用和边界条件下的运动。增加相向初速度改变碰撞前动量；增加挡板改变后续流路和边界接触，两者不能仅用某个终帧外形来区分。",
+  "setup": [
+    "源场景固定到 SPlisHSPlasH 官方 DoubleDamBreak 的指定提交，实际运行使用2.19.0版本 wheel。主视频101帧、25帧/秒，覆盖0至4秒。",
+    "显示水面由原生粒子重建，各条件采用一致的重建流程。透明容器标记帮助理解边界范围，实际碰撞使用原生容器语义；标记线本身不承担物理接触。"
+  ],
+  "axes": {
+    "REF": "双溃坝参考配置下的完整液体运动。",
+    "A": "赋予相向初速度，改变两侧液体的碰撞过程。",
+    "E": "增加斜挡板，观察流路、反射和堆积位置的变化。",
+    "V": "保持参考粒子与几何数据，仅改变相机。"
+  },
+  "gt": [
+    "粒子身份、质量、位置和原生速度是材质数值 GT；密度相位时钟另行保留。",
+    "重建水面的拓扑可逐帧变化，表面顶点不能被当作同一物质点持续追踪。"
+  ],
+  "validation": [
+    "四个展示视频均已有完整解码记录；元数据记录了全窗口原始表面筛查及渲染与 World 几何的一致约定。",
+    "报告中 F01 的最终归档验证回执为空，不能把已有 GT 和已解码视频写成最终封包完成。"
+  ],
+  "limitations": [
+    "当前列为候选案例，完整重复、步长和接触资格不能从显示元数据中的候选状态推断为通过。",
+    "尚无真实液体校准或连续收敛结论；水面平滑程度与数值物理准确性是不同问题。"
+  ],
+  "reproducibility": [
+    "固定源场景提交与实际 wheel 版本分别记录，wheel 构建所对应的 Git 身份未独立证实。",
+    "保存的是原生粒子采样和相关配置证据，不声称保存了每个内部步或完整可续算状态。"
+  ],
+  "sources": [
+    {
+      "title": "SPlisHSPlasH 官方 DoubleDamBreak 场景",
+      "url": "https://github.com/InteractiveComputerGraphics/SPlisHSPlasH/blob/dba6b26b9387ab6bdd187d6df0a7c9d490d03500/data/Scenes/DoubleDamBreak.json",
+      "commit": "dba6b26b9387ab6bdd187d6df0a7c9d490d03500",
+      "license": "MIT"
+    }
+  ],
+  "status_label": "候选案例，最终封包回执待核实",
+  "status_kind": "caution",
+  "category": "fluids",
+  "short_id": "F01",
+  "frames": 101,
+  "fps": 25,
+  "fps_label": "25",
+  "videos": {
+    "REF": {
+      "url": "media/FG_F01_20261112_REF.mp4",
+      "poster": "posters/FG_F01_20261112_REF.jpg",
+      "sha256": "9ddb497ba1128e602e29836b322563cf0f63ff1b6222b210fe982f1403bd6133",
+      "bytes": 425039
+    },
+    "A": {
+      "url": "media/FG_F01_20261112_A.mp4",
+      "poster": "posters/FG_F01_20261112_A.jpg",
+      "sha256": "6991f9916d0b3ddf579a5643026365c8b2015b0b11f9daabf9f6aa70f45fad03",
+      "bytes": 1072805
+    },
+    "E": {
+      "url": "media/FG_F01_20261112_E.mp4",
+      "poster": "posters/FG_F01_20261112_E.jpg",
+      "sha256": "2877d31bc3b96762f2de94a69463dfedac9563a2dcff6314116fa997977cf4e9",
+      "bytes": 360149
+    },
+    "V": {
+      "url": "media/FG_F01_20261112_V.mp4",
+      "poster": "posters/FG_F01_20261112_V.jpg",
+      "sha256": "b477afebeb02e8d4c4e017b210b64cbf6ce03bda897cd2cdd46397563560878f",
+      "bytes": 403998
+    }
+  },
+  "poster": "posters/FG_F01_20261112_overview.jpg",
+  "download": "downloads/FG_F01_20261112-media.zip"
+}

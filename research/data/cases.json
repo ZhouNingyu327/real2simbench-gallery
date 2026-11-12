@@ -1,0 +1,712 @@
+{
+  "schema": "public-physical-generalization-cases-v1",
+  "edition": "2026-11-12",
+  "case_count": 9,
+  "main_video_count": 36,
+  "T_splits_counted_as_main": false,
+  "public_native_GT_included": false,
+  "cases": [
+    {
+      "id": "RG_TENDON_20261112",
+      "title": "滑轮约束与单侧释放",
+      "summary": "运动部件通过滑轮路径和单侧肌腱约束相互影响。案例比较改变初始运动与撤去一侧约束后的响应，用于观察约束传递、接触及自由释放能否被一致地预测。当前展示采用明确派生的 tendon v7 配置。",
+      "mechanism": "MuJoCo 在刚体与关节状态上求解约束和接触。肌腱在这里表达路径及单侧限制；约束存在或撤去会改变可发生的运动。画面中的绳线是无质量约束示意，其曲线形状不代表真实绳索的弹性、弯曲或材料运动。",
+      "setup": [
+        "场景以固定版本 MuJoCo 的基础几何与约束机制构建，v7 对关节阻抗作了明示派生；不将它写成未经修改的上游默认例。主视频为151帧、25帧/秒，覆盖同一段6秒物理过程。",
+        "REF、A、E 保持可比的场景身份与输出约定，分别观察基准运动、初态干预和约束释放。V 提供另一视角；观察重点是部件之间的运动联系，而不是绳线的视觉形变。"
+      ],
+      "axes": {
+        "REF": "固定 v7 派生配置下的参考运动。",
+        "A": "改变初始运动，观察同一约束系统如何传递运动差异。",
+        "E": "撤去单侧肌腱约束，观察约束释放后的自由响应。",
+        "V": "改变观察相机，展示参考运动的另一视角。"
+      },
+      "gt": [
+        "保留原生关节状态、刚体姿态、接触摘要与刚体物质网格轨迹。",
+        "关节、体姿态和可见网格有各自的时间绑定说明；保存视频帧不等于保存全部求解器内部步。"
+      ],
+      "validation": [
+        "交付记录确认 REF/A/E 独立重复、关节与接触门槛，以及便携 REF 原生重放已核验。",
+        "当前 v7 与此前未合格的 v6 E 分开记录；旧失败没有被计入当前通过项。"
+      ],
+      "limitations": [
+        "结论适用于这套固定离散合成模型，未进行实物参数校准，也未证明连续收敛。",
+        "无质量肌腱绘图不是物质网格 GT，不能据此评测绳索材料轨迹。"
+      ],
+      "reproducibility": [
+        "来源固定为 MuJoCo 3.3.7 的指定提交，派生版本与原生数据一并留档。",
+        "原生重放验证支持该参考配置的再现；导出轨迹本身不构成完整可续算内部状态的证明。"
+      ],
+      "sources": [
+        {
+          "title": "MuJoCo 3.3.7 固定源版本",
+          "url": "https://github.com/google-deepmind/mujoco/tree/f1d45bd5422c74beddfb0d1deb590a02583d21de",
+          "commit": "f1d45bd5422c74beddfb0d1deb590a02583d21de",
+          "license": "Apache-2.0"
+        }
+      ],
+      "status_label": "固定离散检查与参考重放已核验",
+      "status_kind": "good",
+      "category": "rigid",
+      "short_id": "RG-01",
+      "frames": 151,
+      "fps": 25,
+      "fps_label": "25",
+      "videos": {
+        "REF": {
+          "url": "media/RG_TENDON_20261112_REF.mp4",
+          "poster": "posters/RG_TENDON_20261112_REF.jpg",
+          "sha256": "019b6ba3ebaa841f3aafda7202b37a4a3ad817f3101fe51f3e7d78a39161995c",
+          "bytes": 239362
+        },
+        "A": {
+          "url": "media/RG_TENDON_20261112_A.mp4",
+          "poster": "posters/RG_TENDON_20261112_A.jpg",
+          "sha256": "9c49fa864ae52603ad8a9913202303aa26045d91d5ef88be42c53cbfd5e8ec57",
+          "bytes": 250638
+        },
+        "E": {
+          "url": "media/RG_TENDON_20261112_E.mp4",
+          "poster": "posters/RG_TENDON_20261112_E.jpg",
+          "sha256": "49b264c547e2dd79071b74169fb934d87d4ce5758b330315da679743948cd5ed",
+          "bytes": 106738
+        },
+        "V": {
+          "url": "media/RG_TENDON_20261112_V.mp4",
+          "poster": "posters/RG_TENDON_20261112_V.jpg",
+          "sha256": "f51fa7a6d5659f6f37bc1235adb712cfda4d9879e1af25af69e24f89f92f3043",
+          "bytes": 252553
+        }
+      },
+      "poster": "posters/RG_TENDON_20261112_overview.jpg",
+      "download": "downloads/RG_TENDON_20261112-media.zip",
+      "download_sha256": "52d3367bbdd6a051b354976dc317e3fe16e5260a9d03d3728c9af2219f3333a4"
+    },
+    {
+      "id": "RG_ADHESION_20261112",
+      "title": "主动黏附搬运与接触堆积",
+      "summary": "主动黏附、规定驱动与接触堆积共同决定物体能否随搬运机构运动。案例通过关闭黏附或撤去卷扬单侧约束，分别考察主动作用和环境约束的贡献。原生数据与参考重放已核验，接触过程仍有明显步长敏感性。",
+      "mechanism": "黏附执行器通过刚体接触施加主动作用；规定驱动与单侧卷扬约束限定机构的运动条件。搬运对象之间还会发生接触和堆积，因此关闭主动黏附与释放机构约束改变的是两种不同的因果环节。",
+      "setup": [
+        "场景从 MuJoCo 官方主动黏附例派生，保留固定源版本并明确记录附加运行协议。每个主视频为151帧、25帧/秒，对应6秒过程。",
+        "比较应在匹配物理时刻进行：既看物体是否跟随机构，也看脱离后的堆积与接触运动。相机或渲染结果不能替代对原生体姿态和接触数据的检查。"
+      ],
+      "axes": {
+        "REF": "主动黏附与规定驱动共同作用的参考搬运过程。",
+        "A": "关闭主动黏附，观察失去主动作用后的接触与运动变化。",
+        "E": "撤去卷扬的单侧约束，观察机构约束改变带来的响应。",
+        "V": "从另一相机观察参考过程。"
+      },
+      "gt": [
+        "原生关节状态、刚体姿态、接触摘要及刚体物质网格构成数值参考。",
+        "约束示意线不作为绳索材料 GT；不同状态字段按记录的时钟解释。"
+      ],
+      "validation": [
+        "REF/A/E 独立重复、关节与接触检查，以及便携 REF 原生重放已有验证记录。",
+        "REF 全6秒的半步长对照中，刚体位置 RMS 差约0.02991米，最大差约0.19371米；这一差异被保留为数值限制。"
+      ],
+      "limitations": [
+        "接触堆积对时间离散敏感，固定设置下可重复不等于步长收敛。",
+        "主动黏附为求解器模型；案例未标定真实胶黏材料、吸盘或夹持装置，也没有实物搬运成功率结论。"
+      ],
+      "reproducibility": [
+        "使用 MuJoCo 3.3.7 指定提交及显式派生协议，原生重复和半步长记录随交付保留。",
+        "参考重放验证与材料真实性分开表述；不由渲染文件推断完整可续算状态。"
+      ],
+      "sources": [
+        {
+          "title": "MuJoCo 官方主动黏附示例",
+          "url": "https://github.com/google-deepmind/mujoco/blob/f1d45bd5422c74beddfb0d1deb590a02583d21de/model/adhesion/active_adhesion.xml",
+          "commit": "f1d45bd5422c74beddfb0d1deb590a02583d21de",
+          "license": "Apache-2.0"
+        }
+      ],
+      "status_label": "固定离散已核验，接触步长敏感",
+      "status_kind": "caution",
+      "category": "rigid",
+      "short_id": "RG-02",
+      "frames": 151,
+      "fps": 25,
+      "fps_label": "25",
+      "videos": {
+        "REF": {
+          "url": "media/RG_ADHESION_20261112_REF.mp4",
+          "poster": "posters/RG_ADHESION_20261112_REF.jpg",
+          "sha256": "78123b2f00ca0d8adf040c76eea0cb32ea6e9ed0fb293cda70b998306b076ce6",
+          "bytes": 244913
+        },
+        "A": {
+          "url": "media/RG_ADHESION_20261112_A.mp4",
+          "poster": "posters/RG_ADHESION_20261112_A.jpg",
+          "sha256": "dd0188a5eca8ea6e9639fbf19a57c28a2c3c3ab58e157aeed4ffedae4f7b2195",
+          "bytes": 221992
+        },
+        "E": {
+          "url": "media/RG_ADHESION_20261112_E.mp4",
+          "poster": "posters/RG_ADHESION_20261112_E.jpg",
+          "sha256": "ac200a1577d29651ed2610d52e1b937cc28ceb4ede3501064638b563c53a21cc",
+          "bytes": 164421
+        },
+        "V": {
+          "url": "media/RG_ADHESION_20261112_V.mp4",
+          "poster": "posters/RG_ADHESION_20261112_V.jpg",
+          "sha256": "e9752bfe10e31111c8bcab0385b52e204e62d23fb201937a9703b951d5581d77",
+          "bytes": 271993
+        }
+      },
+      "poster": "posters/RG_ADHESION_20261112_overview.jpg",
+      "download": "downloads/RG_ADHESION_20261112-media.zip",
+      "download_sha256": "5275bce388154bcb12cc60ef92b1ae7f29f78f33edc8b1a12611d6fd95f746d9"
+    },
+    {
+      "id": "FG_F01_20261112",
+      "title": "双溃坝液体惯性对撞",
+      "summary": "两侧液体释放后向容器内部运动，形成惯性对撞与随后的回流。案例从官方 DoubleDamBreak 场景派生，以相向初速度和新增斜挡板分别改变初态与环境，观察液体碰撞、偏转和铺展。数值 GT 已保留，最终封包回执尚未完成核实。",
+      "mechanism": "SPlisHSPlasH 用粒子离散液体，求解其在重力、压力作用和边界条件下的运动。增加相向初速度改变碰撞前动量；增加挡板改变后续流路和边界接触，两者不能仅用某个终帧外形来区分。",
+      "setup": [
+        "源场景固定到 SPlisHSPlasH 官方 DoubleDamBreak 的指定提交，实际运行使用2.19.0版本 wheel。主视频101帧、25帧/秒，覆盖0至4秒。",
+        "显示水面由原生粒子重建，各条件采用一致的重建流程。透明容器标记帮助理解边界范围，实际碰撞使用原生容器语义；标记线本身不承担物理接触。"
+      ],
+      "axes": {
+        "REF": "双溃坝参考配置下的完整液体运动。",
+        "A": "赋予相向初速度，改变两侧液体的碰撞过程。",
+        "E": "增加斜挡板，观察流路、反射和堆积位置的变化。",
+        "V": "保持参考粒子与几何数据，仅改变相机。"
+      },
+      "gt": [
+        "粒子身份、质量、位置和原生速度是材质数值 GT；密度相位时钟另行保留。",
+        "重建水面的拓扑可逐帧变化，表面顶点不能被当作同一物质点持续追踪。"
+      ],
+      "validation": [
+        "四个展示视频均已有完整解码记录；元数据记录了全窗口原始表面筛查及渲染与 World 几何的一致约定。",
+        "报告中 F01 的最终归档验证回执为空，不能把已有 GT 和已解码视频写成最终封包完成。"
+      ],
+      "limitations": [
+        "当前列为候选案例，完整重复、步长和接触资格不能从显示元数据中的候选状态推断为通过。",
+        "尚无真实液体校准或连续收敛结论；水面平滑程度与数值物理准确性是不同问题。"
+      ],
+      "reproducibility": [
+        "固定源场景提交与实际 wheel 版本分别记录，wheel 构建所对应的 Git 身份未独立证实。",
+        "保存的是原生粒子采样和相关配置证据，不声称保存了每个内部步或完整可续算状态。"
+      ],
+      "sources": [
+        {
+          "title": "SPlisHSPlasH 官方 DoubleDamBreak 场景",
+          "url": "https://github.com/InteractiveComputerGraphics/SPlisHSPlasH/blob/dba6b26b9387ab6bdd187d6df0a7c9d490d03500/data/Scenes/DoubleDamBreak.json",
+          "commit": "dba6b26b9387ab6bdd187d6df0a7c9d490d03500",
+          "license": "MIT"
+        }
+      ],
+      "status_label": "候选案例，最终封包回执待核实",
+      "status_kind": "caution",
+      "category": "fluids",
+      "short_id": "F01",
+      "frames": 101,
+      "fps": 25,
+      "fps_label": "25",
+      "videos": {
+        "REF": {
+          "url": "media/FG_F01_20261112_REF.mp4",
+          "poster": "posters/FG_F01_20261112_REF.jpg",
+          "sha256": "9ddb497ba1128e602e29836b322563cf0f63ff1b6222b210fe982f1403bd6133",
+          "bytes": 425039
+        },
+        "A": {
+          "url": "media/FG_F01_20261112_A.mp4",
+          "poster": "posters/FG_F01_20261112_A.jpg",
+          "sha256": "6991f9916d0b3ddf579a5643026365c8b2015b0b11f9daabf9f6aa70f45fad03",
+          "bytes": 1072805
+        },
+        "E": {
+          "url": "media/FG_F01_20261112_E.mp4",
+          "poster": "posters/FG_F01_20261112_E.jpg",
+          "sha256": "2877d31bc3b96762f2de94a69463dfedac9563a2dcff6314116fa997977cf4e9",
+          "bytes": 360149
+        },
+        "V": {
+          "url": "media/FG_F01_20261112_V.mp4",
+          "poster": "posters/FG_F01_20261112_V.jpg",
+          "sha256": "b477afebeb02e8d4c4e017b210b64cbf6ce03bda897cd2cdd46397563560878f",
+          "bytes": 403998
+        }
+      },
+      "poster": "posters/FG_F01_20261112_overview.jpg",
+      "download": "downloads/FG_F01_20261112-media.zip",
+      "download_sha256": "0603f2f627469364a4dd35439a800f25d67453e48081421fb7bbb8b99147d49c"
+    },
+    {
+      "id": "FG_F02_COMPACT_20261112",
+      "title": "有限黏性液柱撞板与铺展",
+      "summary": "有限长度的黏性液柱下落到承接板，随后碰撞、弯曲并铺展。案例从官方 CoilingModel 场景族派生为紧凑初态，用来比较初始运动和板面倾斜的影响。该场景没有持续供液入口，展示对象是有限液柱的瞬态过程。",
+      "mechanism": "粒子液体的惯性、黏性作用、重力和板面接触共同影响撞击后的形状。改变液柱初速度会改变撞击过程；倾斜原有板面则改变接触方向与铺展路径。有限液体总量和有限观察时长决定了它不能直接代表稳态喷流卷曲。",
+      "setup": [
+        "紧凑版本保留固定源场景身份，明确派生初始液柱与展示范围。主视频76帧、25帧/秒，覆盖0至3秒；参考、动作和环境条件使用各自完整原生运行。",
+        "显示水面从粒子重建，V 则复用参考数值载荷，仅改变相机。E 在初始时刻改变原承接板姿态，原有粒子身份、质量、位置与速度保持可比。"
+      ],
+      "axes": {
+        "REF": "有限黏性液柱落向原承接板的参考过程。",
+        "A": "改变液柱初速度，观察撞板及铺展的响应。",
+        "E": "倾斜原有承接板，观察边界方向改变后的流动。",
+        "V": "完整复用 REF 数值与几何载荷，只改变相机。"
+      },
+      "gt": [
+        "原生粒子身份、质量、位置和速度提供材质数值 GT，显示水面是重建代理。",
+        "位置、速度与密度的源时钟分别保留；表面顶点没有持久物质身份。"
+      ],
+      "validation": [
+        "资格补充记录确认完整 REF/A/E 独立重复、原生接触及逐帧表面与 GT 绑定检查通过。",
+        "最终归档的便携 REF 重放已核验，301个原生采样状态中的对应数组一致；这一补充证据覆盖了较早卡片的重放待验文字。"
+      ],
+      "limitations": [
+        "通过的是当前固定离散合成配置的检查，不代表实物黏度标定或连续收敛。",
+        "有限短液柱撞板不宜用稳态卷曲频率、长期喷流稳定性等结论描述。"
+      ],
+      "reproducibility": [
+        "官方场景来源固定到指定提交，实际 wheel 为2.19.0；wheel 构建 Git 身份尚未独立证实。",
+        "原生参考重放证据与导出材料分开保存，不声称拥有完整求解器内部重启状态。"
+      ],
+      "sources": [
+        {
+          "title": "SPlisHSPlasH 官方场景族固定版本",
+          "url": "https://github.com/InteractiveComputerGraphics/SPlisHSPlasH/tree/dba6b26b9387ab6bdd187d6df0a7c9d490d03500/data/Scenes",
+          "commit": "dba6b26b9387ab6bdd187d6df0a7c9d490d03500",
+          "license": "MIT"
+        }
+      ],
+      "status_label": "固定离散资格与原生参考重放已核验",
+      "status_kind": "good",
+      "category": "fluids",
+      "short_id": "F02",
+      "frames": 76,
+      "fps": 25,
+      "fps_label": "25",
+      "videos": {
+        "REF": {
+          "url": "media/FG_F02_COMPACT_20261112_REF.mp4",
+          "poster": "posters/FG_F02_COMPACT_20261112_REF.jpg",
+          "sha256": "41abdc11117e71364f0f83bc184d9f3aa970cd8c5a25c35ae49fb7c189e6c108",
+          "bytes": 46276
+        },
+        "A": {
+          "url": "media/FG_F02_COMPACT_20261112_A.mp4",
+          "poster": "posters/FG_F02_COMPACT_20261112_A.jpg",
+          "sha256": "73c2a939ba51f6f7207b9f5c45392a67a633bb2ab9e7ec870bfb954952cbbb19",
+          "bytes": 54885
+        },
+        "E": {
+          "url": "media/FG_F02_COMPACT_20261112_E.mp4",
+          "poster": "posters/FG_F02_COMPACT_20261112_E.jpg",
+          "sha256": "fc669f50fb417439d848206f76e34d1de453541ec0ceb00a564c8bf99266c333",
+          "bytes": 45685
+        },
+        "V": {
+          "url": "media/FG_F02_COMPACT_20261112_V.mp4",
+          "poster": "posters/FG_F02_COMPACT_20261112_V.jpg",
+          "sha256": "dd994f1194788d01cf8bc9eae856ba637ec7a4ecb332d80acf3056026ca54acc",
+          "bytes": 45212
+        }
+      },
+      "poster": "posters/FG_F02_COMPACT_20261112_overview.jpg",
+      "download": "downloads/FG_F02_COMPACT_20261112-media.zip",
+      "download_sha256": "f7ead032afa112182b90f1e8ffd9fa464daae5e3d7e5074b412b585f0c90949d"
+    },
+    {
+      "id": "FG_F03_20261112",
+      "title": "双溃坝与运动球体的流固耦合",
+      "summary": "液体与动态球体相互作用，球体又可能与路径中的有限挡墩接触。案例从官方 DoubleDamBreakWithSphere 派生，可用于观察流体响应、刚体运动与环境干预之间的联系。当前将其列为数值敏感性诊断，不能按完全验收的物理解展示。",
+      "mechanism": "SPH 液体与原生 PBD 动态刚体耦合：液体运动影响边界作用，刚体姿态又改变后续流动。改变球体初始运动与增加挡墩会通过不同环节影响系统，因此需要同时比较粒子轨迹、刚体姿态和各自的原生时钟。",
+      "setup": [
+        "源场景固定到官方指定提交，实际 wheel 为2.19.0。各主视频101帧、25帧/秒，覆盖0至4秒；球体可见网格由原生刚体几何和姿态变换得到。",
+        "保留原生耦合顺序及相位记录，没有为了让视频更平顺而改写 GT 或校正相位。展示水面与粒子 GT 分开解释，透明容器标记与实际碰撞边界也分开说明。"
+      ],
+      "axes": {
+        "REF": "液体与运动球体耦合的参考过程。",
+        "A": "改变球体初始运动方向，液体初态保持不变。",
+        "E": "在球体路径增加有限挡墩，观察新的接触和流固响应。",
+        "V": "复用 REF 原生与几何载荷，仅改变相机。"
+      },
+      "gt": [
+        "保留粒子身份、质量、位置、速度，以及原生刚体姿态和网格变换证据；重建水面不提供持久材质顶点。",
+        "液体、密度与刚体的相位时钟分别保存，原生快照不等于全部积分步或完整内部状态。"
+      ],
+      "validation": [
+        "原始案例卡记录 REF/A/E 独立重复的原生数组一致，四个完整表面及 World 绑定筛查已有记录。",
+        "同一单线程后端的半步长对照中，粒子 RMS 差约0.727米，刚体位置 RMS 差约0.139米，表明结果有强数值敏感性。"
+      ],
+      "limitations": [
+        "重复一致与数据绑定通过不能抵消半步长偏差；不宣称连续收敛或真实流固材料校准。",
+        "官方耦合中流体与 PBD 使用步长存在相位差异，记录保留该语义；最终归档独立便携重放仍待完成。"
+      ],
+      "reproducibility": [
+        "固定场景提交、实际 wheel 版本和原生字段证据分别记录，wheel 构建 Git 身份未独立证实。",
+        "完整失败和诊断结果保留，不能用单次重放、体平均量或渲染外观替代步长研究。"
+      ],
+      "sources": [
+        {
+          "title": "SPlisHSPlasH 官方 DoubleDamBreakWithSphere",
+          "url": "https://github.com/InteractiveComputerGraphics/SPlisHSPlasH/blob/dba6b26b9387ab6bdd187d6df0a7c9d490d03500/data/Scenes/DoubleDamBreakWithSphere.json",
+          "commit": "dba6b26b9387ab6bdd187d6df0a7c9d490d03500",
+          "license": "MIT"
+        }
+      ],
+      "status_label": "数值敏感性诊断，未完全验收",
+      "status_kind": "diagnostic",
+      "category": "fluids",
+      "short_id": "F03",
+      "frames": 101,
+      "fps": 25,
+      "fps_label": "25",
+      "videos": {
+        "REF": {
+          "url": "media/FG_F03_20261112_REF.mp4",
+          "poster": "posters/FG_F03_20261112_REF.jpg",
+          "sha256": "f80789de4b0b68906b7bbfee7425ffef87dda53e0ab01711b7614e371f9441f5",
+          "bytes": 869044
+        },
+        "A": {
+          "url": "media/FG_F03_20261112_A.mp4",
+          "poster": "posters/FG_F03_20261112_A.jpg",
+          "sha256": "704d0fda22ba7278477671b9edcda5e20b068b23f67799e894c247fc962272e8",
+          "bytes": 853210
+        },
+        "E": {
+          "url": "media/FG_F03_20261112_E.mp4",
+          "poster": "posters/FG_F03_20261112_E.jpg",
+          "sha256": "b1ecc37ce4285a7a4deb44f591d5228c2f7ec92bdcd681bf674c7facfccb1cec",
+          "bytes": 1020129
+        },
+        "V": {
+          "url": "media/FG_F03_20261112_V.mp4",
+          "poster": "posters/FG_F03_20261112_V.jpg",
+          "sha256": "ea2e5f57508564b8397fa42def3455bbfae868c70f4ae93dc4250a41e1c6074e",
+          "bytes": 811451
+        }
+      },
+      "poster": "posters/FG_F03_20261112_overview.jpg",
+      "download": "downloads/FG_F03_20261112-media.zip",
+      "download_sha256": "64a4e9306521e57fe2d606249a03330c08254b9aa817843427d846ee9f5ab18b"
+    },
+    {
+      "id": "FG_G02_20261112",
+      "title": "有限半径颗粒的料斗出流",
+      "summary": "有限半径球形颗粒在重力与摩擦接触作用下通过料斗排出。当前 G02 使用 LAMMPS sphere DEM，粒子身份、出流和接触记录均来自原生求解器。固定离散资格与最终归档的 REF 原生重放已有证据。",
+      "mechanism": "球形颗粒通过 Hertz 软接触及相应摩擦模型交换力与运动，料斗边界约束其流路。接触模型允许规定范围内的弹性重叠；颗粒离开开放域后会被原生删除，不能把出流造成的缺席误读为数值崩溃或凭空消失。",
+      "setup": [
+        "源例固定到 LAMMPS 指定提交，实际发行版为2025.7.22.4.0。主视频251帧，沿用原生展示帧率约23.7031帧/秒，不强行改成25帧/秒。",
+        "颗粒可见几何按原生球心和半径建立，料斗标记用于解释场景范围。碰撞使用完整原生解析边界，展示标记本身不承担碰撞；V 复用相同几何与粒子轨迹。"
+      ],
+      "axes": {
+        "REF": "固定颗粒与料斗条件下的参考出流。",
+        "A": "增加颗粒的初始向下运动，观察同一料斗中的出流响应。",
+        "E": "扩大出料口及相应下部锥段尺寸，观察通道条件改变后的排出过程。",
+        "V": "与 REF 粒子及几何载荷一致，仅改变相机。"
+      },
+      "gt": [
+        "原生粒子 ID、球心、半径、质量、速度、角速度、力、接触及存活和出流记录构成数值参考。",
+        "存活掩码用于区分开放域删除与有效颗粒；显示球面的顶点没有真实自旋材质身份，不能虚构自旋四元数。"
+      ],
+      "validation": [
+        "原始案例卡记录251帧原生与 World 绑定、独立运行字段一致、完整 E 可视审核及软接触检查；交付补充记录支持当前固定离散资格。",
+        "最终归档 REF 原生重放的251帧 dump 与获准参考逐字节一致；四个主视频已有完整解码记录。"
+      ],
+      "limitations": [
+        "这是软接触球形 DEM 合成模型，未进行真实颗粒材料校准或连续收敛验证。",
+        "当前上游源例提交与实际运行库身份分别记录；wheel 构建 Git 身份未独立证实。"
+      ],
+      "reproducibility": [
+        "源例提交固定为611ca3b7f8525ba802373b04f9e3d632d515f7e3，采用 GPL-2.0 许可。",
+        "参考重放依据归档中的既有辅助程序、配置与原生输入；这一证据不扩展为任意时刻均有完整可续算内部状态。"
+      ],
+      "sources": [
+        {
+          "title": "LAMMPS 固定源例版本",
+          "url": "https://github.com/lammps/lammps/tree/611ca3b7f8525ba802373b04f9e3d632d515f7e3",
+          "commit": "611ca3b7f8525ba802373b04f9e3d632d515f7e3",
+          "license": "GPL-2.0"
+        }
+      ],
+      "status_label": "固定离散资格与原生参考重放已核验",
+      "status_kind": "good",
+      "category": "grains",
+      "short_id": "G02",
+      "frames": 251,
+      "fps": 23.703083868134154,
+      "fps_label": "23.70308",
+      "videos": {
+        "REF": {
+          "url": "media/FG_G02_20261112_REF.mp4",
+          "poster": "posters/FG_G02_20261112_REF.jpg",
+          "sha256": "e782bfef2959781cf5a453e1561141f8654a92d1fc62888a05ae82add0af1db3",
+          "bytes": 366616
+        },
+        "A": {
+          "url": "media/FG_G02_20261112_A.mp4",
+          "poster": "posters/FG_G02_20261112_A.jpg",
+          "sha256": "0386a55706d1d3c6a08116de20a63fe9bf3a0396b47e2d93ba6ae1657aec00b7",
+          "bytes": 500040
+        },
+        "E": {
+          "url": "media/FG_G02_20261112_E.mp4",
+          "poster": "posters/FG_G02_20261112_E.jpg",
+          "sha256": "35614499cab8352a2a1b747dd38054100dbf0d17fe6f877b868c58a09ef6343c",
+          "bytes": 665581
+        },
+        "V": {
+          "url": "media/FG_G02_20261112_V.mp4",
+          "poster": "posters/FG_G02_20261112_V.jpg",
+          "sha256": "6ef143218dc51b537699e2061048c465d571ab574e6eecbbe04ffa55e6d65ad5",
+          "bytes": 369194
+        }
+      },
+      "poster": "posters/FG_G02_20261112_overview.jpg",
+      "download": "downloads/FG_G02_20261112-media.zip",
+      "download_sha256": "e0ede5ecd3d1b2654a79a0b7908a5e7d124402fa08d43aa48fee586d663ccf19"
+    },
+    {
+      "id": "GL_HOIST_20261112",
+      "title": "双肩理想夹持提升与单侧释放",
+      "summary": "开口 T 恤由肩部理想夹持点提升，衣身在重力下展开并变形。增大提升动作与释放右侧夹持点分别改变驱动和约束，便于观察整体运动、局部褶皱及单侧下垂。该案例使用规定夹持，未模拟真实衣夹的接触结构。",
+      "mechanism": "PPF CPU 求解器推动衣料网格随材料力、重力和接触演化；肩部理想夹持点通过规定运动驱动衣服。提高动作幅度改变外部驱动，释放一个夹持点则改变受约束的自由度，二者对衣身姿态的作用不同。",
+      "setup": [
+        "衣服是本项目原创的预缝合开口 T 恤资产，采用 MIT 许可；求解器使用固定提交的 PPF CPU，采用 Apache-2.0 许可。主视频181帧、60帧/秒，覆盖3秒过程。",
+        "比较在同一物理时刻进行，关注肩部带动、衣身展开和释放后的左右不对称响应。理想夹持不可见，画面不应被解释为实际夹子抓取、夹持摩擦或衣服从夹子滑脱的验证。"
+      ],
+      "axes": {
+        "REF": "双肩理想夹持下的参考提升。",
+        "A": "增大提升动作，观察同一衣服的运动与形变响应。",
+        "E": "释放右侧夹持点，观察单侧失去约束后的下垂与摆动。",
+        "V": "从另一相机观察参考过程。"
+      },
+      "gt": [
+        "保留材质顶点轨迹、拓扑、质量和原生端点速度，衣料网格具有持续材质身份。",
+        "原生端点与展示插值时钟分别记录；保存帧不能当作每个内部求解步。"
+      ],
+      "validation": [
+        "完整原生数据和归档交付回执已保留，四个主视频均有完整解码及 SHA 校验记录。",
+        "报告明确区分已有交付与物理资格边界，数值阻尼敏感性需要随案例说明，不能仅凭提升外观宣称真实材料准确。"
+      ],
+      "limitations": [
+        "材料尚未实物标定，理想肩部夹持不能代表真实夹子接触系统。",
+        "这里只展示提升和约束释放；没有人体、完整穿衣策略或抓取成功率结论，也不宣称连续收敛。"
+      ],
+      "reproducibility": [
+        "固定 PPF 源版本，并保留原创资产、实际构建器、CPU 二进制和兼容补丁补充。",
+        "源码树存在换行差异及部分构建兼容改动，已分范围说明；不将其描述成整树零修改或完整内部状态检查点。"
+      ],
+      "sources": [
+        {
+          "title": "PPF Contact Solver 固定源版本",
+          "url": "https://github.com/st-tech/ppf-contact-solver/tree/ac4084729b457a5d66ebc62424ff4836b3587360",
+          "commit": "ac4084729b457a5d66ebc62424ff4836b3587360",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "本项目原创预缝合开口 T 恤资产",
+          "url": null,
+          "commit": null,
+          "license": "MIT"
+        }
+      ],
+      "status_label": "原生数据完整，理想夹持与材料局限已标明",
+      "status_kind": "caution",
+      "category": "garments",
+      "short_id": "GL-01",
+      "frames": 181,
+      "fps": 60,
+      "fps_label": "60",
+      "videos": {
+        "REF": {
+          "url": "media/GL_HOIST_20261112_REF.mp4",
+          "poster": "posters/GL_HOIST_20261112_REF.jpg",
+          "sha256": "cc2429c820072f3ec20c5d5f1b29063898e024e55eeb0aea795543d53b2d7a5f",
+          "bytes": 100112
+        },
+        "A": {
+          "url": "media/GL_HOIST_20261112_A.mp4",
+          "poster": "posters/GL_HOIST_20261112_A.jpg",
+          "sha256": "9e251e7c29760d61e27a631cd8b18b37d3c0fbf84d6a3a041139fca6d926d937",
+          "bytes": 118780
+        },
+        "E": {
+          "url": "media/GL_HOIST_20261112_E.mp4",
+          "poster": "posters/GL_HOIST_20261112_E.jpg",
+          "sha256": "cec18e18f805b01cc0bb736a21f2e2d579a420a18a838de127ff79840b5fdc98",
+          "bytes": 129909
+        },
+        "V": {
+          "url": "media/GL_HOIST_20261112_V.mp4",
+          "poster": "posters/GL_HOIST_20261112_V.jpg",
+          "sha256": "a24d9db05f36e0223451f6a649259536e5d8e58081ef5ff3ce455d8cc9563310",
+          "bytes": 82664
+        }
+      },
+      "poster": "posters/GL_HOIST_20261112_overview.jpg",
+      "download": "downloads/GL_HOIST_20261112-media.zip",
+      "download_sha256": "de502a16709eabdf0b408329b2aeebcdf2f5a7f50821c94a757c0505df695279"
+    },
+    {
+      "id": "GL_FOLD_20261112",
+      "title": "理想夹持下的单次下摆翻折",
+      "summary": "开口 T 恤在规定夹持条件下完成一次下摆翻折，用于观察驱动位移、衣料接触和固定点释放之间的关系。案例保留完整原生衣料数据，适合比较单次翻折过程；它没有验证完整叠衣流程或工业折叠策略。",
+      "mechanism": "规定驱动带动下摆产生位移，衣料随重力、材料形变及接触继续演化。增加翻折位移影响折叠范围和运动路径；释放右领口固定则改变上部支撑，使整体姿态与折痕演化受到不同的边界条件影响。",
+      "setup": [
+        "使用固定提交的 PPF CPU 和原创预缝合开口 T 恤资产，求解器与资产分别采用 Apache-2.0 和 MIT 许可。主视频271帧、60帧/秒，覆盖4.5秒。",
+        "观察对象包括翻折进行中的材质运动与接触，而不只是一张最终折叠外形。此前失败版本与当前版本分开保留；当前结果不被写成可泛化到任意衣物的策略。"
+      ],
+      "axes": {
+        "REF": "既定夹持和位移下的一次下摆翻折。",
+        "A": "增加翻折位移，观察单次动作幅度改变的影响。",
+        "E": "释放右领口固定，观察支撑条件变化后的衣料运动。",
+        "V": "从另一视角观察参考翻折。"
+      },
+      "gt": [
+        "材质顶点轨迹、拓扑、质量、原生端点速度与插值时钟均随交付保留。",
+        "材质顶点对应关系用于分析折叠与变形；展示帧率不代表内部积分步长。"
+      ],
+      "validation": [
+        "折叠与袖口组合交付记录确认固定离散 QA 及归档 CRC、成员 SHA 核验；四个翻折主视频均有完整解码记录。",
+        "组合最终归档的独立便携重放尚未执行，因此封包完整与求解器再现不能合并为一个通过结论。"
+      ],
+      "limitations": [
+        "仅为一次下摆翻折，未覆盖完整叠衣顺序、重抓取、整理或工业策略成功率。",
+        "夹持是理想约束，材料未实物标定；固定离散 QA 不构成连续收敛或真实棉布材料验证。"
+      ],
+      "reproducibility": [
+        "固定 PPF 提交，原创衣服、实际构建器、CPU 二进制与兼容补丁独立保留。",
+        "数值限制和相机对照补充与封包一同解释，不用视频可播放代替原生重放验证，也不声称完整可续算内部状态。"
+      ],
+      "sources": [
+        {
+          "title": "PPF Contact Solver 固定源版本",
+          "url": "https://github.com/st-tech/ppf-contact-solver/tree/ac4084729b457a5d66ebc62424ff4836b3587360",
+          "commit": "ac4084729b457a5d66ebc62424ff4836b3587360",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "本项目原创预缝合开口 T 恤资产",
+          "url": null,
+          "commit": null,
+          "license": "MIT"
+        }
+      ],
+      "status_label": "固定离散 QA 已核验，组合归档重放待完成",
+      "status_kind": "caution",
+      "category": "garments",
+      "short_id": "GL-02",
+      "frames": 271,
+      "fps": 60,
+      "fps_label": "60",
+      "videos": {
+        "REF": {
+          "url": "media/GL_FOLD_20261112_REF.mp4",
+          "poster": "posters/GL_FOLD_20261112_REF.jpg",
+          "sha256": "262d43b598ffbfaa0ed14d57f6aaea89bb7b8c1819f46d1dcfdffce054d4dbd6",
+          "bytes": 132456
+        },
+        "A": {
+          "url": "media/GL_FOLD_20261112_A.mp4",
+          "poster": "posters/GL_FOLD_20261112_A.jpg",
+          "sha256": "e72f6f03deb8ab2fee4548b5df409002354d97bb228f2f487dcbbaf6e75d589c",
+          "bytes": 140809
+        },
+        "E": {
+          "url": "media/GL_FOLD_20261112_E.mp4",
+          "poster": "posters/GL_FOLD_20261112_E.jpg",
+          "sha256": "4e6ff48cee29d46e2bb1378fc3d15d7c734b6b6b8dff78935abb386aaa812b61",
+          "bytes": 140624
+        },
+        "V": {
+          "url": "media/GL_FOLD_20261112_V.mp4",
+          "poster": "posters/GL_FOLD_20261112_V.jpg",
+          "sha256": "ff746d5c6dfc638e1a435668e28d99357c32bf3adf80a09d2a81cb114fdcc5c7",
+          "bytes": 144215
+        }
+      },
+      "poster": "posters/GL_FOLD_20261112_overview.jpg",
+      "download": "downloads/GL_FOLD_20261112-media.zip",
+      "download_sha256": "32b1a8174157e0435d06c03553ba1c0e202ca7490871a98a84b573d1bcfac499"
+    },
+    {
+      "id": "GL_SLEEVE_20261112",
+      "title": "胶囊体袖口插入尝试",
+      "summary": "规定运动的胶囊体沿路径插入开口 T 恤的袖口，观察衣料在接触和固定条件下的响应。原动作变体只沿同一路径加速，衣料差异较弱；当前保留完整原版本，作为动作可见性与验证边界明确的插入尝试。",
+      "mechanism": "PPF CPU 求解衣料变形及其与运动胶囊体的接触，袖口固定点约束入口附近的自由度。加快相同路径主要改变运动时序；释放袖口固定会直接改变入口支撑。胶囊体只是简化运动代理，没有人体关节和自主穿衣控制。",
+      "setup": [
+        "采用固定 PPF 源版本与原创预缝合开口 T 恤，主视频211帧、60帧/秒，覆盖3.5秒。完整 REF/A/E/V 保留，衣料轨迹可按同一物理时间进行比较。",
+        "原 A 的衣料最大帧 RMS 差异约7.29毫米，不能仅凭胶囊运动更快就宣称衣料泛化效果显著。另一个增强动作候选未完成全程，不替代当前完整版本。"
+      ],
+      "axes": {
+        "REF": "规定胶囊路径与袖口固定下的参考插入尝试。",
+        "A": "沿同一路径加速；已有衣料响应较弱，保留这一事实。",
+        "E": "释放袖口固定，观察入口支撑改变后的运动与接触。",
+        "V": "从另一相机观察参考插入过程。"
+      },
+      "gt": [
+        "衣料的材质顶点、拓扑、质量、原生端点速度与展示插值时钟随交付保留。",
+        "胶囊的规定运动与衣料响应应分别解释，不能把代理运动幅度当作衣料效果指标。"
+      ],
+      "validation": [
+        "完整原版本的211帧主视频均有解码记录，折叠与袖口组合包的固定离散 QA、CRC 与成员 SHA 核验已有回执。",
+        "增强 A 候选仅保存11/211帧，未通过完整验收；原 A 的弱效应没有被这段片段替换或计为成功。"
+      ],
+      "limitations": [
+        "不属于已验证的全身穿衣系统，也没有实际人体、抓手或完整穿袖成功率结论。",
+        "动作轴衣料响应偏弱，不宜称为成熟四轴泛化案例；材料未校准，连续收敛和组合最终包独立重放仍未证实。"
+      ],
+      "reproducibility": [
+        "固定 PPF 提交，原创 MIT 资产与实际 CPU 构建及兼容补充保留，完整原版本与不完整增强候选明确分开。",
+        "导出轨迹和材质对应关系可供复查，不扩展为完整求解器内部状态或任意时刻续算能力。"
+      ],
+      "sources": [
+        {
+          "title": "PPF Contact Solver 固定源版本",
+          "url": "https://github.com/st-tech/ppf-contact-solver/tree/ac4084729b457a5d66ebc62424ff4836b3587360",
+          "commit": "ac4084729b457a5d66ebc62424ff4836b3587360",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "本项目原创预缝合开口 T 恤资产",
+          "url": null,
+          "commit": null,
+          "license": "MIT"
+        }
+      ],
+      "status_label": "插入尝试，原动作衣料响应偏弱",
+      "status_kind": "diagnostic",
+      "category": "garments",
+      "short_id": "GL-03",
+      "frames": 211,
+      "fps": 60,
+      "fps_label": "60",
+      "videos": {
+        "REF": {
+          "url": "media/GL_SLEEVE_20261112_REF.mp4",
+          "poster": "posters/GL_SLEEVE_20261112_REF.jpg",
+          "sha256": "716fa15456144fa0745dce668798941942442157c9b18e6299d777af3929a5f1",
+          "bytes": 91785
+        },
+        "A": {
+          "url": "media/GL_SLEEVE_20261112_A.mp4",
+          "poster": "posters/GL_SLEEVE_20261112_A.jpg",
+          "sha256": "8e0253e71f32042790134a7ed6b4ed91db7b5fab8959ca7d4be3659a9400fdf4",
+          "bytes": 91174
+        },
+        "E": {
+          "url": "media/GL_SLEEVE_20261112_E.mp4",
+          "poster": "posters/GL_SLEEVE_20261112_E.jpg",
+          "sha256": "ac9d3c375b925ac18f975f61635d49e376df3c7fc4c7f2296444444bd94d9bca",
+          "bytes": 129640
+        },
+        "V": {
+          "url": "media/GL_SLEEVE_20261112_V.mp4",
+          "poster": "posters/GL_SLEEVE_20261112_V.jpg",
+          "sha256": "421cbff5ae9bc626e964661b90f8288d2d3b5058bb657eeac0a123eb31aa17f8",
+          "bytes": 73984
+        }
+      },
+      "poster": "posters/GL_SLEEVE_20261112_overview.jpg",
+      "download": "downloads/GL_SLEEVE_20261112-media.zip",
+      "download_sha256": "2bfee60a96c6c61d1aaf48c7742dfcbdba14f6e7cffd7e04978e5e3a709aebcf"
+    }
+  ]
+}

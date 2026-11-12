@@ -1,0 +1,81 @@
+{
+  "id": "GL_SLEEVE_20261112",
+  "title": "胶囊体袖口插入尝试",
+  "summary": "规定运动的胶囊体沿路径插入开口 T 恤的袖口，观察衣料在接触和固定条件下的响应。原动作变体只沿同一路径加速，衣料差异较弱；当前保留完整原版本，作为动作可见性与验证边界明确的插入尝试。",
+  "mechanism": "PPF CPU 求解衣料变形及其与运动胶囊体的接触，袖口固定点约束入口附近的自由度。加快相同路径主要改变运动时序；释放袖口固定会直接改变入口支撑。胶囊体只是简化运动代理，没有人体关节和自主穿衣控制。",
+  "setup": [
+    "采用固定 PPF 源版本与原创预缝合开口 T 恤，主视频211帧、60帧/秒，覆盖3.5秒。完整 REF/A/E/V 保留，衣料轨迹可按同一物理时间进行比较。",
+    "原 A 的衣料最大帧 RMS 差异约7.29毫米，不能仅凭胶囊运动更快就宣称衣料泛化效果显著。另一个增强动作候选未完成全程，不替代当前完整版本。"
+  ],
+  "axes": {
+    "REF": "规定胶囊路径与袖口固定下的参考插入尝试。",
+    "A": "沿同一路径加速；已有衣料响应较弱，保留这一事实。",
+    "E": "释放袖口固定，观察入口支撑改变后的运动与接触。",
+    "V": "从另一相机观察参考插入过程。"
+  },
+  "gt": [
+    "衣料的材质顶点、拓扑、质量、原生端点速度与展示插值时钟随交付保留。",
+    "胶囊的规定运动与衣料响应应分别解释，不能把代理运动幅度当作衣料效果指标。"
+  ],
+  "validation": [
+    "完整原版本的211帧主视频均有解码记录，折叠与袖口组合包的固定离散 QA、CRC 与成员 SHA 核验已有回执。",
+    "增强 A 候选仅保存11/211帧，未通过完整验收；原 A 的弱效应没有被这段片段替换或计为成功。"
+  ],
+  "limitations": [
+    "不属于已验证的全身穿衣系统，也没有实际人体、抓手或完整穿袖成功率结论。",
+    "动作轴衣料响应偏弱，不宜称为成熟四轴泛化案例；材料未校准，连续收敛和组合最终包独立重放仍未证实。"
+  ],
+  "reproducibility": [
+    "固定 PPF 提交，原创 MIT 资产与实际 CPU 构建及兼容补充保留，完整原版本与不完整增强候选明确分开。",
+    "导出轨迹和材质对应关系可供复查，不扩展为完整求解器内部状态或任意时刻续算能力。"
+  ],
+  "sources": [
+    {
+      "title": "PPF Contact Solver 固定源版本",
+      "url": "https://github.com/st-tech/ppf-contact-solver/tree/ac4084729b457a5d66ebc62424ff4836b3587360",
+      "commit": "ac4084729b457a5d66ebc62424ff4836b3587360",
+      "license": "Apache-2.0"
+    },
+    {
+      "title": "本项目原创预缝合开口 T 恤资产",
+      "url": null,
+      "commit": null,
+      "license": "MIT"
+    }
+  ],
+  "status_label": "插入尝试，原动作衣料响应偏弱",
+  "status_kind": "diagnostic",
+  "category": "garments",
+  "short_id": "GL-03",
+  "frames": 211,
+  "fps": 60,
+  "fps_label": "60",
+  "videos": {
+    "REF": {
+      "url": "media/GL_SLEEVE_20261112_REF.mp4",
+      "poster": "posters/GL_SLEEVE_20261112_REF.jpg",
+      "sha256": "716fa15456144fa0745dce668798941942442157c9b18e6299d777af3929a5f1",
+      "bytes": 91785
+    },
+    "A": {
+      "url": "media/GL_SLEEVE_20261112_A.mp4",
+      "poster": "posters/GL_SLEEVE_20261112_A.jpg",
+      "sha256": "8e0253e71f32042790134a7ed6b4ed91db7b5fab8959ca7d4be3659a9400fdf4",
+      "bytes": 91174
+    },
+    "E": {
+      "url": "media/GL_SLEEVE_20261112_E.mp4",
+      "poster": "posters/GL_SLEEVE_20261112_E.jpg",
+      "sha256": "ac9d3c375b925ac18f975f61635d49e376df3c7fc4c7f2296444444bd94d9bca",
+      "bytes": 129640
+    },
+    "V": {
+      "url": "media/GL_SLEEVE_20261112_V.mp4",
+      "poster": "posters/GL_SLEEVE_20261112_V.jpg",
+      "sha256": "421cbff5ae9bc626e964661b90f8288d2d3b5058bb657eeac0a123eb31aa17f8",
+      "bytes": 73984
+    }
+  },
+  "poster": "posters/GL_SLEEVE_20261112_overview.jpg",
+  "download": "downloads/GL_SLEEVE_20261112-media.zip"
+}

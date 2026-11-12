@@ -1,0 +1,75 @@
+{
+  "id": "FG_F02_COMPACT_20261112",
+  "title": "有限黏性液柱撞板与铺展",
+  "summary": "有限长度的黏性液柱下落到承接板，随后碰撞、弯曲并铺展。案例从官方 CoilingModel 场景族派生为紧凑初态，用来比较初始运动和板面倾斜的影响。该场景没有持续供液入口，展示对象是有限液柱的瞬态过程。",
+  "mechanism": "粒子液体的惯性、黏性作用、重力和板面接触共同影响撞击后的形状。改变液柱初速度会改变撞击过程；倾斜原有板面则改变接触方向与铺展路径。有限液体总量和有限观察时长决定了它不能直接代表稳态喷流卷曲。",
+  "setup": [
+    "紧凑版本保留固定源场景身份，明确派生初始液柱与展示范围。主视频76帧、25帧/秒，覆盖0至3秒；参考、动作和环境条件使用各自完整原生运行。",
+    "显示水面从粒子重建，V 则复用参考数值载荷，仅改变相机。E 在初始时刻改变原承接板姿态，原有粒子身份、质量、位置与速度保持可比。"
+  ],
+  "axes": {
+    "REF": "有限黏性液柱落向原承接板的参考过程。",
+    "A": "改变液柱初速度，观察撞板及铺展的响应。",
+    "E": "倾斜原有承接板，观察边界方向改变后的流动。",
+    "V": "完整复用 REF 数值与几何载荷，只改变相机。"
+  },
+  "gt": [
+    "原生粒子身份、质量、位置和速度提供材质数值 GT，显示水面是重建代理。",
+    "位置、速度与密度的源时钟分别保留；表面顶点没有持久物质身份。"
+  ],
+  "validation": [
+    "资格补充记录确认完整 REF/A/E 独立重复、原生接触及逐帧表面与 GT 绑定检查通过。",
+    "最终归档的便携 REF 重放已核验，301个原生采样状态中的对应数组一致；这一补充证据覆盖了较早卡片的重放待验文字。"
+  ],
+  "limitations": [
+    "通过的是当前固定离散合成配置的检查，不代表实物黏度标定或连续收敛。",
+    "有限短液柱撞板不宜用稳态卷曲频率、长期喷流稳定性等结论描述。"
+  ],
+  "reproducibility": [
+    "官方场景来源固定到指定提交，实际 wheel 为2.19.0；wheel 构建 Git 身份尚未独立证实。",
+    "原生参考重放证据与导出材料分开保存，不声称拥有完整求解器内部重启状态。"
+  ],
+  "sources": [
+    {
+      "title": "SPlisHSPlasH 官方场景族固定版本",
+      "url": "https://github.com/InteractiveComputerGraphics/SPlisHSPlasH/tree/dba6b26b9387ab6bdd187d6df0a7c9d490d03500/data/Scenes",
+      "commit": "dba6b26b9387ab6bdd187d6df0a7c9d490d03500",
+      "license": "MIT"
+    }
+  ],
+  "status_label": "固定离散资格与原生参考重放已核验",
+  "status_kind": "good",
+  "category": "fluids",
+  "short_id": "F02",
+  "frames": 76,
+  "fps": 25,
+  "fps_label": "25",
+  "videos": {
+    "REF": {
+      "url": "media/FG_F02_COMPACT_20261112_REF.mp4",
+      "poster": "posters/FG_F02_COMPACT_20261112_REF.jpg",
+      "sha256": "41abdc11117e71364f0f83bc184d9f3aa970cd8c5a25c35ae49fb7c189e6c108",
+      "bytes": 46276
+    },
+    "A": {
+      "url": "media/FG_F02_COMPACT_20261112_A.mp4",
+      "poster": "posters/FG_F02_COMPACT_20261112_A.jpg",
+      "sha256": "73c2a939ba51f6f7207b9f5c45392a67a633bb2ab9e7ec870bfb954952cbbb19",
+      "bytes": 54885
+    },
+    "E": {
+      "url": "media/FG_F02_COMPACT_20261112_E.mp4",
+      "poster": "posters/FG_F02_COMPACT_20261112_E.jpg",
+      "sha256": "fc669f50fb417439d848206f76e34d1de453541ec0ceb00a564c8bf99266c333",
+      "bytes": 45685
+    },
+    "V": {
+      "url": "media/FG_F02_COMPACT_20261112_V.mp4",
+      "poster": "posters/FG_F02_COMPACT_20261112_V.jpg",
+      "sha256": "dd994f1194788d01cf8bc9eae856ba637ec7a4ecb332d80acf3056026ca54acc",
+      "bytes": 45212
+    }
+  },
+  "poster": "posters/FG_F02_COMPACT_20261112_overview.jpg",
+  "download": "downloads/FG_F02_COMPACT_20261112-media.zip"
+}

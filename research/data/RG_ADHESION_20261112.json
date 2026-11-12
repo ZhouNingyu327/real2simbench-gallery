@@ -1,0 +1,75 @@
+{
+  "id": "RG_ADHESION_20261112",
+  "title": "主动黏附搬运与接触堆积",
+  "summary": "主动黏附、规定驱动与接触堆积共同决定物体能否随搬运机构运动。案例通过关闭黏附或撤去卷扬单侧约束，分别考察主动作用和环境约束的贡献。原生数据与参考重放已核验，接触过程仍有明显步长敏感性。",
+  "mechanism": "黏附执行器通过刚体接触施加主动作用；规定驱动与单侧卷扬约束限定机构的运动条件。搬运对象之间还会发生接触和堆积，因此关闭主动黏附与释放机构约束改变的是两种不同的因果环节。",
+  "setup": [
+    "场景从 MuJoCo 官方主动黏附例派生，保留固定源版本并明确记录附加运行协议。每个主视频为151帧、25帧/秒，对应6秒过程。",
+    "比较应在匹配物理时刻进行：既看物体是否跟随机构，也看脱离后的堆积与接触运动。相机或渲染结果不能替代对原生体姿态和接触数据的检查。"
+  ],
+  "axes": {
+    "REF": "主动黏附与规定驱动共同作用的参考搬运过程。",
+    "A": "关闭主动黏附，观察失去主动作用后的接触与运动变化。",
+    "E": "撤去卷扬的单侧约束，观察机构约束改变带来的响应。",
+    "V": "从另一相机观察参考过程。"
+  },
+  "gt": [
+    "原生关节状态、刚体姿态、接触摘要及刚体物质网格构成数值参考。",
+    "约束示意线不作为绳索材料 GT；不同状态字段按记录的时钟解释。"
+  ],
+  "validation": [
+    "REF/A/E 独立重复、关节与接触检查，以及便携 REF 原生重放已有验证记录。",
+    "REF 全6秒的半步长对照中，刚体位置 RMS 差约0.02991米，最大差约0.19371米；这一差异被保留为数值限制。"
+  ],
+  "limitations": [
+    "接触堆积对时间离散敏感，固定设置下可重复不等于步长收敛。",
+    "主动黏附为求解器模型；案例未标定真实胶黏材料、吸盘或夹持装置，也没有实物搬运成功率结论。"
+  ],
+  "reproducibility": [
+    "使用 MuJoCo 3.3.7 指定提交及显式派生协议，原生重复和半步长记录随交付保留。",
+    "参考重放验证与材料真实性分开表述；不由渲染文件推断完整可续算状态。"
+  ],
+  "sources": [
+    {
+      "title": "MuJoCo 官方主动黏附示例",
+      "url": "https://github.com/google-deepmind/mujoco/blob/f1d45bd5422c74beddfb0d1deb590a02583d21de/model/adhesion/active_adhesion.xml",
+      "commit": "f1d45bd5422c74beddfb0d1deb590a02583d21de",
+      "license": "Apache-2.0"
+    }
+  ],
+  "status_label": "固定离散已核验，接触步长敏感",
+  "status_kind": "caution",
+  "category": "rigid",
+  "short_id": "RG-02",
+  "frames": 151,
+  "fps": 25,
+  "fps_label": "25",
+  "videos": {
+    "REF": {
+      "url": "media/RG_ADHESION_20261112_REF.mp4",
+      "poster": "posters/RG_ADHESION_20261112_REF.jpg",
+      "sha256": "78123b2f00ca0d8adf040c76eea0cb32ea6e9ed0fb293cda70b998306b076ce6",
+      "bytes": 244913
+    },
+    "A": {
+      "url": "media/RG_ADHESION_20261112_A.mp4",
+      "poster": "posters/RG_ADHESION_20261112_A.jpg",
+      "sha256": "dd0188a5eca8ea6e9639fbf19a57c28a2c3c3ab58e157aeed4ffedae4f7b2195",
+      "bytes": 221992
+    },
+    "E": {
+      "url": "media/RG_ADHESION_20261112_E.mp4",
+      "poster": "posters/RG_ADHESION_20261112_E.jpg",
+      "sha256": "ac200a1577d29651ed2610d52e1b937cc28ceb4ede3501064638b563c53a21cc",
+      "bytes": 164421
+    },
+    "V": {
+      "url": "media/RG_ADHESION_20261112_V.mp4",
+      "poster": "posters/RG_ADHESION_20261112_V.jpg",
+      "sha256": "e9752bfe10e31111c8bcab0385b52e204e62d23fb201937a9703b951d5581d77",
+      "bytes": 271993
+    }
+  },
+  "poster": "posters/RG_ADHESION_20261112_overview.jpg",
+  "download": "downloads/RG_ADHESION_20261112-media.zip"
+}
