@@ -22,6 +22,7 @@
     "最终归档的便携 REF 重放已核验，301个原生采样状态中的对应数组一致；这一补充证据覆盖了较早卡片的重放待验文字。"
   ],
   "limitations": [
+    "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
     "通过的是当前固定离散合成配置的检查，不代表实物黏度标定或连续收敛。",
     "有限短液柱撞板不宜用稳态卷曲频率、长期喷流稳定性等结论描述。"
   ],
@@ -37,8 +38,8 @@
       "license": "MIT"
     }
   ],
-  "status_label": "固定离散资格与原生参考重放已核验",
-  "status_kind": "good",
+  "status_label": "真实感未通过 · 待重做",
+  "status_kind": "diagnostic",
   "category": "fluids",
   "short_id": "F02",
   "frames": 76,
@@ -71,5 +72,8 @@
     }
   },
   "poster": "posters/FG_F02_COMPACT_20261112_overview.jpg",
-  "download": "downloads/FG_F02_COMPACT_20261112-media.zip"
+  "download": "downloads/FG_F02_COMPACT_20261112-media.zip",
+  "download_sha256": "87329ec866fc0c4be14942e57e260c72f23431fa3b89b2d2ff9d2357de174c63",
+  "numerical_status_label": "固定离散资格与原生参考重放已核验",
+  "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
 }

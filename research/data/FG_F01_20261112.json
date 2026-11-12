@@ -22,6 +22,7 @@
     "报告中 F01 的最终归档验证回执为空，不能把已有 GT 和已解码视频写成最终封包完成。"
   ],
   "limitations": [
+    "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
     "当前列为候选案例，完整重复、步长和接触资格不能从显示元数据中的候选状态推断为通过。",
     "尚无真实液体校准或连续收敛结论；水面平滑程度与数值物理准确性是不同问题。"
   ],
@@ -37,8 +38,8 @@
       "license": "MIT"
     }
   ],
-  "status_label": "候选案例，最终封包回执待核实",
-  "status_kind": "caution",
+  "status_label": "真实感未通过 · 待重做",
+  "status_kind": "diagnostic",
   "category": "fluids",
   "short_id": "F01",
   "frames": 101,
@@ -71,5 +72,8 @@
     }
   },
   "poster": "posters/FG_F01_20261112_overview.jpg",
-  "download": "downloads/FG_F01_20261112-media.zip"
+  "download": "downloads/FG_F01_20261112-media.zip",
+  "download_sha256": "cfeb8182a9470f0a69a2eded0f88fee699b07a9e3f6b67c33c88adbe4a33bb7b",
+  "numerical_status_label": "候选案例，最终封包回执待核实",
+  "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
 }

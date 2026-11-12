@@ -22,6 +22,7 @@
     "增强 A 候选仅保存11/211帧，未通过完整验收；原 A 的弱效应没有被这段片段替换或计为成功。"
   ],
   "limitations": [
+    "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
     "不属于已验证的全身穿衣系统，也没有实际人体、抓手或完整穿袖成功率结论。",
     "动作轴衣料响应偏弱，不宜称为成熟四轴泛化案例；材料未校准，连续收敛和组合最终包独立重放仍未证实。"
   ],
@@ -43,7 +44,7 @@
       "license": "MIT"
     }
   ],
-  "status_label": "插入尝试，原动作衣料响应偏弱",
+  "status_label": "真实感未通过 · 待重做",
   "status_kind": "diagnostic",
   "category": "garments",
   "short_id": "GL-03",
@@ -77,5 +78,8 @@
     }
   },
   "poster": "posters/GL_SLEEVE_20261112_overview.jpg",
-  "download": "downloads/GL_SLEEVE_20261112-media.zip"
+  "download": "downloads/GL_SLEEVE_20261112-media.zip",
+  "download_sha256": "6285f16a51b24a83655e893cb939bdb68cb24873d96133bf516da76ef17672ea",
+  "numerical_status_label": "插入尝试，原动作衣料响应偏弱",
+  "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
 }

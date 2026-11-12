@@ -22,6 +22,7 @@
     "报告明确区分已有交付与物理资格边界，数值阻尼敏感性需要随案例说明，不能仅凭提升外观宣称真实材料准确。"
   ],
   "limitations": [
+    "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
     "材料尚未实物标定，理想肩部夹持不能代表真实夹子接触系统。",
     "这里只展示提升和约束释放；没有人体、完整穿衣策略或抓取成功率结论，也不宣称连续收敛。"
   ],
@@ -43,8 +44,8 @@
       "license": "MIT"
     }
   ],
-  "status_label": "原生数据完整，理想夹持与材料局限已标明",
-  "status_kind": "caution",
+  "status_label": "真实感未通过 · 待重做",
+  "status_kind": "diagnostic",
   "category": "garments",
   "short_id": "GL-01",
   "frames": 181,
@@ -77,5 +78,8 @@
     }
   },
   "poster": "posters/GL_HOIST_20261112_overview.jpg",
-  "download": "downloads/GL_HOIST_20261112-media.zip"
+  "download": "downloads/GL_HOIST_20261112-media.zip",
+  "download_sha256": "a2e99663efce817f58a4c17feb23d2b3e5b8cf7593aded93b458e5b51b4b3c74",
+  "numerical_status_label": "原生数据完整，理想夹持与材料局限已标明",
+  "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
 }

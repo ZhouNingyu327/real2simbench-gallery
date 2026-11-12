@@ -182,6 +182,7 @@
         "报告中 F01 的最终归档验证回执为空，不能把已有 GT 和已解码视频写成最终封包完成。"
       ],
       "limitations": [
+        "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
         "当前列为候选案例，完整重复、步长和接触资格不能从显示元数据中的候选状态推断为通过。",
         "尚无真实液体校准或连续收敛结论；水面平滑程度与数值物理准确性是不同问题。"
       ],
@@ -197,8 +198,8 @@
           "license": "MIT"
         }
       ],
-      "status_label": "候选案例，最终封包回执待核实",
-      "status_kind": "caution",
+      "status_label": "真实感未通过 · 待重做",
+      "status_kind": "diagnostic",
       "category": "fluids",
       "short_id": "F01",
       "frames": 101,
@@ -232,7 +233,9 @@
       },
       "poster": "posters/FG_F01_20261112_overview.jpg",
       "download": "downloads/FG_F01_20261112-media.zip",
-      "download_sha256": "0603f2f627469364a4dd35439a800f25d67453e48081421fb7bbb8b99147d49c"
+      "download_sha256": "cfeb8182a9470f0a69a2eded0f88fee699b07a9e3f6b67c33c88adbe4a33bb7b",
+      "numerical_status_label": "候选案例，最终封包回执待核实",
+      "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
     },
     {
       "id": "FG_F02_COMPACT_20261112",
@@ -258,6 +261,7 @@
         "最终归档的便携 REF 重放已核验，301个原生采样状态中的对应数组一致；这一补充证据覆盖了较早卡片的重放待验文字。"
       ],
       "limitations": [
+        "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
         "通过的是当前固定离散合成配置的检查，不代表实物黏度标定或连续收敛。",
         "有限短液柱撞板不宜用稳态卷曲频率、长期喷流稳定性等结论描述。"
       ],
@@ -273,8 +277,8 @@
           "license": "MIT"
         }
       ],
-      "status_label": "固定离散资格与原生参考重放已核验",
-      "status_kind": "good",
+      "status_label": "真实感未通过 · 待重做",
+      "status_kind": "diagnostic",
       "category": "fluids",
       "short_id": "F02",
       "frames": 76,
@@ -308,7 +312,9 @@
       },
       "poster": "posters/FG_F02_COMPACT_20261112_overview.jpg",
       "download": "downloads/FG_F02_COMPACT_20261112-media.zip",
-      "download_sha256": "f7ead032afa112182b90f1e8ffd9fa464daae5e3d7e5074b412b585f0c90949d"
+      "download_sha256": "87329ec866fc0c4be14942e57e260c72f23431fa3b89b2d2ff9d2357de174c63",
+      "numerical_status_label": "固定离散资格与原生参考重放已核验",
+      "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
     },
     {
       "id": "FG_F03_20261112",
@@ -334,6 +340,7 @@
         "同一单线程后端的半步长对照中，粒子 RMS 差约0.727米，刚体位置 RMS 差约0.139米，表明结果有强数值敏感性。"
       ],
       "limitations": [
+        "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
         "重复一致与数据绑定通过不能抵消半步长偏差；不宣称连续收敛或真实流固材料校准。",
         "官方耦合中流体与 PBD 使用步长存在相位差异，记录保留该语义；最终归档独立便携重放仍待完成。"
       ],
@@ -349,7 +356,7 @@
           "license": "MIT"
         }
       ],
-      "status_label": "数值敏感性诊断，未完全验收",
+      "status_label": "真实感未通过 · 待重做",
       "status_kind": "diagnostic",
       "category": "fluids",
       "short_id": "F03",
@@ -384,7 +391,9 @@
       },
       "poster": "posters/FG_F03_20261112_overview.jpg",
       "download": "downloads/FG_F03_20261112-media.zip",
-      "download_sha256": "64a4e9306521e57fe2d606249a03330c08254b9aa817843427d846ee9f5ab18b"
+      "download_sha256": "a23221e3da0689b48e89808078574c81d08bca96648aa1700d4289634a98a9cc",
+      "numerical_status_label": "数值敏感性诊断，未完全验收",
+      "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
     },
     {
       "id": "FG_G02_20261112",
@@ -486,6 +495,7 @@
         "报告明确区分已有交付与物理资格边界，数值阻尼敏感性需要随案例说明，不能仅凭提升外观宣称真实材料准确。"
       ],
       "limitations": [
+        "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
         "材料尚未实物标定，理想肩部夹持不能代表真实夹子接触系统。",
         "这里只展示提升和约束释放；没有人体、完整穿衣策略或抓取成功率结论，也不宣称连续收敛。"
       ],
@@ -507,8 +517,8 @@
           "license": "MIT"
         }
       ],
-      "status_label": "原生数据完整，理想夹持与材料局限已标明",
-      "status_kind": "caution",
+      "status_label": "真实感未通过 · 待重做",
+      "status_kind": "diagnostic",
       "category": "garments",
       "short_id": "GL-01",
       "frames": 181,
@@ -542,7 +552,9 @@
       },
       "poster": "posters/GL_HOIST_20261112_overview.jpg",
       "download": "downloads/GL_HOIST_20261112-media.zip",
-      "download_sha256": "de502a16709eabdf0b408329b2aeebcdf2f5a7f50821c94a757c0505df695279"
+      "download_sha256": "a2e99663efce817f58a4c17feb23d2b3e5b8cf7593aded93b458e5b51b4b3c74",
+      "numerical_status_label": "原生数据完整，理想夹持与材料局限已标明",
+      "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
     },
     {
       "id": "GL_FOLD_20261112",
@@ -568,6 +580,7 @@
         "组合最终归档的独立便携重放尚未执行，因此封包完整与求解器再现不能合并为一个通过结论。"
       ],
       "limitations": [
+        "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
         "仅为一次下摆翻折，未覆盖完整叠衣顺序、重抓取、整理或工业策略成功率。",
         "夹持是理想约束，材料未实物标定；固定离散 QA 不构成连续收敛或真实棉布材料验证。"
       ],
@@ -589,8 +602,8 @@
           "license": "MIT"
         }
       ],
-      "status_label": "固定离散 QA 已核验，组合归档重放待完成",
-      "status_kind": "caution",
+      "status_label": "真实感未通过 · 待重做",
+      "status_kind": "diagnostic",
       "category": "garments",
       "short_id": "GL-02",
       "frames": 271,
@@ -624,7 +637,9 @@
       },
       "poster": "posters/GL_FOLD_20261112_overview.jpg",
       "download": "downloads/GL_FOLD_20261112-media.zip",
-      "download_sha256": "32b1a8174157e0435d06c03553ba1c0e202ca7490871a98a84b573d1bcfac499"
+      "download_sha256": "81bbd3a668e1a9d413c3386b296d58f2c9ff1c411fa456f173caf0aed91e42ae",
+      "numerical_status_label": "固定离散 QA 已核验，组合归档重放待完成",
+      "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
     },
     {
       "id": "GL_SLEEVE_20261112",
@@ -650,6 +665,7 @@
         "增强 A 候选仅保存11/211帧，未通过完整验收；原 A 的弱效应没有被这段片段替换或计为成功。"
       ],
       "limitations": [
+        "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
         "不属于已验证的全身穿衣系统，也没有实际人体、抓手或完整穿袖成功率结论。",
         "动作轴衣料响应偏弱，不宜称为成熟四轴泛化案例；材料未校准，连续收敛和组合最终包独立重放仍未证实。"
       ],
@@ -671,7 +687,7 @@
           "license": "MIT"
         }
       ],
-      "status_label": "插入尝试，原动作衣料响应偏弱",
+      "status_label": "真实感未通过 · 待重做",
       "status_kind": "diagnostic",
       "category": "garments",
       "short_id": "GL-03",
@@ -706,7 +722,9 @@
       },
       "poster": "posters/GL_SLEEVE_20261112_overview.jpg",
       "download": "downloads/GL_SLEEVE_20261112-media.zip",
-      "download_sha256": "2bfee60a96c6c61d1aaf48c7742dfcbdba14f6e7cffd7e04978e5e3a709aebcf"
+      "download_sha256": "6285f16a51b24a83655e893cb939bdb68cb24873d96133bf516da76ef17672ea",
+      "numerical_status_label": "插入尝试，原动作衣料响应偏弱",
+      "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
     }
   ]
 }

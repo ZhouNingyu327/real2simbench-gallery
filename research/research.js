@@ -85,7 +85,7 @@
   $("modelObservationVideo").addEventListener("play",stop);
   document.addEventListener("visibilitychange",()=>{if(document.hidden)stop();});
   window.addEventListener("hashchange",()=>{const p=new URLSearchParams(location.hash.slice(1));if(p.has("case")){if(p.get("axis") in axisNames)state.axis=p.get("axis");selectCase(p.get("case"),false);}});
-  fetch("data/cases.json?v=20261112-1").then(r=>{if(!r.ok)throw new Error("catalog");return r.json();}).then(data=>{
+  fetch("data/cases.json?v=20261112-2").then(r=>{if(!r.ok)throw new Error("catalog");return r.json();}).then(data=>{
     state.cases=data.cases;const p=new URLSearchParams(location.hash.slice(1));if(p.get("axis") in axisNames)state.axis=p.get("axis");const id=state.cases.some(c=>c.id===p.get("case"))?p.get("case"):state.cases[0].id;
     selectCase(id,false);renderNav();if(!location.hash||location.hash.startsWith("#case="))updateHash();
   }).catch(()=>{$("caseNav").textContent="案例目录加载失败，请刷新页面。原片与说明仍可通过下载目录访问。";});

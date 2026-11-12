@@ -22,6 +22,7 @@
     "组合最终归档的独立便携重放尚未执行，因此封包完整与求解器再现不能合并为一个通过结论。"
   ],
   "limitations": [
+    "当前视频未通过真实水流或真实衣料观感的验收，仅保留为数值研究预览；已有数值检查不能代替真实感验收。",
     "仅为一次下摆翻折，未覆盖完整叠衣顺序、重抓取、整理或工业策略成功率。",
     "夹持是理想约束，材料未实物标定；固定离散 QA 不构成连续收敛或真实棉布材料验证。"
   ],
@@ -43,8 +44,8 @@
       "license": "MIT"
     }
   ],
-  "status_label": "固定离散 QA 已核验，组合归档重放待完成",
-  "status_kind": "caution",
+  "status_label": "真实感未通过 · 待重做",
+  "status_kind": "diagnostic",
   "category": "garments",
   "short_id": "GL-02",
   "frames": 271,
@@ -77,5 +78,8 @@
     }
   },
   "poster": "posters/GL_FOLD_20261112_overview.jpg",
-  "download": "downloads/GL_FOLD_20261112-media.zip"
+  "download": "downloads/GL_FOLD_20261112-media.zip",
+  "download_sha256": "81bbd3a668e1a9d413c3386b296d58f2c9ff1c411fa456f173caf0aed91e42ae",
+  "numerical_status_label": "固定离散 QA 已核验，组合归档重放待完成",
+  "visual_quality_status": "user_rejected_pending_physics_asset_and_render_rework"
 }

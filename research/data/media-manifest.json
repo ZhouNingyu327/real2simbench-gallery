@@ -423,20 +423,20 @@
     {
       "id": "FG_F01_20261112",
       "url": "downloads/FG_F01_20261112-media.zip",
-      "sha256": "0603f2f627469364a4dd35439a800f25d67453e48081421fb7bbb8b99147d49c",
-      "bytes": 2267239
+      "sha256": "cfeb8182a9470f0a69a2eded0f88fee699b07a9e3f6b67c33c88adbe4a33bb7b",
+      "bytes": 2267683
     },
     {
       "id": "FG_F02_COMPACT_20261112",
       "url": "downloads/FG_F02_COMPACT_20261112-media.zip",
-      "sha256": "f7ead032afa112182b90f1e8ffd9fa464daae5e3d7e5074b412b585f0c90949d",
-      "bytes": 197385
+      "sha256": "87329ec866fc0c4be14942e57e260c72f23431fa3b89b2d2ff9d2357de174c63",
+      "bytes": 197832
     },
     {
       "id": "FG_F03_20261112",
       "url": "downloads/FG_F03_20261112-media.zip",
-      "sha256": "64a4e9306521e57fe2d606249a03330c08254b9aa817843427d846ee9f5ab18b",
-      "bytes": 3559241
+      "sha256": "a23221e3da0689b48e89808078574c81d08bca96648aa1700d4289634a98a9cc",
+      "bytes": 3559682
     },
     {
       "id": "FG_G02_20261112",
@@ -447,20 +447,20 @@
     {
       "id": "GL_HOIST_20261112",
       "url": "downloads/GL_HOIST_20261112-media.zip",
-      "sha256": "de502a16709eabdf0b408329b2aeebcdf2f5a7f50821c94a757c0505df695279",
-      "bytes": 436916
+      "sha256": "a2e99663efce817f58a4c17feb23d2b3e5b8cf7593aded93b458e5b51b4b3c74",
+      "bytes": 437360
     },
     {
       "id": "GL_FOLD_20261112",
       "url": "downloads/GL_FOLD_20261112-media.zip",
-      "sha256": "32b1a8174157e0435d06c03553ba1c0e202ca7490871a98a84b573d1bcfac499",
-      "bytes": 563493
+      "sha256": "81bbd3a668e1a9d413c3386b296d58f2c9ff1c411fa456f173caf0aed91e42ae",
+      "bytes": 563937
     },
     {
       "id": "GL_SLEEVE_20261112",
       "url": "downloads/GL_SLEEVE_20261112-media.zip",
-      "sha256": "2bfee60a96c6c61d1aaf48c7742dfcbdba14f6e7cffd7e04978e5e3a709aebcf",
-      "bytes": 392070
+      "sha256": "6285f16a51b24a83655e893cb939bdb68cb24873d96133bf516da76ef17672ea",
+      "bytes": 392511
     }
   ]
 }
